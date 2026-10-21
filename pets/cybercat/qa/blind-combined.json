@@ -2,16 +2,15 @@
   "pairs": [
     {
       "pair": "horizontal-1",
-      "A": "screen-left",
-      "B": "screen-right",
+      "A": "screen-right",
+      "B": "screen-left",
       "reason": "strict majority of independent blind reviews",
       "votes": {
         "A": {
-          "ambiguous": 1,
-          "screen-left": 2
+          "screen-right": 3
         },
         "B": {
-          "screen-right": 3
+          "screen-left": 3
         }
       }
     },
@@ -73,15 +72,15 @@
     },
     {
       "pair": "horizontal-6",
-      "A": "screen-right",
-      "B": "screen-left",
+      "A": "screen-left",
+      "B": "screen-right",
       "reason": "strict majority of independent blind reviews",
       "votes": {
         "A": {
-          "screen-right": 3
+          "screen-left": 3
         },
         "B": {
-          "screen-left": 3
+          "screen-right": 3
         }
       }
     },
@@ -92,8 +91,7 @@
       "reason": "strict majority of independent blind reviews",
       "votes": {
         "A": {
-          "ambiguous": 1,
-          "screen-left": 2
+          "screen-left": 3
         },
         "B": {
           "ambiguous": 3
@@ -116,6 +114,20 @@
     },
     {
       "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "strict majority of independent blind reviews",
+      "votes": {
+        "A": {
+          "up": 3
+        },
+        "B": {
+          "down": 3
+        }
+      }
+    },
+    {
+      "pair": "vertical-3",
       "A": "down",
       "B": "up",
       "reason": "strict majority of independent blind reviews",
@@ -129,30 +141,17 @@
       }
     },
     {
-      "pair": "vertical-3",
-      "A": "up",
-      "B": "down",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "up": 3
-        },
-        "B": {
-          "down": 3
-        }
-      }
-    },
-    {
       "pair": "vertical-4",
-      "A": "up",
-      "B": "down",
+      "A": "ambiguous",
+      "B": "up",
       "reason": "strict majority of independent blind reviews",
       "votes": {
         "A": {
-          "up": 3
+          "down": 1,
+          "ambiguous": 2
         },
         "B": {
-          "down": 3
+          "up": 3
         }
       }
     },
@@ -163,8 +162,7 @@
       "reason": "strict majority of independent blind reviews",
       "votes": {
         "A": {
-          "ambiguous": 1,
-          "up": 2
+          "up": 3
         },
         "B": {
           "down": 3
@@ -187,15 +185,16 @@
     },
     {
       "pair": "vertical-7",
-      "A": "up",
-      "B": "down",
+      "A": "down",
+      "B": "up",
       "reason": "strict majority of independent blind reviews",
       "votes": {
         "A": {
-          "up": 3
+          "down": 2,
+          "ambiguous": 1
         },
         "B": {
-          "down": 3
+          "up": 3
         }
       }
     }

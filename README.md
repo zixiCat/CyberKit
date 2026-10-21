@@ -2,13 +2,13 @@
 
 Set up my Codex instructions and workflows on a new Windows computer with one task.
 
-## CyberCat desktop pet
+## Clover desktop pet
 
-CyberKit includes the [CyberCat pet and reusable animations](pets/cybercat/README.md), based on the [CyberCat brand mascot](https://github.com/zixiCat/CyberCat/tree/master/brand).
+CyberKit includes [Clover, a compact green-haired scientist companion with expressive animations](pets/cybercat/README.md).
 
-![CyberCat waving with a simple design and clean outline](pets/cybercat/animations/waving.gif)
+![Clover waving with green hair and oversized goggles](pets/cybercat/animations/waving.gif)
 
-The setup helper installs the pet package into this computer's resolved Codex home. In Settings > Pets, select Refresh and choose CyberCat. Existing pet selection and unrelated pets are preserved.
+The setup helper installs the pet package into this computer's resolved Codex home. In Settings > Pets, select Refresh and choose Clover. Existing pet selection and unrelated pets are preserved. The existing `cybercat` package folder is retained for compatibility.
 
 ## Windows setup
 
@@ -19,7 +19,7 @@ Set up this Windows computer from https://github.com/zixiCat/CyberKit.
 
 Fetch the latest main branch into a normal local checkout, reusing one if available and preserving uncommitted work. Review the repository instructions and setup scripts before running setup/install-config.ps1, passing the actual checkout root as RepositoryPath. Resolve this user's CODEX_HOME, Windows Documents folder and verified local skill directory; never reuse another computer's paths.
 
-Install/update AGENTS.md, the custom skills, and the bundled CyberCat desktop pet. Preserve existing pet selection and unrelated pets; report the Settings > Pets > Refresh step when needed. Commit only shared instructions and Common hotwords to CyberKit. Keep the installed AGENTS.md's ### Local section only on this computer, preserve it during updates, and never copy it from another computer or upload it to GitHub. Preserve unrelated configuration and files. Never create worktrees or copy credentials/runtime state/sessions/local histories.
+Install/update AGENTS.md, the custom skills, and the bundled Clover desktop pet. Preserve existing pet selection and unrelated pets; report the Settings > Pets > Refresh step when needed. Commit only shared instructions and Common hotwords to CyberKit. Keep the installed AGENTS.md's ### Local section only on this computer, preserve it during updates, and never copy it from another computer or upload it to GitHub. Preserve unrelated configuration and files. Never create worktrees or copy credentials/runtime state/sessions/local histories.
 
 Read the installed skills and perform their bare-setup workflows: initialize this chat as the pinned manager with one quiet monitor that pauses when idle and resumes on new delegated work; check the available ActivityWatch service and its daily task; check reporting readiness. Use this computer as the default daily ActivityWatch scheduler at 20:00 Asia/Singapore without asking which computer owns it. Reuse matching local schedules, preserve existing settings and manual pauses, and leave other computers' jobs unchanged. Missing account-wide schedule listing must not block local setup. Match the manager monitor to this exact chat. Respect real account, plugin and installation prerequisites.
 

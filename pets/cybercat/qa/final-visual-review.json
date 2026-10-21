@@ -1,81 +1,87 @@
 {
-  "ok": true,
-  "review_type": "independent static visual review",
+  "review_method": "Independent labeled review of exact final atlas, native 192x208 ordered cells, boundary strips, final contact/direction sheets and exported motion stills. No claim of live GIF or MP4 playback.",
+  "atlas_sha256": "ed59d829149a0769bd3082cce8e620d26055e425d9bb812bd653be1fea29221c",
+  "result": "acceptable_with_minor_visual_variation",
   "blockers": [],
-  "reviewed": [
-    "final/spritesheet.png",
-    "qa/direction-review.png",
-    "package/motion-stills.png",
-    "package/look-directions.png",
-    "package/look.gif",
-    "package/animations/waving.gif",
-    "package/cute.gif",
-    "package/validation.json"
-  ],
-  "native_border_review": {
-    "cell_size": [
-      192,
-      208
-    ],
-    "directions": [
-      135,
-      157.5,
-      180,
-      337.5,
-      0
-    ],
-    "backgrounds": [
-      "#ffffff",
-      "#23262d"
-    ],
-    "method": "Existing atlas cells were alpha-composited in memory at native size; artwork and files were unchanged.",
-    "observations": [
-      "Dark outer contours remain distinct on light and dark backgrounds.",
-      "No old speckled opaque fringe is visible in the inspected crops.",
-      "Halo openings and gaps above the head read as intended transparent negative space; no broken body contour is visible."
-    ]
-  },
-  "transition_review": [
+  "cardinals": [
     {
-      "sequence": [
-        135,
-        157.5,
-        180
-      ],
-      "finding": "Acceptable with a subtle intermediate.",
-      "observations": [
-        "135 is clearly down-right; 180 is clearly down.",
-        "157.5 is nearly frontal/down with a weak horizontal component.",
-        "The turn toward frontal is more abrupt at 135 to 157.5 than in nearby steps, but there is no clear visual evidence of an opposite-direction reversal.",
-        "Body scale, complete silhouette and foot baseline remain stable."
-      ],
-      "certainty": "Exact 22.5-degree spacing cannot be established from stylized static artwork."
+      "expected": "000 up",
+      "observed": "Chin tipped upward and eyes aimed upward; face retained.",
+      "verdict": "pass"
     },
     {
-      "sequence": [
-        337.5,
-        0
-      ],
-      "finding": "Acceptable orientation change.",
-      "observations": [
-        "The face broadens as up-left becomes frontal-up.",
-        "The head change is more noticeable than some adjacent steps, but the body and foot baseline remain stable; it does not read as a whole-character resize.",
-        "No broken contour or clear directional reversal is visible."
-      ]
+      "expected": "090 screen-right",
+      "observed": "Face/nose and eye aim to screen-right; anchored front-facing torso.",
+      "verdict": "pass"
+    },
+    {
+      "expected": "180 down",
+      "observed": "Chin tucked and eyelids/eyes downcast; residual leftward head yaw does not obscure downward primary axis.",
+      "verdict": "pass"
+    },
+    {
+      "expected": "270 screen-left",
+      "observed": "Nose/face and gaze turn to screen-left; torso and feet retained.",
+      "verdict": "pass"
     }
   ],
-  "gif_review": {
-    "first_decoded_frames_reviewed": [
-      "look.gif",
-      "animations/waving.gif",
-      "cute.gif"
-    ],
-    "full_real_time_loop_watched": false,
-    "content_validation": "Existing package validation reports zero alpha-mask mismatches and exact timings for all 57 standard state frames, cute.gif and idle-jump-idle.gif.",
-    "limitation": "This review compares existing static keyframes and decoded first GIF frames; it does not claim smooth real-time playback was observed."
-  },
-  "warnings": [
-    "The horizontal component at 157.5 degrees remains ambiguous and should be recorded as a nonblocking limitation.",
-    "The 337.5 to 0 wrap has a noticeable head-orientation step, without a visible body-scale jump."
-  ]
+  "quadrants": [
+    {
+      "directions": [
+        "022.5",
+        "045",
+        "067.5"
+      ],
+      "observed": "Upward gaze/chin with increasing rightward face turn.",
+      "verdict": "pass"
+    },
+    {
+      "directions": [
+        "112.5",
+        "135",
+        "157.5"
+      ],
+      "observed": "Gaze descends while face/rightward eye aim remains; 157.5 nearly frontal but rightward component visible.",
+      "verdict": "pass"
+    },
+    {
+      "directions": [
+        "202.5",
+        "225",
+        "247.5"
+      ],
+      "observed": "Downcast eyes/chin with leftward face turn; adjacent 202.5 and225 very similar.",
+      "verdict": "pass"
+    },
+    {
+      "directions": [
+        "292.5",
+        "315",
+        "337.5"
+      ],
+      "observed": "Lifted eyes/chin with leftward face aim easing back toward front.",
+      "verdict": "pass"
+    }
+  ],
+  "registration": "All sixteen visible bounds end at y201; boots remain fixed, torso remains front-facing, head/goggles/hair articulate. No clipping, missing face, detached components or conspicuous global scale change observed in ordered native stills.",
+  "boundaries": [
+    {
+      "from": "157.5",
+      "to": "180",
+      "verdict": "warning",
+      "evidence": "Largest head-perspective step: near-frontal down-right changes to down with residual left yaw, changing goggles/hair perspective more than neighboring increments. Primary gaze axes remain valid; treated as minor aesthetic continuity variation."
+    },
+    {
+      "from": "337.5",
+      "to": "000",
+      "verdict": "pass",
+      "evidence": "Up-left gaze and chin position ease into frontal upward gaze; torso/boots stable."
+    }
+  ],
+  "limitations": [
+    "Angular interpolation is stylized and nonuniform;202.5/225 are close in appearance.",
+    "Live GIF/MP4 timing and perceived playback smoothness were not directly viewed by this tool.",
+    "Native-frame visual review cannot guarantee frontend runtime behavior."
+  ],
+  "standard_states": "Rechecked final contact and exported motion-stills; distinct idle, wave, jump, failure, waiting, thinking/review, directional gait semantics retained. Prior native standard review accepted corrected profile scale and ground return."
 }

@@ -8,8 +8,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageSequence
 
 
 CELL = (192, 208)
-BACKGROUND = "#f5f1ff"
-INK = "#43256a"
+BACKGROUND = "#f1f7ef"
+INK = "#1f4936"
 TRANSPARENT = 255
 ROW_DURATIONS = {
     "idle": [280, 110, 110, 140, 140, 320],

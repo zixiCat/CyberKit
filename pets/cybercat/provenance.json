@@ -1,13 +1,10 @@
 {
-  "name": "CyberCat",
-  "brand_source": {
-    "repository": "https://github.com/zixiCat/CyberCat",
-    "ref": "master",
-    "commit": "d85444aec918b33c9418af0953f552e8491bac21",
-    "path": "brand/CyberCat.png"
-  },
+  "name": "Clover",
+  "package_id": "cybercat",
+  "revision": "green-scientist-chibi",
   "artwork_tool": "built-in ImageGen",
-  "brief": "Simplify CyberCat for a tiny desktop companion: broad purple/cyan shapes, a smooth consistent dark-purple outline, large simple eyes, a plain hoodie with one cyan dot and two collar stripes, mitten hands and plain boots. Preserve cat ears, headphones, purple bob hair with a cyan accent, and one clean cyan halo. Remove dense costume panels, hardware, tiny highlights, glitter, fine hair strands and glow. Keep cute blinking, waving, hopping, expectant waiting, thinking and expressive reactions. Generate genuine transparent alpha and coherent state/gaze strips from the same simplified canonical reference.",
+  "reference": "User-supplied screenshot highlighting a green-haired scientist on its right side. Green hair, forehead goggles and scientist-coat cues were used for an original simplified chibi; no exact source-character identity is asserted. The screenshot itself is not included in this package.",
+  "brief": "Predominantly green, compact readable full-body scientist with broad green hair locks, expressive green eyes, oversized mint goggles, a plain ivory coat, forest-green tunic and simple dark boots. Remove fiddly costume details. Rich state-specific acting through limbs, expression, anticipation, head movement and hair/coat follow-through; no detached decorative effects.",
   "sprite_version": 2,
   "cell_size": [
     192,
@@ -29,7 +26,12 @@
     "review": 6
   },
   "look_directions": 16,
-  "processing": "Bundled work-pets 0.1.6 frame extraction, inspection, atlas composition, shared state transforms, look registration, structural validation and quality checks. Source imagery uses true alpha; chroma color correction is disabled (strength 0), preserving purple/cyan colors. Hidden RGB under zero alpha is cleared. GIF export uses a shared palette, alpha threshold 128, reserved transparency and no dithering. Each state retains its own pose motion and one common scale.",
+  "processing": "Bundled work-pets 0.1.6 preparation, connected-pose extraction, frame inspection, atlas composition, cardinal extraction, shared look registration, despill, structural/quality validation and direction review. Additional deterministic registration applies one uniform scale/ground transform to all frames of each standard row; horizontal profiles inherit idle scale. Generated pet pixels are not manually drawn. Source art uses genuine alpha; the single magenta-key despill pass uses strength 0 to preserve its greens while clearing hidden RGB. Final PNG encoding is lossless. GIFs use a shared palette, no dithering and alpha threshold 128.",
+  "prompts": "source/prompts/README.md",
+  "canonical_design": "clover.png",
+  "previous_design": "https://github.com/zixiCat/CyberKit/tree/474abe00db648ac27d8f470d0fbc090f8474a55a/pets/cybercat",
   "local_state_included": false,
-  "revision": "simplified-clean-outline"
+  "account_pet_created": false,
+  "sha256": "ed59d829149a0769bd3082cce8e620d26055e425d9bb812bd653be1fea29221c",
+  "encoded_bytes": 3051474
 }

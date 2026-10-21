@@ -2,87 +2,87 @@
   "pairs": [
     {
       "pair": "horizontal-1",
-      "A": "ambiguous",
-      "B": "screen-right",
-      "reason": "A: both eyes are fully exposed with nearly centered irises and no clear projecting nose; a tiny facial offset is insufficient. B: nose/mouth sit to the right of the head center, with a broad screen-left cheek and compressed far eye."
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A's pupils and mouth/nose placement favor the right side of the face; B's pupils favor the left, with the face opening toward screen-left. Both turns are shallow."
     },
     {
       "pair": "horizontal-2",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "A: rightward facial profile, nose and mouth near the screen-right contour, with the far eye narrowed. B: nose/mouth shift left, the screen-left eye is compressed, and the screen-right cheek is broader."
+      "reason": "A has the nose and open mouth displaced right, with the right eye nearer the face edge. B has the nose/mouth projecting left and the left eye closer to the outer contour."
     },
     {
       "pair": "horizontal-3",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "A: clear rightward nose and mouth projection with a narrow far eye along the right outline. B: nose projects at the left outline and the right cheek and near eye dominate."
+      "reason": "A's cheek, nose and chin project toward the right and the rightmost eye is foreshortened. B shows the corresponding facial projection toward the left, with the leftmost eye narrower."
     },
     {
       "pair": "horizontal-4",
       "A": "screen-left",
       "B": "screen-right",
-      "reason": "A: strong left profile with the nose at the left silhouette and essentially one dominant visible eye. B: nose and mouth approach the right silhouette, with the broad cheek on screen-left."
+      "reason": "A's nose, chin and visible face cluster toward screen-left beneath the hair. B's face and chin project right, with the far eye compressed on the right edge."
     },
     {
       "pair": "horizontal-5",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "A: face midline and mouth are displaced right, and the eye at the right contour is narrower. B: face midline points left, with a compressed left eye and broader right cheek."
+      "reason": "A's nose/mouth and chin favor screen-right, and both pupils look right. B has a pronounced left-facing nose/chin contour and the visible eye looks left."
     },
     {
       "pair": "horizontal-6",
-      "A": "screen-right",
-      "B": "screen-left",
-      "reason": "A: despite downward pitch, the nose/mouth and chin shift toward screen-right and the right eye is compressed. B: the nose/mouth move toward screen-left, the left eye narrows, and the broad cheek lies on screen-right."
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's low face projects left, with nose and chin left of the head center. B has a shallower rightward facial turn: the nose/mouth sit rightward and the rightmost eye is narrower."
     },
     {
       "pair": "horizontal-7",
-      "A": "ambiguous",
+      "A": "screen-left",
       "B": "ambiguous",
-      "reason": "A: downward pitch is apparent, but the nose/mouth are nearly centered between two broadly visible eyes and iris displacement is inconclusive. B: nearly symmetric frontal face, centered mouth and chin, and no reliable lateral iris or nose cue."
+      "reason": "A's nose and chin point left under a lowered brow. B is nearly frontal: both eyes are similarly exposed and the nose, mouth and chin remain close to the midpoint, so the small lateral pupil offset is insufficient for a confident direction."
     },
     {
       "pair": "vertical-1",
       "A": "down",
       "B": "up",
-      "reason": "A: eyes and mouth lie low under a large visible crown, upper lids compress the eyes, and little chin remains below the mouth. B: eyes and mouth sit high on an expanded exposed face, with a long lower-face area and raised chin."
+      "reason": "A's eyelids and face sit low under the forehead, with a tucked chin. B's pupils sit high, the eyes are open upward, and the chin is lifted with more lower face exposed."
     },
     {
       "pair": "vertical-2",
-      "A": "down",
-      "B": "up",
-      "reason": "A: face sits low beneath the bangs, with low eyes, a small lower-face area, and tucked chin. B: raised eye line and facial projection expose more cheek and lower face beneath the mouth."
+      "A": "up",
+      "B": "down",
+      "reason": "A's pupils aim upward and the face/chin tilt up. B's upper lids are lowered, the face is tucked beneath the fringe, and the chin points down."
     },
     {
       "pair": "vertical-3",
-      "A": "up",
-      "B": "down",
-      "reason": "A: elevated nose/mouth, open eyes high on the face, and exposed lower cheek/chin indicate upward pitch. B: eye line and mouth are low under the hair, with a short chin area and tucked face."
+      "A": "down",
+      "B": "up",
+      "reason": "A has lowered upper lids and a tucked, low mouth/chin. B's pupils and nose/mouth aim upward with a lifted chin and more open eyes."
     },
     {
       "pair": "vertical-4",
-      "A": "up",
-      "B": "down",
-      "reason": "A: nose and mouth project upward/right, eyes sit high, and the lower face is exposed. B: the face is carried lower beneath the bangs, the mouth sits near the chin, and the upper crown is prominent; the downward cue is mild."
+      "A": "down",
+      "B": "up",
+      "reason": "A's eyelids are flatter and the chin is tucked close to the collar, giving a mild downward pitch. B's eyes look distinctly upward and its projecting nose and raised chin show upward pitch."
     },
     {
       "pair": "vertical-5",
-      "A": "ambiguous",
+      "A": "up",
       "B": "down",
-      "reason": "A: nearly level frontal eye line, centered irises, and no decisive raised-chin or upward nose cue. B: eyes and mouth are set low under a large crown, eyelids compress the eyes, and the chin tucks toward the collar."
+      "reason": "A's pupils are high in open eyes and its chin is lifted. B's brow and eyelids slope down over the low face and the chin is tucked."
     },
     {
       "pair": "vertical-6",
       "A": "down",
       "B": "up",
-      "reason": "A: eyes and nose/mouth are carried low beneath the fringe, with narrowed upper lids and little visible chin. B: elevated eye line and nose/mouth, open eyes, and a fuller exposed lower face indicate upward pitch."
+      "reason": "A's visible eye is under a lowered lid and its nose/chin angle downward. B's visible pupils look up, the face opens upward, and the chin is raised."
     },
     {
       "pair": "vertical-7",
-      "A": "up",
-      "B": "down",
-      "reason": "A: the leftward nose and mouth are elevated, the eye line is high, and lower cheek/chin remain exposed. B: nose/mouth and eyes sit low beneath the fringe, with a shorter lower-face area and lowered head; the pitch is subtle."
+      "A": "down",
+      "B": "up",
+      "reason": "A's eye and nose sit low beneath the brow with a tucked chin. B's visible eye looks upward and its nose/mouth and chin are raised, though the upward pitch is modest."
     }
   ]
 }

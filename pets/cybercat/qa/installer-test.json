@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "fresh_pet_parity": true,
+  "fresh_repeat_changes": 0,
+  "existing_pet_replacements": 2,
+  "local_instructions_preserved": true,
+  "selection_and_unrelated_pet_preserved": true,
+  "old_pet_backups_preserved": true,
+  "existing_repeat_changes": 0
+}

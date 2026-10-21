@@ -1,40 +1,42 @@
-# CyberCat
+# Clover
 
-A simple purple cat-eared companion with cyan headphones, a halo, a plain hoodie, and a clean dark outline. Adapted from the [CyberCat brand mascot](https://github.com/zixiCat/CyberCat/tree/master/brand).
+A compact green-haired scientist companion with oversized mint goggles, a simple ivory coat, and an evergreen outfit. The original simplified chibi design takes its green-hair/scientist cues from the user's visual reference; it does not assert an exact source-character identity.
 
-## Preview
+## Motion previews
 
-![CyberCat blinking, waving, hopping and waiting](cute.gif)
+![Clover blinking, waving, hopping and asking for input](cute.gif)
 
-[All animations](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png)
+[All states](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png)
 
-## Animations
-
-| Animation | Preview |
+| State | Preview |
 | --- | --- |
-| Calm blinking | [idle.gif](animations/idle.gif) |
+| Calm breathing and blink | [idle.gif](animations/idle.gif) |
 | Friendly wave | [waving.gif](animations/waving.gif) |
-| Playful hop | [jumping.gif](animations/jumping.gif) |
-| Hopeful waiting | [waiting.gif](animations/waiting.gif) |
+| Anticipation, hop and landing | [jumping.gif](animations/jumping.gif) |
+| Expectant asking gesture | [waiting.gif](animations/waiting.gif) |
 | Running right | [running-right.gif](animations/running-right.gif) |
 | Running left | [running-left.gif](animations/running-left.gif) |
-| Error reaction | [failed.gif](animations/failed.gif) |
-| Focused work | [running.gif](animations/running.gif) |
-| Reviewing work | [review.gif](animations/review.gif) |
+| Worried reaction and recovery | [failed.gif](animations/failed.gif) |
+| Active thinking | [running.gif](animations/running.gif) |
+| Inspecting and approving work | [review.gif](animations/review.gif) |
 
-The desktop sprite sheet also includes sixteen clockwise look directions. See the [action contact sheet](contact-sheet.png), [look directions](look-directions.png), [look loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif).
+The [action contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif) show the complete pose set. Head, eyes, goggles and hair follow the gaze while the torso and boots remain planted.
 
 ## Install
 
-Run `setup/install-config.ps1` with the actual checkout root as `RepositoryPath`. It resolves this computer's Codex home and installs only `pet.json` and `spritesheet.png` into its `pets/cybercat` directory. Existing selection and unrelated pets stay unchanged; changed package files receive local backups. Then open Settings > Pets, select Refresh, and choose CyberCat.
+Run `setup/install-config.ps1` with the actual checkout root as `RepositoryPath`. It installs only this package's `pet.json` and `spritesheet.png` into the current computer's resolved `CODEX_HOME/pets/cybercat`. The existing folder name is retained for compatibility; the display name is **Clover**. Existing selection and unrelated pets are preserved. Replaced files receive local backups.
 
-The package uses sprite version 2: a transparent 1536 × 2288 PNG, eight columns and eleven rows, with 192 × 208 cells. The first nine rows contain 6, 8, 8, 4, 5, 8, 6, 6, and 6 animation frames; the last two rows contain sixteen look directions. Unused cells are transparent.
+Open **Settings > Pets > Refresh**, then choose **Clover**. Desktop pets are local; this package does not create an account pet or copy another computer's selection.
 
-## Clean animation exports
+The former design remains recoverable in [Git history](https://github.com/zixiCat/CyberKit/tree/474abe00db648ac27d8f470d0fbc090f8474a55a/pets/cybercat) and in the local backups made during replacement.
 
-The PNG keeps smooth alpha edges. Native-size GIFs use a shared palette, no dithering, and a reserved transparent color. Pixels below alpha 128 remain transparent, preventing faint edge pixels from becoming a speckled opaque border.
+## Format and exports
 
-To rebuild previews from the sprite sheet, run these commands from the checkout root:
+The transparent, losslessly encoded PNG is sprite version 2: **1536 × 2288**, eight columns and eleven rows, with **192 × 208** cells. Nine animation rows contain **57 frames**; two gaze rows contain **16 clockwise directions**. All fifteen unused cells remain transparent.
+
+The PNG preserves smooth alpha edges. Native-size GIFs use a shared palette, no dithering, and a reserved transparent index; an alpha threshold of 128 keeps faint edge pixels from becoming speckled opaque borders.
+
+To rebuild and check the exports from the checkout root:
 
 ```powershell
 python -m pip install -r pets/cybercat/tools/requirements.txt
@@ -42,16 +44,10 @@ python pets/cybercat/tools/export_previews.py --atlas pets/cybercat/spritesheet.
 python pets/cybercat/tools/export_previews.py --atlas pets/cybercat/spritesheet.png --output-dir pets/cybercat --validate
 ```
 
-## Validation
+## Evidence and source
 
-The [atlas validation](qa/atlas-validation.json) and [quality gate](qa/pet-quality.json) passed for the packaged PNG. The [GIF validation](validation.json) confirms exact timing and zero alpha-mask mismatches for all 57 state frames, the cute sequence, and the idle-to-jump transition.
+The [provenance](provenance.json), [canonical design](clover.png), and [accepted prompt set](source/prompts/README.md) describe the artwork. Built-in ImageGen produced the base and every state/gaze strip; deterministic tools extracted connected poses, applied a uniform registration per row, composed the atlas, and encoded previews. Both running directions were generated separately.
 
-The [three-reviewer blind gaze check](qa/blind-validation.json) passed the four cardinal directions. The 157.5° pose is nearly down-facing; its slight rightward component is difficult to distinguish by itself. This and other subtle intermediate gaze steps are recorded in the [visual review](qa/direction-semantics.json). Halo openings are intentional transparent gaps. The jump returns to the idle baseline.
+The [atlas validator](qa/atlas-validation.json), [quality gate](qa/pet-quality.json), [standard-frame inspection](qa/frame-inspection.json), [visual review](qa/standard-visual-review.json), [direction semantics](qa/direction-semantics.json), [continuity analysis](qa/look-continuity.json), and [blind direction check](qa/blind-validation.json) record the checks on this revision. [GIF validation](validation.json) checks the exact timing and alpha masks of all 57 standard frames and the combined transitions.
 
-Reports describe generation-time checks. Intermediate strips and frames remain outside this repository; local paths in packaged reports are normalized.
-
-## Source and generation
-
-The original mascot reference is [source/CyberCat.png](source/CyberCat.png), from CyberCat commit `d85444aec918b33c9418af0953f552e8491bac21`. The simplified full-body design is [cybercat.png](cybercat.png). Built-in ImageGen produced the character and pose strips with transparent backgrounds; deterministic tools extracted frames, aligned each state, assembled the sprite sheet, and encoded previews.
-
-The [generation brief and provenance](provenance.json) preserve the purple/cyan identity while replacing tiny costume details and highlights with broad shapes and a consistent outline. Local pet selection, account data, sessions, and histories do not belong in this directory.
+Visual inspection uses ordered native-size frames and contact sheets; a still-image inspection tool does not verify live playback. The largest gaze step is 157.5° to 180°; 202.5° and 225° are close in appearance. Subtle intermediate gaze components and minor hand-drawn hair/outline variation are documented in the reviews. Reports describe generation-time checks and use repository-relative paths. Intermediate source strips, rejected revisions and working frames remain in the local creation run; credentials, selections, local instructions and runtime histories are excluded.
