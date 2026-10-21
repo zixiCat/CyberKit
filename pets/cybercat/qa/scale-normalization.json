@@ -1,0 +1,45 @@
+{
+  "target_body_height": 158,
+  "pivot": [
+    96,
+    203
+  ],
+  "rows": [
+    {
+      "state": "idle",
+      "shared_scale": 0.8061224489795918
+    },
+    {
+      "state": "running-right",
+      "shared_scale": 0.8102564102564103
+    },
+    {
+      "state": "running-left",
+      "shared_scale": 0.8123393316195373
+    },
+    {
+      "state": "waving",
+      "shared_scale": 0.8061224489795918
+    },
+    {
+      "state": "jumping",
+      "shared_scale": 1.0
+    },
+    {
+      "state": "failed",
+      "shared_scale": 0.8144329896907216
+    },
+    {
+      "state": "waiting",
+      "shared_scale": 0.8102564102564103
+    },
+    {
+      "state": "running",
+      "shared_scale": 0.8061224489795918
+    },
+    {
+      "state": "review",
+      "shared_scale": 0.8102564102564103
+    }
+  ]
+}

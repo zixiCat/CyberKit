@@ -46,6 +46,14 @@ foreach($name in $names) {
         $files += [pscustomobject]@{Source=$item.FullName;Relative=('skills\' + $name + '\' + $item.FullName.Substring($root.Length+1))}
     }
 }
+$petRoot = Join-Path $RepositoryPath 'pets\cybercat'
+$petNames = @()
+if(Test-Path -LiteralPath (Join-Path $petRoot 'pet.json') -PathType Leaf) {
+    $petNames = @('cybercat')
+    foreach($petFile in @('pet.json','spritesheet.png')) {
+        $files += [pscustomobject]@{Source=(Join-Path $petRoot $petFile);Relative=('pets\cybercat\' + $petFile)}
+    }
+}
 foreach($file in $files) {
     Assert-NoLink $file.Source
     if(-not (Test-Path -LiteralPath $file.Source -PathType Leaf)) { throw "Missing source: $($file.Relative)" }
@@ -93,4 +101,4 @@ foreach($file in $files) {
     } else { [IO.File]::Move($temporary,$destination) }
     $changed++
 }
-[pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next='Verify this app discovers SkillsPath; reopen a chat and invoke each skill. Existing AGENTS.override.md can take precedence; inspect active instructions without removing it.'} | ConvertTo-Json -Depth 4
+[pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;custom_pets=$petNames;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next='Verify this app discovers SkillsPath; reopen a chat and invoke each skill. Existing AGENTS.override.md can take precedence; inspect active instructions without removing it. Refresh Settings > Pets to discover installed pet packages.'} | ConvertTo-Json -Depth 4

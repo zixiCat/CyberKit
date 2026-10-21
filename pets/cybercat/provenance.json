@@ -1,0 +1,34 @@
+{
+  "name": "CyberCat",
+  "brand_source": {
+    "repository": "https://github.com/zixiCat/CyberCat",
+    "ref": "master",
+    "commit": "d85444aec918b33c9418af0953f552e8491bac21",
+    "path": "brand/CyberCat.png"
+  },
+  "artwork_tool": "built-in ImageGen",
+  "brief": "Preserve purple bob hair, cyan streaks, violet eyes, cat ears, headphones, halo and purple cyber clothing. Extend the brand bust into a tiny full-body chibi. Use cute blinking, waving, hopping, hopeful waiting, focused work and expressive reactions; no new props or text. Generate coherent state strips and clockwise gaze rows from the same canonical reference.",
+  "sprite_version": 2,
+  "cell_size": [
+    192,
+    208
+  ],
+  "atlas_size": [
+    1536,
+    2288
+  ],
+  "standard_rows": {
+    "idle": 6,
+    "running-right": 8,
+    "running-left": 8,
+    "waving": 4,
+    "jumping": 5,
+    "failed": 8,
+    "waiting": 6,
+    "running": 6,
+    "review": 6
+  },
+  "look_directions": 16,
+  "processing": "Bundled work-pets 0.1.6 extraction, inspection, atlas composition, look registration, one chroma despill, structural validation and quality checks. Shared transform per animation state preserves original jump displacement.",
+  "local_state_included": false
+}
