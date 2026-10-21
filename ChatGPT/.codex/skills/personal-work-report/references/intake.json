@@ -11,6 +11,14 @@
   "conclusion": "What is true now and the main takeaway",
   "impact": "Who benefits and how; label unmeasured impact",
   "decision": "Specific decision or no decision requested",
+  "summary": [
+    {
+      "label": "What changed",
+      "text": "One or two short sentences about an observed change",
+      "evidence_ids": []
+    }
+  ],
+  "commits": [],
   "completed": [
     {
       "text": "Observable completed action",

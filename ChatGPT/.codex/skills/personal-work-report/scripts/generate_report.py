@@ -26,6 +26,18 @@ def validate(data, base):
         raise ValueError('mode must be daily or extended')
     if data.get('language', 'en') not in ('en', 'zh'):
         raise ValueError('language must be en or zh')
+    if data.get('imageLayout', 'pages') not in ('pages', 'long'):
+        raise ValueError('imageLayout must be pages or long')
+    for key in ('summary', 'commits'):
+        if key in data and not isinstance(data[key], list):
+            raise ValueError(f'{key} must be a list')
+    commit_ids = set()
+    for item in data.get('commits', []):
+        if not isinstance(item, dict) or any(not isinstance(item.get(k), str) or not item[k].strip() for k in ('id', 'at', 'author', 'title', 'status')):
+            raise ValueError('Each commit needs id, at, author, title and status')
+        if item['id'] in commit_ids:
+            raise ValueError('Commit IDs must be unique')
+        commit_ids.add(item['id'])
     ids = set()
     for key in ('completed', 'validation', 'limitations', 'next', 'evidence', 'details'):
         if not isinstance(data.get(key), list):
@@ -59,12 +71,14 @@ def validate(data, base):
             if not (content.startswith(b'\x89PNG\r\n\x1a\n') or content.startswith(b'\xff\xd8\xff')):
                 raise ValueError('Image content is not PNG or JPEG')
             e['image'] = f'data:{mime};base64,' + base64.b64encode(content).decode('ascii')
-    for key in ('completed', 'validation'):
-        for item in data[key]:
+    for key in ('summary', 'completed', 'validation'):
+        for item in data.get(key, []):
             if not isinstance(item, dict):
                 raise ValueError(f'Each {key} item must be an object')
             if not isinstance(item.get('text'), str) or not item['text'].strip():
                 raise ValueError(f'{key}.text must be non-empty')
+            if key == 'summary' and (not isinstance(item.get('label'), str) or not item['label'].strip()):
+                raise ValueError('summary.label must be non-empty')
             refs = item.get('evidence_ids', [])
             if not isinstance(refs, list) or any(ref not in ids for ref in refs):
                 raise ValueError(f'{key} contains an unknown evidence ID')
@@ -87,17 +101,20 @@ def validate(data, base):
         if lang not in ('en', 'zh') or not isinstance(translation, dict):
             raise ValueError('Translation languages must be en or zh')
         allowed = {'title','audience','period','status','goal','conclusion','impact','decision',
-                   'completed','validation','limitations','next','evidence','details'}
+                   'summary','commits','completed','validation','limitations','next','evidence','details'}
         if set(translation) - allowed:
             raise ValueError('Translations may change prose only, not report identity or screenshots')
-        for field in ('completed','validation','next','evidence','details'):
+        for field in ('summary','commits','completed','validation','next','evidence','details'):
             if field in translation:
-                if not isinstance(translation[field], list) or len(translation[field]) != len(data[field]) or any(not isinstance(i, dict) for i in translation[field]):
+                if not isinstance(translation[field], list) or len(translation[field]) != len(data.get(field, [])) or any(not isinstance(i, dict) for i in translation[field]):
                     raise ValueError('Translation records must match the original report')
-        for field in ('completed','validation'):
-            for original, translated in zip(data[field], translation.get(field, data[field])):
+        for field in ('summary','completed','validation'):
+            for original, translated in zip(data.get(field, []), translation.get(field, data.get(field, []))):
                 if translated.get('evidence_ids', []) != original.get('evidence_ids', []):
                     raise ValueError('Translations must preserve evidence references')
+        for original, translated in zip(data.get('commits', []), translation.get('commits', [])):
+            if translated.get('id') != original['id'] or set(translated) - {'id', 'title', 'status'}:
+                raise ValueError('Translated commits must preserve IDs, attribution and dates')
         for original, translated in zip(data['evidence'], translation.get('evidence', [])):
             if translated.get('id') != original['id'] or set(translated)-{'id','caption','observation','limitation'}:
                 raise ValueError('Translated evidence must preserve IDs and original screenshot metadata')
@@ -113,8 +130,8 @@ def validate(data, base):
 def localized(data, lang):
     result = copy.deepcopy(data)
     for key, value in data.get('translations', {}).get(lang, {}).items():
-        if key == 'evidence':
-            result[key] = [{**original, **translated} for original, translated in zip(data[key], value)]
+        if key in ('evidence', 'commits'):
+            result[key] = [{**original, **translated} for original, translated in zip(data.get(key, []), value)]
         else:
             result[key] = value
     result['language'] = lang
@@ -126,22 +143,32 @@ def markdown(data):
         return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
     lines = [f"# {clean(data['title'])}", '',
              ' | '.join(clean(data[k]) for k in ('author','date','period','status')), '',
-             f"Audience: {clean(data['audience'])}", '', '## Overview', '']
-    for k in ('goal','conclusion','impact','decision'):
+             f"Audience: {clean(data['audience'])}", '', '## At a glance', '']
+    if data.get('summary'):
+        lines += [clean(data['conclusion']), '', '| Topic | Summary |', '| --- | --- |']
+        for item in data['summary']:
+            lines += ['| ' + ' | '.join(clean(item[k]).replace('|', '\\|').replace('\n', ' ') for k in ('label', 'text')) + ' |']
+        lines += ['']
+    for k in (() if data.get('summary') else ('goal','conclusion','impact','decision')):
         lines += [f"**{k.capitalize()}:** {clean(data[k])}", '']
-    for k, title in (('completed','Completed work'),('validation','Validation')):
+    for k, title in (('completed','What changed'),('validation','Checks')):
         lines += [f'## {title}', '']
         for item in data[k]:
             refs = ' '.join(f"[{ref}](#{ref.lower()})" for ref in item.get('evidence_ids', []))
             lines += [f"- {clean(item['text'])} {refs}".rstrip()]
         if not data[k]: lines += ['Not recorded.']
         lines += ['']
-    lines += ['## Limitations and blockers','']
+    if data.get('commits'):
+        lines += ['## Changes & commits', '', '| Commit | Author | Time | Change | Status |', '| --- | --- | --- | --- | --- |']
+        for item in data['commits']:
+            lines += ['| ' + ' | '.join(clean(item[k]).replace('|', '\\|').replace('\n', ' ') for k in ('id', 'author', 'at', 'title', 'status')) + ' |']
+        lines += ['']
+    lines += ['## Still open','']
     lines += ['- ' + clean(s) for s in data['limitations']] or ['Not recorded.']
-    lines += ['', '## Next actions', '', '| Action | Owner | Due |', '| --- | --- | --- |']
+    lines += ['', '## Next steps', '', '| Action | Owner | Due |', '| --- | --- | --- |']
     for item in data['next']:
         lines += ['| ' + ' | '.join(clean(item[k]).replace('|', '\\|').replace('\n', ' ') for k in ('action','owner','due')) + ' |']
-    lines += ['', '## Evidence', '']
+    lines += ['', '## Sources', '']
     for e in data['evidence']:
         lines += [f"<a id=\"{e['id'].lower()}\"></a>", f"### {e['id']} {clean(e['caption'])}", '',
                   clean(e['observation']), '', f"Source: {clean(e['source'])}. Captured: {clean(e['captured'])}.", '',
@@ -152,11 +179,12 @@ def markdown(data):
         lines += [f"## {clean(item['title'])}", '', clean(item['text']), '']
     result = '\n'.join(lines)
     if data.get('language') == 'zh':
-        for original, translated in {'Overview':'概览','Completed work':'已完成工作','Validation':'验证','Limitations and blockers':'局限与阻碍','Next actions':'下一步行动','Evidence':'证据'}.items():
+        for original, translated in {'At a glance':'一页看懂','What changed':'做了什么','Changes & commits':'提交与改动','Checks':'怎么验证','Still open':'还差什么','Next steps':'接下来','Sources':'依据与范围'}.items():
             result = result.replace('## '+original+'\n','## '+translated+'\n')
         for original, translated in {'Goal':'目标','Conclusion':'结论','Impact':'影响','Decision':'需要的决策'}.items():
             result = result.replace('**'+original+':**','**'+translated+':**')
         result = result.replace('Audience: ', '读者: ').replace('| Action | Owner | Due |','| 行动 | 负责人 | 截止日期 |').replace('Source: ','来源: ').replace('Captured: ','采集日期: ').replace('Limit: ','局限: ').replace('Not recorded.','尚未记录。')
+        result = result.replace('| Topic | Summary |', '| 事项 | 摘要 |').replace('| Commit | Author | Time | Change | Status |', '| 提交 | 作者 | 时间 | 改动 | 状态 |')
     return result
 
 
