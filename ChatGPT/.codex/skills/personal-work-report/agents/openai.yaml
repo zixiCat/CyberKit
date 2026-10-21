@@ -1,0 +1,7 @@
+interface:
+  display_name: "Personal Work Report"
+  short_description: "Draft verified work reports with evidence and next actions"
+  brand_color: "#176559"
+  default_prompt: "Use $personal-work-report to check setup and readiness on this computer."
+policy:
+  allow_implicit_invocation: true

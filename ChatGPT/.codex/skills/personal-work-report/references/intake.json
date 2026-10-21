@@ -1,0 +1,39 @@
+{
+  "slug": "report-date-subject",
+  "title": "Report subject",
+  "author": "zixiCat",
+  "audience": "Leader and coworkers",
+  "date": "YYYY-MM-DD",
+  "period": "Today or task period",
+  "mode": "daily",
+  "status": "Draft",
+  "goal": "What outcome was needed and why",
+  "conclusion": "What is true now and the main takeaway",
+  "impact": "Who benefits and how; label unmeasured impact",
+  "decision": "Specific decision or no decision requested",
+  "completed": [
+    {
+      "text": "Observable completed action",
+      "evidence_ids": []
+    }
+  ],
+  "validation": [
+    {
+      "text": "Check, result, scope and conditions",
+      "evidence_ids": []
+    }
+  ],
+  "limitations": [
+    "Current blocker or limitation; do not assume none"
+  ],
+  "next": [
+    {
+      "action": "Next proposed action",
+      "owner": "To confirm",
+      "due": "To confirm"
+    }
+  ],
+  "evidence": [],
+  "details": [],
+  "language": "en"
+}

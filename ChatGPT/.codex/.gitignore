@@ -1,0 +1,20 @@
+# Version user instructions and custom skills.
+/*
+!/.gitignore
+!/AGENTS.md
+!/skills/
+
+# Exclude bundled skills, caches, credentials, and personal runtime data.
+/skills/.*
+/skills/**/.git/
+/skills/**/__pycache__/
+/skills/**/node_modules/
+/skills/**/*.py[cod]
+/skills/**/.env
+/skills/**/.env.*
+/skills/**/auth.json
+/skills/**/*.jsonl
+/skills/**/*.log
+/skills/**/*.sqlite*
+/skills/**/*.zip
+/skills/**/*.tar.gz

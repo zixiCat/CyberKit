@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Manager"
+  short_description: "Delegate project work and monitor completion"
+  default_prompt: "Use $task-manager to initialize this chat as my Task Manager with delegation and scheduled completion monitoring."
