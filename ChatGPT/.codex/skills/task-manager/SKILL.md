@@ -7,6 +7,12 @@ description: Coordinate project work through the most relevant existing executor
 
 Turn the current chat into the user's coordination hub. Bare `$task-manager` initializes/checks this chat without extra wording; an explicit delegation/status request or a scheduled monitor run follows its own mode. Keep implementation in the relevant executor chats. Never create worktrees.
 
+## Quiet coordination, including voice
+
+- Acknowledge a successful dispatch once. After that, speak only for a meaningful new result, failure, required user action, or an explicit status question. Apply this during active voice conversations as well as scheduled checks.
+- Never announce waiting, repeat a dispatch acknowledgement, or add filler because a tool is running, a poll timed out, or an executor is still working. Do not read quiet heartbeat decisions aloud. Silence needs no spoken explanation.
+- During voice coordination, once a dispatch is recorded and its monitor is verified ACTIVE, avoid repeated foreground waits whose only purpose is polling. Leave ongoing completion checks to the same quiet monitor. If a result must be awaited in the active turn, wait without commentary unless there is a meaningful change.
+
 ## Route project work before executing
 
 The manager coordinates; executor chats investigate, implement and validate project work. Apply this boundary to follow-ups, pasted URLs/configuration, troubleshooting and small requests such as "try it" or "go ahead" as well as large tasks. Do not run a quick project command, HTTP probe, browser test, repository search or fix in the manager before deciding where the work belongs.
