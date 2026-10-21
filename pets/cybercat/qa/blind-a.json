@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "ambiguous",
+      "B": "screen-right",
+      "reason": "A: both eyes are fully exposed with nearly centered irises and no clear projecting nose; a tiny facial offset is insufficient. B: nose/mouth sit to the right of the head center, with a broad screen-left cheek and compressed far eye."
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: rightward facial profile, nose and mouth near the screen-right contour, with the far eye narrowed. B: nose/mouth shift left, the screen-left eye is compressed, and the screen-right cheek is broader."
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: clear rightward nose and mouth projection with a narrow far eye along the right outline. B: nose projects at the left outline and the right cheek and near eye dominate."
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A: strong left profile with the nose at the left silhouette and essentially one dominant visible eye. B: nose and mouth approach the right silhouette, with the broad cheek on screen-left."
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: face midline and mouth are displaced right, and the eye at the right contour is narrower. B: face midline points left, with a compressed left eye and broader right cheek."
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: despite downward pitch, the nose/mouth and chin shift toward screen-right and the right eye is compressed. B: the nose/mouth move toward screen-left, the left eye narrows, and the broad cheek lies on screen-right."
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "A: downward pitch is apparent, but the nose/mouth are nearly centered between two broadly visible eyes and iris displacement is inconclusive. B: nearly symmetric frontal face, centered mouth and chin, and no reliable lateral iris or nose cue."
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "up",
+      "reason": "A: eyes and mouth lie low under a large visible crown, upper lids compress the eyes, and little chin remains below the mouth. B: eyes and mouth sit high on an expanded exposed face, with a long lower-face area and raised chin."
+    },
+    {
+      "pair": "vertical-2",
+      "A": "down",
+      "B": "up",
+      "reason": "A: face sits low beneath the bangs, with low eyes, a small lower-face area, and tucked chin. B: raised eye line and facial projection expose more cheek and lower face beneath the mouth."
+    },
+    {
+      "pair": "vertical-3",
+      "A": "up",
+      "B": "down",
+      "reason": "A: elevated nose/mouth, open eyes high on the face, and exposed lower cheek/chin indicate upward pitch. B: eye line and mouth are low under the hair, with a short chin area and tucked face."
+    },
+    {
+      "pair": "vertical-4",
+      "A": "up",
+      "B": "down",
+      "reason": "A: nose and mouth project upward/right, eyes sit high, and the lower face is exposed. B: the face is carried lower beneath the bangs, the mouth sits near the chin, and the upper crown is prominent; the downward cue is mild."
+    },
+    {
+      "pair": "vertical-5",
+      "A": "ambiguous",
+      "B": "down",
+      "reason": "A: nearly level frontal eye line, centered irises, and no decisive raised-chin or upward nose cue. B: eyes and mouth are set low under a large crown, eyelids compress the eyes, and the chin tucks toward the collar."
+    },
+    {
+      "pair": "vertical-6",
+      "A": "down",
+      "B": "up",
+      "reason": "A: eyes and nose/mouth are carried low beneath the fringe, with narrowed upper lids and little visible chin. B: elevated eye line and nose/mouth, open eyes, and a fuller exposed lower face indicate upward pitch."
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "A: the leftward nose and mouth are elevated, the eye line is high, and lower cheek/chin remain exposed. B: nose/mouth and eyes sit low beneath the fringe, with a shorter lower-face area and lowered head; the pitch is subtle."
+    }
+  ]
+}

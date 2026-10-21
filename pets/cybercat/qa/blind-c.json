@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A: muzzle and eye midpoint sit left of the head center, with the right earcup broader than the left; a subtle left turn. B: muzzle points right, the right eye is compressed near the face edge, and the left cheek is broad."
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: nose/mouth project toward the right outline, with the far right eye narrowed. B: nose/mouth project toward the left outline, with the far left eye narrowed and the right cheek broad."
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: the nose/mouth cluster is right of center and the far right eye is compressed. B: a visible left-facing nose contour and a compressed left eye establish the left turn."
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A: the nose silhouette projects strongly left and only the near eye is clearly visible. B: the nose/mouth cluster projects right and the right eye is compressed near the outline."
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: muzzle lies right of the face center and the far right eye is narrow. B: muzzle lies left of center, with the left eye compressed against the left outline and a broad right cheek."
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: lowered face still has a right-offset muzzle and compressed far right eye. B: lowered muzzle points left, the far left eye is compressed, and the right cheek remains more exposed."
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "screen-left",
+      "B": "ambiguous",
+      "reason": "A: slight left-offset muzzle and eye midpoint, with a broader right earcup, support a subtle left turn despite the downward pitch. B: eyes, mouth, and chin appear centered and nearly symmetric; no reliable left/right nose or iris displacement is visible."
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "up",
+      "reason": "A: large upper forehead, lowered narrowed eyes, and mouth crowded toward the collar indicate chin-down pitch. B: raised open eyes and mouth with a large visible lower-cheek/chin area indicate chin-up pitch."
+    },
+    {
+      "pair": "vertical-2",
+      "A": "down",
+      "B": "up",
+      "reason": "A: eye line and muzzle sit low beneath a broad forehead, and the chin is tucked close to the collar. B: eyes and muzzle sit high on the exposed face and the raised chin leaves a substantial lower-cheek area."
+    },
+    {
+      "pair": "vertical-3",
+      "A": "up",
+      "B": "down",
+      "reason": "A: eyes and nose/mouth are raised, with an open near eye and exposed lower cheek. B: upper lids sit lower over the irises, the muzzle is low, and the chin is tucked toward the collar."
+    },
+    {
+      "pair": "vertical-4",
+      "A": "up",
+      "B": "down",
+      "reason": "A: open eye and raised muzzle leave a substantial cheek area below the mouth. B: lower upper-eyelid line and a lower muzzle shorten the visible chin area, indicating a mild downward pitch."
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "down",
+      "reason": "A: raised, open eyes and a high mouth leave a broad lower-face area; upward pitch is mild. B: heavier upper lids, low eye/mouth placement, and a tucked chin indicate down."
+    },
+    {
+      "pair": "vertical-6",
+      "A": "down",
+      "B": "up",
+      "reason": "A: eyes are lowered and partly covered by upper lids, with the muzzle tucked close to the collar. B: eyes are open and high, the muzzle is raised, and more lower cheek is visible."
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "A: raised nose contour, open near eye, and exposed lower cheek indicate up. B: lower eyelids/iris line and lowered muzzle with less visible chin indicate a mild down pitch."
+    }
+  ]
+}

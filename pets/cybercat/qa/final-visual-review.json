@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "review_type": "independent static visual review",
+  "blockers": [],
+  "reviewed": [
+    "final/spritesheet.png",
+    "qa/direction-review.png",
+    "package/motion-stills.png",
+    "package/look-directions.png",
+    "package/look.gif",
+    "package/animations/waving.gif",
+    "package/cute.gif",
+    "package/validation.json"
+  ],
+  "native_border_review": {
+    "cell_size": [
+      192,
+      208
+    ],
+    "directions": [
+      135,
+      157.5,
+      180,
+      337.5,
+      0
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#23262d"
+    ],
+    "method": "Existing atlas cells were alpha-composited in memory at native size; artwork and files were unchanged.",
+    "observations": [
+      "Dark outer contours remain distinct on light and dark backgrounds.",
+      "No old speckled opaque fringe is visible in the inspected crops.",
+      "Halo openings and gaps above the head read as intended transparent negative space; no broken body contour is visible."
+    ]
+  },
+  "transition_review": [
+    {
+      "sequence": [
+        135,
+        157.5,
+        180
+      ],
+      "finding": "Acceptable with a subtle intermediate.",
+      "observations": [
+        "135 is clearly down-right; 180 is clearly down.",
+        "157.5 is nearly frontal/down with a weak horizontal component.",
+        "The turn toward frontal is more abrupt at 135 to 157.5 than in nearby steps, but there is no clear visual evidence of an opposite-direction reversal.",
+        "Body scale, complete silhouette and foot baseline remain stable."
+      ],
+      "certainty": "Exact 22.5-degree spacing cannot be established from stylized static artwork."
+    },
+    {
+      "sequence": [
+        337.5,
+        0
+      ],
+      "finding": "Acceptable orientation change.",
+      "observations": [
+        "The face broadens as up-left becomes frontal-up.",
+        "The head change is more noticeable than some adjacent steps, but the body and foot baseline remain stable; it does not read as a whole-character resize.",
+        "No broken contour or clear directional reversal is visible."
+      ]
+    }
+  ],
+  "gif_review": {
+    "first_decoded_frames_reviewed": [
+      "look.gif",
+      "animations/waving.gif",
+      "cute.gif"
+    ],
+    "full_real_time_loop_watched": false,
+    "content_validation": "Existing package validation reports zero alpha-mask mismatches and exact timings for all 57 standard state frames, cute.gif and idle-jump-idle.gif.",
+    "limitation": "This review compares existing static keyframes and decoded first GIF frames; it does not claim smooth real-time playback was observed."
+  },
+  "warnings": [
+    "The horizontal component at 157.5 degrees remains ambiguous and should be recorded as a nonblocking limitation.",
+    "The 337.5 to 0 wrap has a noticeable head-orientation step, without a visible body-scale jump."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A: The nose/mouth axis and visible face sit slightly left within the headset, with more right-side head volume; this is a subtle left turn. B: The nose/mouth project toward the right face edge, the far eye is compressed, and the broad visible left cheek indicates a right turn."
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: The muzzle lies near the right silhouette and the rightmost eye is narrowed by the face edge; the broad near cheek is on the left. B: The nose/mouth sit left of the head center, the leftmost eye is foreshortened, and the broad right cheek is visible."
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: The small far eye and projecting muzzle are at the right edge, with the broad near eye/cheek to their left. B: The nose projects from the left contour and the far eye is a narrow sliver there, while the near eye and cheek occupy the right side."
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A: The nose breaks the left profile, only one eye is substantially visible, and the large headset and cheek are on the right. B: The muzzle approaches the right outline, the rightmost eye is compressed, and the near left eye/cheek remain broad."
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: The nose/mouth lie right of the face center and the rightmost eye is foreshortened beneath the fringe. B: The nose reaches the left contour, the far left eye is narrow, and the broad near eye/cheek are on the right."
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A: Despite the lowered pitch, the muzzle is right of the head center and the rightmost eye is smaller than the near left eye. B: The face axis and nose lie left of the head center, with a compressed far left eye and broad right cheek."
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "screen-left",
+      "B": "ambiguous",
+      "reason": "A: The downturned face and mouth axis are shifted slightly left inside the headset, and the irises favor the left side of their eye openings; the horizontal cue is subtle. B: The nose/mouth are centered, the eye openings and irises appear approximately symmetric, and no dependable left or right displacement is visible."
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "up",
+      "reason": "A: The eye line sits low beneath the large visible crown, upper lids cover the irises, and the mouth/chin region is compressed toward the collar. B: The eyes sit high in the exposed face, the muzzle is raised, and the long visible lower cheek/chin opens above the neck."
+    },
+    {
+      "pair": "vertical-2",
+      "A": "down",
+      "B": "up",
+      "reason": "A: The fringe and crown dominate above the eyes, the eyelids angle downward, and the short mouth-to-chin region tucks toward the collar. B: The nose/mouth lift toward the right upper face, the eyes are open and high, and the lower jaw/chin are visibly extended."
+    },
+    {
+      "pair": "vertical-3",
+      "A": "up",
+      "B": "down",
+      "reason": "A: The projecting right muzzle tips upward, the near iris sits high in an open eye, and a broad lower cheek/chin remains exposed. B: The eyes and muzzle sit low under the fringe, the upper lids flatten over the irises, and the chin is tucked close to the collar."
+    },
+    {
+      "pair": "vertical-4",
+      "A": "up",
+      "B": "down",
+      "reason": "A: The rightward nose/muzzle tilt upward, the near eye is open with a high iris, and the lower cheek/jaw are extended. B: The eye line is lower under the bangs, the upper lids press down slightly, and the nose/mouth and shortened chin angle toward the collar; the downward pitch is mild."
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "down",
+      "reason": "A: The eyes are open and positioned high in the visible face, with a raised small muzzle and an exposed rounded lower cheek/chin; the upward pitch is mild. B: The head crown dominates, the upper lids flatten over the lowered irises, and the mouth/chin compress toward the collar."
+    },
+    {
+      "pair": "vertical-6",
+      "A": "down",
+      "B": "up",
+      "reason": "A: The leftward muzzle and lowered eye line angle toward the collar, the lids cover the upper irises, and the chin is tucked. B: The eyes are open higher in the exposed face, the leftward muzzle is raised, and the broad lower cheek/chin remain visible beneath the mouth."
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "A: The left-profile nose points upward, the near iris is high within the eye, and the lower jaw extends beneath the raised muzzle. B: The muzzle slopes slightly downward, the eyes sit low beneath the fringe with a lowered upper lid, and the chin turns toward the collar; the pitch is subtle."
+    }
+  ]
+}

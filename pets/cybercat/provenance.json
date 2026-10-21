@@ -7,7 +7,7 @@
     "path": "brand/CyberCat.png"
   },
   "artwork_tool": "built-in ImageGen",
-  "brief": "Preserve purple bob hair, cyan streaks, violet eyes, cat ears, headphones, halo and purple cyber clothing. Extend the brand bust into a tiny full-body chibi. Use cute blinking, waving, hopping, hopeful waiting, focused work and expressive reactions; no new props or text. Generate coherent state strips and clockwise gaze rows from the same canonical reference.",
+  "brief": "Simplify CyberCat for a tiny desktop companion: broad purple/cyan shapes, a smooth consistent dark-purple outline, large simple eyes, a plain hoodie with one cyan dot and two collar stripes, mitten hands and plain boots. Preserve cat ears, headphones, purple bob hair with a cyan accent, and one clean cyan halo. Remove dense costume panels, hardware, tiny highlights, glitter, fine hair strands and glow. Keep cute blinking, waving, hopping, expectant waiting, thinking and expressive reactions. Generate genuine transparent alpha and coherent state/gaze strips from the same simplified canonical reference.",
   "sprite_version": 2,
   "cell_size": [
     192,
@@ -29,6 +29,7 @@
     "review": 6
   },
   "look_directions": 16,
-  "processing": "Bundled work-pets 0.1.6 extraction, inspection, atlas composition, look registration, one chroma despill, structural validation and quality checks. Shared transform per animation state preserves original jump displacement.",
-  "local_state_included": false
+  "processing": "Bundled work-pets 0.1.6 frame extraction, inspection, atlas composition, shared state transforms, look registration, structural validation and quality checks. Source imagery uses true alpha; chroma color correction is disabled (strength 0), preserving purple/cyan colors. Hidden RGB under zero alpha is cleared. GIF export uses a shared palette, alpha threshold 128, reserved transparency and no dithering. Each state retains its own pose motion and one common scale.",
+  "local_state_included": false,
+  "revision": "simplified-clean-outline"
 }

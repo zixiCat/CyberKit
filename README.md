@@ -6,7 +6,7 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 CyberKit includes the [CyberCat pet and reusable animations](pets/cybercat/README.md), based on the [CyberCat brand mascot](https://github.com/zixiCat/CyberCat/tree/master/brand).
 
-![CyberCat waving](pets/cybercat/animations/waving.gif)
+![CyberCat waving with a simple design and clean outline](pets/cybercat/animations/waving.gif)
 
 The setup helper installs the pet package into this computer's resolved Codex home. In Settings > Pets, select Refresh and choose CyberCat. Existing pet selection and unrelated pets are preserved.
 
