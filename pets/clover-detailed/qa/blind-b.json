@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's nose and mouth sit left of the eye line center, with the left cheek edge projecting left; B's nose and mouth project right and the right cheek is the leading edge."
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A shows a left-projecting nose and a larger visible eye on the screen-right half of its face; B shows the reversed face wedge, with the nose pointing right."
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's nose tip and exposed face wedge point left beneath the fringe; B's nose tip and chin wedge point right, with the exposed eye on the left side of that wedge."
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A has a strongly left-facing profile, with its nose at the left edge of the exposed face; B has the nose at the right edge and the face profile points right."
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A's exposed eye, nose, and cheek form a right-facing face wedge beneath the hair; B's nose projects left beyond its visible eye and cheek."
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "Despite the lowered chins, A's small nose and face wedge extend left of the visible screen-right eye; B's nose and exposed cheek extend right beneath its eye."
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A's low face wedge and nose point right under the fringe; B's nose and exposed cheek point left, with the more visible eye on the screen-right side."
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "up",
+      "reason": "A shows a broad crown above goggles, a low compressed eye line, and chin tucked into the collar; B shows an open raised face, higher eye line, and chin lifted clear of the collar."
+    },
+    {
+      "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "A's eyes and nose sit high in an open face with lifted chin; B exposes more crown, lowers the eye line under the fringe, and tucks the chin."
+    },
+    {
+      "pair": "vertical-3",
+      "A": "up",
+      "B": "down",
+      "reason": "A has a raised chin and open eye line with less crown dominating the face; B has the eye line low beneath a larger crown and chin close to the collar."
+    },
+    {
+      "pair": "vertical-4",
+      "A": "up",
+      "B": "down",
+      "reason": "A's chin is lifted and its eye line and nose sit higher in the exposed face; B's eye line drops under the fringe and the cheek-to-chin area slopes toward a tucked chin."
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "down",
+      "reason": "A exposes a lifted chin and full open face below the eye line; B's crown and goggles dominate above low half-lidded eyes, with chin tucked near the collar."
+    },
+    {
+      "pair": "vertical-6",
+      "A": "up",
+      "B": "down",
+      "reason": "A's raised face shows higher eyes, nose, and lifted chin; B shows more crown and a lower eye line with the chin drawn into the collar."
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "A has a higher eye line and lifted chin beneath the left-facing nose; B's eye line and nose are lower beneath the crown, and the chin tucks toward the collar."
+    }
+  ]
+}

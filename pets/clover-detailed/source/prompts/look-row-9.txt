@@ -1,0 +1,21 @@
+REPAIR THE SOURCE LAYOUT. Draw EIGHT SMALL isolated complete characters with HUGE transparent gutters in ONE horizontal row. Each whole character is only 40% of canvas height. Leave top 30% and bottom 30% empty. Empty transparent gaps between figures must be at least HALF A CHARACTER'S HAIR WIDTH. Never let even a single hair or cuff pixel touch another figure. Keep all eight characters small enough to fit this spacing.
+
+Use case: identity-preserve
+Asset: one COHERENT EIGHT-POSE full-body gaze strip for detailed Clover animated pet, first clockwise half.
+Inputs: 1 canonical detailed identity; 2 approved standard-animation contact sheet for proportions/style (do not draw grid/labels); 3 approved cardinal strip in order UP, RIGHT, DOWN, LEFT, authoritative head families; 4 eight-slot spacing guide only (do not draw guide).
+Draw all eight poses together as one consistent family, never paste unrelated cells. EXACT left-to-right order:
+(1) 000 UP: match first approved anchor, head tipped BACK with raised chin, both open irises high.
+(2) 022.5 mostly UP with slight RIGHT head yaw, eyes high-right.
+(3) 045 clear UP-RIGHT: intermediate rightward head yaw and raised chin, eyes high-right.
+(4) 067.5 mostly RIGHT and slightly UP: strong right yaw, slightly raised chin, eyes right and slightly high.
+(5) 090 SCREEN-RIGHT: match second approved anchor, head yaws right, nose/face and open irises to viewer-right, neutral head pitch.
+(6) 112.5 mostly RIGHT and slightly DOWN: strong right yaw, slight bow/downward irises.
+(7) 135 clear DOWN-RIGHT: intermediate right yaw, head bow and downward-right irises.
+(8) 157.5 mostly DOWN and slightly RIGHT: near third approved DOWN anchor with tucked chin and clearly downcast open eyes, slight right yaw. Must flow by one even step into the approved DOWN anchor.
+Screen-right is viewer's right edge. This row moves smoothly through the RIGHT half of the look circle from up toward down, never reverses left. No neutral/front extra pose. Distinct natural head pitch/yaw, not body rotation or pupil-only motion.
+Anchoring: all boots/legs, front-facing torso, neutral arms/hands stay in EXACTLY the same planted pose, scale, baseline and registration. Head and eyes lead; goggles turn with skull, layered hair follows with natural cheek occlusion. Eyes stay OPEN and visible in all eight. Same original green eye anatomy/highlights and face construction, no replacement eyes. Curl remains attached to same part of head, never teleports sides.
+Detailed identity lock: match canonical taller chibi proportions and polished anime linework, rich layered cel shading/gradients. Fuller layered green hair with dark/light locks and curled tuft; large mint round forehead goggles; luminous green eyes. Long ivory scientist coat with large folded cuffs, lapels, sleeve folds and flared long hem; fitted dark-green wrap bodice with diagonal ivory trim; distinct pleated skirt with ivory hem trim; tall green boots with folded cuffs, diamond motifs and pale piping. No simplifying dress/coat/boots or flattening shading. Stable head/body size across family.
+Production geometry: exactly eight COMPLETE SEPARATED figures in one row. Deliberately leave generous transparent whitespace: full figure height at most 40% of image height, width at most 6.25% of full canvas width, centers at 6.25%,18.75%,31.25%,43.75%,56.25%,68.75%,81.25%,93.75% of full width. All soles at 70% image height, same anatomical scale. At least 6% full-canvas-width transparent gap between adjacent silhouettes. Transparent outer margins. Every curl, hair lock, cuff, coat tip and boot visible. No touching, merged figures, clipping or independently resized cells; deterministic registration will fit the family later.
+Background: genuine transparent alpha, no solid color/chroma key/checkerboard.
+Avoid text, labels, degree numbers, arrows, clocks, guide marks, boxes, scenery, new props, shadows, glows, floating effects, loose pixels, blur, overlap and cutoffs. Only eight complete connected Clover figures.
+The previous attempt merged poses 4 and 5. Do not reuse its oversized layout. This is an isolated sprite-production family with empty transparent space between all eight full silhouettes, and no posed group can touch another.

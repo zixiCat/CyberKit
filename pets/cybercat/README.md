@@ -1,6 +1,8 @@
-# Clover
+# Clover (Simple)
 
 A compact green-haired scientist companion with oversized mint goggles, a simple ivory coat, and an evergreen outfit. The original simplified chibi design takes its green-hair/scientist cues from the user's visual reference; it does not assert an exact source-character identity.
+
+This saved version keeps the simpler design. [Clover (Detailed)](../clover-detailed/README.md) retains the upper artwork's richer hair and costume details as a separate pet.
 
 ## Motion previews
 
@@ -24,9 +26,9 @@ The [action contact sheet](contact-sheet.png), [sixteen gaze directions](look-di
 
 ## Install
 
-Run `setup/install-config.ps1` with the actual checkout root as `RepositoryPath`. It installs only this package's `pet.json` and `spritesheet.png` into the current computer's resolved `CODEX_HOME/pets/cybercat`. The existing folder name is retained for compatibility; the display name is **Clover**. Existing selection and unrelated pets are preserved. Replaced files receive local backups.
+Run `setup/install-config.ps1` with the actual checkout root as `RepositoryPath`. It installs this package's `pet.json` and `spritesheet.png` into the current computer's resolved `CODEX_HOME/pets/cybercat`, alongside the separate detailed package. The existing folder name is retained for compatibility; the display name is **Clover (Simple)**. Existing selection and unrelated pets are preserved. Replaced files receive local backups.
 
-Open **Settings > Pets > Refresh**, then choose **Clover**. Desktop pets are local; this package does not create an account pet or copy another computer's selection.
+Open **Settings > Pets > Refresh**, then choose **Clover (Simple)** or **Clover (Detailed)**. Desktop pets are local; these packages do not create account pets or copy another computer's selection.
 
 The former design remains recoverable in [Git history](https://github.com/zixiCat/CyberKit/tree/474abe00db648ac27d8f470d0fbc090f8474a55a/pets/cybercat) and in the local backups made during replacement.
 

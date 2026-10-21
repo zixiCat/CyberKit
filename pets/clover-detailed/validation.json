@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "atlas": "spritesheet.png",
+  "states": [
+    {
+      "state": "idle",
+      "frames": 6,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "running-right",
+      "frames": 8,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "running-left",
+      "frames": 8,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "waving",
+      "frames": 4,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "jumping",
+      "frames": 5,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "failed",
+      "frames": 8,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "waiting",
+      "frames": 6,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "running",
+      "frames": 6,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "state": "review",
+      "frames": 6,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    }
+  ],
+  "sequences": [
+    {
+      "file": "cute.gif",
+      "frames": 21,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    },
+    {
+      "file": "animations/idle-jump-idle.gif",
+      "frames": 17,
+      "alpha_mismatches": 0,
+      "timings_exact": true
+    }
+  ],
+  "total_state_frames": 57
+}

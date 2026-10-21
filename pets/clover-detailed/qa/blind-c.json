@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's nose and mouth sit left of the face center, with the left cheek projecting; B's nose, mouth, and exposed cheek project right."
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A has a clear leftward nose tip and left cheek outline, with the far eye narrowed; B's nose and open facial oval shift toward screen-right."
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's nose and chin project left and the visible eyes face left; B has the corresponding nose, chin, and eye-facing direction to the right."
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's strongest visible eye and nose point left, with hair obscuring the far cheek; B shows a rightward nose profile and right-facing visible eye."
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A's exposed eye, nose tip, mouth, and chin are on the right edge of the face; B's nose and chin project from the left edge."
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "Despite the lowered heads, A's visible eye and small nose shift left of the forehead center; B's exposed eye, nose, and cheek are directed right."
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A's lowered face ends in a rightward nose and chin beneath the right-side visible eye; B's nose and exposed cheek extend left beneath the goggles."
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "up",
+      "reason": "A shows a large crown and goggles above a shortened, lowered face with hooded eyes; B has open raised eyes, a fuller exposed face, and a lifted chin."
+    },
+    {
+      "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "A's eyes are open and raised, with the nose and chin visibly lifted; B exposes more crown while the eye line and chin tuck down under the fringe."
+    },
+    {
+      "pair": "vertical-3",
+      "A": "up",
+      "B": "down",
+      "reason": "A's visible cheek and chin extend below an open, raised eye line; B's crown dominates and the eyes and chin sit lowered under the bangs."
+    },
+    {
+      "pair": "vertical-4",
+      "A": "up",
+      "B": "down",
+      "reason": "A has a longer exposed facial oval, raised open eye, and lifted chin; B's eye line is lower beneath the fringe and its chin is tucked closer to the collar."
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "down",
+      "reason": "A's lifted chin and open upward-looking eyes reveal the face below the goggles; B's enlarged crown and goggles overhang hooded eyes and a lowered chin."
+    },
+    {
+      "pair": "vertical-6",
+      "A": "up",
+      "B": "down",
+      "reason": "A's nose and chin angle upward with a clear open eye and exposed cheek; B's eyes look out beneath a lowered brow and the chin is tucked down."
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "A has an open visible eye and an exposed cheek with the chin lifted forward; B's visible eye is hooded beneath the brow, with more crown visible and the chin lowered."
+    }
+  ]
+}

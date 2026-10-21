@@ -1,0 +1,1 @@
+No new base-art generation was needed for this revision. The exact full-resolution transparent original detailed artwork matches the upper illustration explicitly selected by the user. It is reused as canonical-base.png and packaged as clover.png. All subsequent state, cardinal and gaze jobs use that detailed reference. The simple design remains saved separately.

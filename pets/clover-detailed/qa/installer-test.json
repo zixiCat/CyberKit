@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "installed_designs": [
+    "cybercat",
+    "clover-detailed"
+  ],
+  "four_file_source_parity": true,
+  "fresh_repeat_changes": 0,
+  "existing_pet_replacements": 4,
+  "local_instructions_preserved": true,
+  "selection_and_unrelated_pet_preserved": true,
+  "all_replaced_file_backups_preserved": true,
+  "existing_repeat_changes": 0
+}

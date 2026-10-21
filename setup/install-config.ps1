@@ -46,12 +46,11 @@ foreach($name in $names) {
         $files += [pscustomobject]@{Source=$item.FullName;Relative=('skills\' + $name + '\' + $item.FullName.Substring($root.Length+1))}
     }
 }
-$petRoot = Join-Path $RepositoryPath 'pets\cybercat'
-$petNames = @()
-if(Test-Path -LiteralPath (Join-Path $petRoot 'pet.json') -PathType Leaf) {
-    $petNames = @('cybercat')
+$petNames = @('cybercat','clover-detailed')
+foreach($petName in $petNames) {
+    $petRoot = Join-Path $RepositoryPath ('pets\' + $petName)
     foreach($petFile in @('pet.json','spritesheet.png')) {
-        $files += [pscustomobject]@{Source=(Join-Path $petRoot $petFile);Relative=('pets\cybercat\' + $petFile)}
+        $files += [pscustomobject]@{Source=(Join-Path $petRoot $petFile);Relative=('pets\' + $petName + '\' + $petFile)}
     }
 }
 foreach($file in $files) {

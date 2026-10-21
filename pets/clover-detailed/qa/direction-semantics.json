@@ -1,0 +1,120 @@
+{
+  "ok": true,
+  "atlas_sha256": "4faed723f0450dcf73185aca9b0076a8478693c23f2905982a2f8afd20de05f2",
+  "method": "Primary labeled review of all sixteen native cells and face crops in the final direction sheet, supported by three independent randomized blind axis reviews. No live playback claim.",
+  "directions": [
+    {
+      "label": "000",
+      "expected": "up",
+      "observed": "Frontal face lifts upward.",
+      "verdict": "pass",
+      "evidence": "Raised chin, open upper-directed irises and exposed lower face distinguish it from the bowed down cardinal. Body stays frontal."
+    },
+    {
+      "label": "022.5",
+      "expected": "up-right",
+      "observed": "Raised face starts a rightward yaw.",
+      "verdict": "pass",
+      "evidence": "Nose and mouth move right of head center, high irises and lifted chin preserve upward pitch."
+    },
+    {
+      "label": "045",
+      "expected": "up-right",
+      "observed": "Moderate screen-right turn and high gaze.",
+      "verdict": "pass",
+      "evidence": "Face midline and near cheek project right, far eye compresses and visible irises favor upper-right."
+    },
+    {
+      "label": "067.5",
+      "expected": "up-right",
+      "observed": "Mostly rightward face with shallow upward pitch.",
+      "verdict": "warning",
+      "evidence": "Right-facing nose and cheek are clear; chin and irises remain slightly above level-right090. Upward component is subtle, but blind majority identified both axes correctly."
+    },
+    {
+      "label": "090",
+      "expected": "right",
+      "observed": "Unmistakable screen-right head and eyes.",
+      "verdict": "pass",
+      "evidence": "Nose projects toward the right face contour, far eye is narrow, visible iris favors right. Torso, boots and hands remain frontal."
+    },
+    {
+      "label": "112.5",
+      "expected": "down-right",
+      "observed": "Rightward yaw begins a downward bow.",
+      "verdict": "pass",
+      "evidence": "Nose remains screen-right while eyelids, gaze and chin lower relative to090; goggles tilt with the head."
+    },
+    {
+      "label": "135",
+      "expected": "down-right",
+      "observed": "Right-facing head bows visibly.",
+      "verdict": "pass",
+      "evidence": "More crown/goggle surface, low eye line and tucked chin combine with rightward facial projection."
+    },
+    {
+      "label": "157.5",
+      "expected": "down-right",
+      "observed": "Deep bow retains rightward face bias.",
+      "verdict": "pass",
+      "evidence": "Face and chin sit low beneath the fringe; mouth/nose and asymmetric cheek retain a rightward component before the centered down cardinal."
+    },
+    {
+      "label": "180",
+      "expected": "down",
+      "observed": "Centered face looks down over a planted torso.",
+      "verdict": "pass",
+      "evidence": "Large visible crown and forward goggles, low lids and irises, tucked chin and lowered face clearly show down. Blind cardinal review passed."
+    },
+    {
+      "label": "202.5",
+      "expected": "down-left",
+      "observed": "Downward bow starts a shallow leftward yaw.",
+      "verdict": "pass",
+      "evidence": "Chin and eyelids stay low; nose, mouth and iris placement bias left of head center. Blind majority identified both axes."
+    },
+    {
+      "label": "225",
+      "expected": "down-left",
+      "observed": "Bowed face turns screen-left.",
+      "verdict": "pass",
+      "evidence": "Nose/cheek project left, far eye narrows, and eyes/chin remain lowered beneath the goggles."
+    },
+    {
+      "label": "247.5",
+      "expected": "down-left",
+      "observed": "Mostly leftward head with shallow downward pitch.",
+      "verdict": "warning",
+      "evidence": "Left facial projection is clear; eye line and chin remain lower than270. The vertical distinction is subtle in isolation but both blind axes passed."
+    },
+    {
+      "label": "270",
+      "expected": "left",
+      "observed": "Unmistakable screen-left head and gaze.",
+      "verdict": "pass",
+      "evidence": "Nose and chin project toward left face edge, far eye is compressed and visible iris looks left. Body and boots remain frontal."
+    },
+    {
+      "label": "292.5",
+      "expected": "up-left",
+      "observed": "Left-facing head begins an upward lift.",
+      "verdict": "pass",
+      "evidence": "Left-facing nose and cheek persist while chin rises and irises move high relative to270."
+    },
+    {
+      "label": "315",
+      "expected": "up-left",
+      "observed": "Moderate left turn with lifted chin and eyes.",
+      "verdict": "pass",
+      "evidence": "Left-biased nose/mouth and cheek asymmetry combine with high irises and more exposed lower-face plane."
+    },
+    {
+      "label": "337.5",
+      "expected": "up-left",
+      "observed": "Raised face returns toward front with left bias.",
+      "verdict": "pass",
+      "evidence": "Chin remains raised, nose/mouth favor left and eyes aim upper-left. Blind majority identified both axes before return to000."
+    }
+  ],
+  "continuity_review": "Reviewed the local-outlier boundaries157.5->180,270->292.5 and337.5->000 in native final cells. Bowed right-facing hair/face moves toward a centered down face at157.5->180 (9.6px visible-bound center shift); hair and cheek silhouettes change at the wrap back to frontal up. Bodies, hands and soles stay planted and comparable in scale, faces remain present, and no wrong quadrant, broken attachment, clipped edge or alpha hole is visible. These are accepted hand-drawn variations, not a mathematically uniform turntable. The whole row10 source was uniformly fitted once to source density before the unchanged shared row9 registration; no final cell was independently resized. Independent final visual review records its own assessment."
+}

@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "method": "One uniform resampling of the entire coherent source strip to match source pixel density; final bundled registration uses the unchanged row9 scale for all sixteen gaze cells. No per-cell fitting or artwork drawing.",
+  "input": "creation-run/qa/rows/look-row-10/accepted-imagegen-original.png",
+  "output": "creation-run/decoded/look-row-10.png",
+  "input_sha256": "d2bafb36a3c6dd022d9d107808d983941b362619061d106923063b15d0010a8a",
+  "output_sha256": "2acc7005a4f3b659d5da70d60f7f93cd2e8acef0fde160d308590a23dbb285f4",
+  "input_size": [
+    2172,
+    724
+  ],
+  "output_size": [
+    2026,
+    675
+  ],
+  "scale": 0.9328859060402684,
+  "measured_source_max_pose_height": 447,
+  "target_source_max_pose_height": 417,
+  "row9_registration_scale": 0.4676258992805755
+}

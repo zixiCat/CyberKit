@@ -1,0 +1,123 @@
+{
+  "ok": true,
+  "atlas": "spritesheet.png",
+  "previews": [
+    {
+      "file": "animations/failed.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 8,
+      "duration_ms": 1220
+    },
+    {
+      "file": "animations/idle-jump-idle.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 17,
+      "duration_ms": 3040
+    },
+    {
+      "file": "animations/idle.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 6,
+      "duration_ms": 1100
+    },
+    {
+      "file": "animations/jumping.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 5,
+      "duration_ms": 840
+    },
+    {
+      "file": "animations/review.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 6,
+      "duration_ms": 1030
+    },
+    {
+      "file": "animations/running-left.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 8,
+      "duration_ms": 1060
+    },
+    {
+      "file": "animations/running-right.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 8,
+      "duration_ms": 1060
+    },
+    {
+      "file": "animations/running.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 6,
+      "duration_ms": 820
+    },
+    {
+      "file": "animations/waiting.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 6,
+      "duration_ms": 1010
+    },
+    {
+      "file": "animations/waving.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 4,
+      "duration_ms": 700
+    },
+    {
+      "file": "cute.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 21,
+      "duration_ms": 3650
+    },
+    {
+      "file": "look.gif",
+      "size": [
+        384,
+        448
+      ],
+      "frames": 16,
+      "duration_ms": 2400
+    },
+    {
+      "file": "preview.gif",
+      "size": [
+        384,
+        448
+      ],
+      "frames": 57,
+      "duration_ms": 8840
+    }
+  ]
+}
