@@ -1,6 +1,6 @@
 {
-  "name": "Clover (Detailed)",
-  "package_id": "clover-detailed",
+  "name": "Hakase (Detailed)",
+  "package_id": "hakase-detailed",
   "revision": "saved-detailed-upper-design",
   "artwork_tool": "built-in ImageGen",
   "canonical_art_reused": true,
@@ -30,7 +30,7 @@
   "processing": "Built-in ImageGen re-grounded every state and gaze row in the chosen detailed canonical artwork. Bundled work-pets 0.1.6 extraction, frame inspection, atlas composition, cardinal anchors, shared gaze registration, alpha cleanup, structural/quality validation and independent visual checks are reused. Standard rows use uniform row-wide scale/ground registration; side profiles inherit idle scale. Final PNG encoding is lossless. Generated pet pixels are not manually redrawn. GIF export uses shared palette, no dithering and alpha threshold128. Row10 source pixel density is normalized once with a uniform whole-strip resampling (417/447), then both gaze rows use the identical recorded row9 registration scale. No final cell is independently resized or recentered.",
   "prompts": "source/prompts/README.md",
   "canonical_design": "clover.png",
-  "companion_package": "../cybercat",
+  "companion_package": "../hakase-simple",
   "previous_revision": "https://github.com/zixiCat/CyberKit/tree/8633af6010bd2817b9c170f4b5b5215e488da608/pets/cybercat",
   "local_state_included": false,
   "account_pet_created": false,

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "atlas": "pets/cybercat/spritesheet.png",
+  "atlas": "pets/hakase-simple/spritesheet.png",
   "encoded_bytes": 3051474,
   "sha256": "ed59d829149a0769bd3082cce8e620d26055e425d9bb812bd653be1fea29221c",
   "jump": {

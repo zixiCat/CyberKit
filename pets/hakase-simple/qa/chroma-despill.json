@@ -1,7 +1,7 @@
 {
   "ok": true,
   "input": "creation-run/final/spritesheet-raw.png",
-  "output": "pets/clover-detailed/spritesheet.png",
+  "output": "pets/hakase-simple/spritesheet.png",
   "chroma_key": "#FF00FF",
   "algorithm": "edge-local-chroma-spill-suppression",
   "strength": 0.0,

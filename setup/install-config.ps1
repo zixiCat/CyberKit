@@ -46,7 +46,7 @@ foreach($name in $names) {
         $files += [pscustomobject]@{Source=$item.FullName;Relative=('skills\' + $name + '\' + $item.FullName.Substring($root.Length+1))}
     }
 }
-$petNames = @('cybercat','clover-detailed')
+$petNames = @('hakase-simple','hakase-detailed')
 foreach($petName in $petNames) {
     $petRoot = Join-Path $RepositoryPath ('pets\' + $petName)
     foreach($petFile in @('pet.json','spritesheet.png')) {

@@ -1,6 +1,6 @@
 # Hakase (Simple)
 
-Hakase's simple desktop pet. [Hakase (Detailed)](../clover-detailed/README.md) is available separately.
+Hakase's simple desktop pet. [Hakase (Detailed)](../hakase-detailed/README.md) is available separately.
 
 ## Motion previews
 
@@ -29,12 +29,12 @@ Copy this task into Codex to install **Hakase (Simple)** without the full Window
 ```text
 Install only Hakase (Simple) from https://github.com/zixiCat/CyberKit, using the latest main branch.
 
-Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/cybercat/pet.json and pets/cybercat/spritesheet.png from the repository into CODEX_HOME/pets/cybercat/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
+Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/hakase-simple/pet.json and pets/hakase-simple/spritesheet.png from the repository into CODEX_HOME/pets/hakase-simple/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
 
 Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Hakase (Simple).
 ```
 
-The existing `cybercat` folder name is retained for compatibility; the display name is **Hakase (Simple)**. Desktop pets are local; this package does not create an account pet or copy another computer's selection. For both pets plus instructions and skills, use the separate [full Windows setup](../../README.md#windows-setup).
+The package installs into `pets/hakase-simple`; its display name is **Hakase (Simple)**. Desktop pets are local; this package does not create an account pet or copy another computer's selection. For both pets plus instructions and skills, use the separate [full Windows setup](../../README.md#windows-setup).
 
 The former design remains recoverable in [Git history](https://github.com/zixiCat/CyberKit/tree/474abe00db648ac27d8f470d0fbc090f8474a55a/pets/cybercat) and in the local backups made during replacement.
 
@@ -47,9 +47,9 @@ The PNG preserves smooth alpha edges. Native-size GIFs use a shared palette, no 
 To rebuild and check the exports from the checkout root:
 
 ```powershell
-python -m pip install -r pets/cybercat/tools/requirements.txt
-python pets/cybercat/tools/export_previews.py --atlas pets/cybercat/spritesheet.png --output-dir pets/cybercat
-python pets/cybercat/tools/export_previews.py --atlas pets/cybercat/spritesheet.png --output-dir pets/cybercat --validate
+python -m pip install -r pets/hakase-simple/tools/requirements.txt
+python pets/hakase-simple/tools/export_previews.py --atlas pets/hakase-simple/spritesheet.png --output-dir pets/hakase-simple
+python pets/hakase-simple/tools/export_previews.py --atlas pets/hakase-simple/spritesheet.png --output-dir pets/hakase-simple --validate
 ```
 
 ## Evidence and source

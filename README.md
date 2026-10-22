@@ -8,10 +8,10 @@ Copy your chosen pet's task from the table into Codex to install only that desig
 
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |
-| **[Hakase (Detailed)](pets/clover-detailed/README.md)**<br><img src="pets/clover-detailed/animations/waving.gif" alt="Hakase (Detailed) waving" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
-| **[Hakase (Simple)](pets/cybercat/README.md)**<br><img src="pets/cybercat/animations/waving.gif" alt="Hakase (Simple) waving" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Detailed)](pets/hakase-detailed/README.md)**<br><img src="pets/hakase-detailed/animations/waving.gif" alt="Hakase (Detailed) waving" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Simple)](pets/hakase-simple/README.md)**<br><img src="pets/hakase-simple/animations/waving.gif" alt="Hakase (Simple) waving" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-simple/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
-The simple design retains the existing `cybercat` folder for compatibility; the detailed design uses `clover-detailed`. The full Windows setup installs both designs along with instructions and skills.
+The packages use `hakase-simple` and `hakase-detailed` folders. The full Windows setup installs both designs along with instructions and skills.
 
 ## Windows setup
 

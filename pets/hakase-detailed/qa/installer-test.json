@@ -1,8 +1,8 @@
 {
   "ok": true,
   "installed_designs": [
-    "cybercat",
-    "clover-detailed"
+    "hakase-simple",
+    "hakase-detailed"
   ],
   "four_file_source_parity": true,
   "fresh_repeat_changes": 0,

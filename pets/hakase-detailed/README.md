@@ -1,6 +1,6 @@
 # Hakase (Detailed)
 
-Hakase's detailed desktop pet. [Hakase (Simple)](../cybercat/README.md) is available separately.
+Hakase's detailed desktop pet. [Hakase (Simple)](../hakase-simple/README.md) is available separately.
 
 ## Motion previews
 
@@ -29,7 +29,7 @@ Copy this task into Codex to install **Hakase (Detailed)** without the full Wind
 ```text
 Install only Hakase (Detailed) from https://github.com/zixiCat/CyberKit, using the latest main branch.
 
-Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/clover-detailed/pet.json and pets/clover-detailed/spritesheet.png from the repository into CODEX_HOME/pets/clover-detailed/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
+Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/hakase-detailed/pet.json and pets/hakase-detailed/spritesheet.png from the repository into CODEX_HOME/pets/hakase-detailed/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
 
 Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Hakase (Detailed).
 ```
@@ -43,9 +43,9 @@ The transparent lossless PNG uses sprite version 2: **1536 × 2288**, eight colu
 To rebuild exports from the checkout root:
 
 ```powershell
-python -m pip install -r pets/clover-detailed/tools/requirements.txt
-python pets/clover-detailed/tools/export_previews.py --atlas pets/clover-detailed/spritesheet.png --output-dir pets/clover-detailed
-python pets/clover-detailed/tools/export_previews.py --atlas pets/clover-detailed/spritesheet.png --output-dir pets/clover-detailed --validate
+python -m pip install -r pets/hakase-detailed/tools/requirements.txt
+python pets/hakase-detailed/tools/export_previews.py --atlas pets/hakase-detailed/spritesheet.png --output-dir pets/hakase-detailed
+python pets/hakase-detailed/tools/export_previews.py --atlas pets/hakase-detailed/spritesheet.png --output-dir pets/hakase-detailed --validate
 ```
 
 ## Source and validation
