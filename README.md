@@ -4,36 +4,12 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 ## Clover desktop pets
 
-Both Clover designs are saved as separate green-haired scientist companions:
+Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
-| Design | Artwork and animations | Motion |
+| Design and artwork | Motion | Copy into Codex (pet only) |
 | --- | --- | --- |
-| **Clover (Detailed)** — layered hair, shaded coat and cuffs, trimmed pleated outfit, and taller boots | [Detailed version](pets/clover-detailed/README.md) | ![Detailed Clover waving](pets/clover-detailed/animations/waving.gif) |
-| **Clover (Simple)** — rounded proportions, plain outfit, and simpler shapes | [Simple version](pets/cybercat/README.md) | ![Simple Clover waving](pets/cybercat/animations/waving.gif) |
-
-### Copy and use one pet
-
-Want just a pet? Copy the task for your chosen design into Codex. Each task installs only that pet; the full Windows setup below is optional.
-
-**Clover (Detailed)**
-
-```text
-Install only Clover (Detailed) from https://github.com/zixiCat/CyberKit, using the latest main branch.
-
-Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/clover-detailed/pet.json and pets/clover-detailed/spritesheet.png from the repository into CODEX_HOME/pets/clover-detailed/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
-
-Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Clover (Detailed).
-```
-
-**Clover (Simple)**
-
-```text
-Install only Clover (Simple) from https://github.com/zixiCat/CyberKit, using the latest main branch.
-
-Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/cybercat/pet.json and pets/cybercat/spritesheet.png from the repository into CODEX_HOME/pets/cybercat/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
-
-Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Clover (Simple).
-```
+| **[Clover (Detailed)](pets/clover-detailed/README.md)** — layered hair, shaded coat and cuffs, trimmed pleated outfit, and taller boots | ![Detailed Clover waving](pets/clover-detailed/animations/waving.gif) | `Install only Clover (Detailed) from https://github.com/zixiCat/CyberKit using the latest main branch. Follow the "Copy and use only this pet" instructions in pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Clover (Simple)](pets/cybercat/README.md)** — rounded proportions, plain outfit, and simpler shapes | ![Simple Clover waving](pets/cybercat/animations/waving.gif) | `Install only Clover (Simple) from https://github.com/zixiCat/CyberKit using the latest main branch. Follow the "Copy and use only this pet" instructions in pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
 The simple design retains the existing `cybercat` folder for compatibility; the detailed design uses `clover-detailed`. The full Windows setup installs both designs along with instructions and skills.
 
