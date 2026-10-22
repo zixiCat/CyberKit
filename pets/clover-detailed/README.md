@@ -1,10 +1,10 @@
-# Clover (Detailed)
+# Hakase (Detailed)
 
-The saved detailed design keeps the user's chosen upper artwork: layered shaded green hair, oversized forehead goggles, an ivory coat with folded cuffs and lapels, a fitted wrap bodice and trimmed pleated skirt, and taller decorated boots. Its taller proportions and costume details are intentional. [Clover (Simple)](../cybercat/README.md) remains a separate saved pet.
+Hakase's detailed desktop pet. [Hakase (Simple)](../cybercat/README.md) is available separately.
 
 ## Motion previews
 
-![Detailed Clover blinking, waving, hopping and asking for input](cute.gif)
+![Hakase (Detailed) blinking, waving, hopping and asking for input](cute.gif)
 
 [All animations](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png)
 
@@ -24,14 +24,14 @@ See the [contact sheet](contact-sheet.png), [sixteen gaze directions](look-direc
 
 ## Copy and use only this pet
 
-Copy this task into Codex to install **Clover (Detailed)** without the full Windows setup:
+Copy this task into Codex to install **Hakase (Detailed)** without the full Windows setup:
 
 ```text
-Install only Clover (Detailed) from https://github.com/zixiCat/CyberKit, using the latest main branch.
+Install only Hakase (Detailed) from https://github.com/zixiCat/CyberKit, using the latest main branch.
 
 Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/clover-detailed/pet.json and pets/clover-detailed/spritesheet.png from the repository into CODEX_HOME/pets/clover-detailed/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
 
-Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Clover (Detailed).
+Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Hakase (Detailed).
 ```
 
 For both pets plus instructions and skills, use the separate [full Windows setup](../../README.md#windows-setup). The earlier revision remains in [Git history](https://github.com/zixiCat/CyberKit/tree/8633af6010bd2817b9c170f4b5b5215e488da608/pets/cybercat).

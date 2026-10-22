@@ -2,14 +2,14 @@
 
 Set up my Codex instructions and workflows on a new Windows computer with one task.
 
-## Clover desktop pets
+## Hakase desktop pets
 
 Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |
-| **[Clover (Detailed)](pets/clover-detailed/README.md)**<br>Layered hair and detailed costume.<br><img src="pets/clover-detailed/animations/waving.gif" alt="Detailed Clover waving" width="144" height="156"> | `Install only Clover (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
-| **[Clover (Simple)](pets/cybercat/README.md)**<br>Rounded proportions and simple outfit.<br><img src="pets/cybercat/animations/waving.gif" alt="Simple Clover waving" width="144" height="156"> | `Install only Clover (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Detailed)](pets/clover-detailed/README.md)**<br><img src="pets/clover-detailed/animations/waving.gif" alt="Hakase (Detailed) waving" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Simple)](pets/cybercat/README.md)**<br><img src="pets/cybercat/animations/waving.gif" alt="Hakase (Simple) waving" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
 The simple design retains the existing `cybercat` folder for compatibility; the detailed design uses `clover-detailed`. The full Windows setup installs both designs along with instructions and skills.
 
@@ -22,7 +22,7 @@ Set up this Windows computer from https://github.com/zixiCat/CyberKit.
 
 Fetch the latest main branch into a normal local checkout, reusing one if available and preserving uncommitted work. Review the repository instructions and setup scripts before running setup/install-config.ps1, passing the actual checkout root as RepositoryPath. Resolve this user's CODEX_HOME, Windows Documents folder and verified local skill directory; never reuse another computer's paths.
 
-Install/update AGENTS.md, the custom skills, and both bundled Clover desktop pets (Detailed and Simple). Preserve existing pet selection and unrelated pets; report the Settings > Pets > Refresh step when needed. Commit only shared instructions and Common hotwords to CyberKit. Keep the installed AGENTS.md's ### Local section only on this computer, preserve it during updates, and never copy it from another computer or upload it to GitHub. Preserve unrelated configuration and files. Never create worktrees or copy credentials/runtime state/sessions/local histories.
+Install/update AGENTS.md, the custom skills, and both bundled Hakase desktop pets (Detailed and Simple). Preserve existing pet selection and unrelated pets; report the Settings > Pets > Refresh step when needed. Commit only shared instructions and Common hotwords to CyberKit. Keep the installed AGENTS.md's ### Local section only on this computer, preserve it during updates, and never copy it from another computer or upload it to GitHub. Preserve unrelated configuration and files. Never create worktrees or copy credentials/runtime state/sessions/local histories.
 
 Read the installed skills and perform their bare-setup workflows: initialize this chat as the pinned manager with one quiet monitor that pauses when idle and resumes on new delegated work; check the available ActivityWatch service and its daily task; check reporting readiness. Use this computer as the default daily ActivityWatch scheduler at 20:00 Asia/Singapore without asking which computer owns it. Reuse matching local schedules, preserve existing settings and manual pauses, and leave other computers' jobs unchanged. Missing account-wide schedule listing must not block local setup. Match the manager monitor to this exact chat. Respect real account, plugin and installation prerequisites.
 
