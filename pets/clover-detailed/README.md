@@ -22,14 +22,19 @@ The saved detailed design keeps the user's chosen upper artwork: layered shaded 
 
 See the [contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif).
 
-## Install and choose
+## Copy and use only this pet
 
-Run `setup/install-config.ps1` with the actual checkout root as `RepositoryPath`. It installs both designs, copying only each package's `pet.json` and `spritesheet.png` into the current user's resolved Codex home:
+Copy this task into Codex to install **Clover (Detailed)** without the full Windows setup:
 
-- `pets/clover-detailed`: **Clover (Detailed)**
-- `pets/cybercat`: **Clover (Simple)**, retaining its existing folder for compatibility.
+```text
+Install only Clover (Detailed) from https://github.com/zixiCat/CyberKit, using the latest main branch.
 
-Open **Settings > Pets > Refresh**, then choose either version. Existing selection and unrelated pets stay intact. Replaced files are backed up locally; the earlier revision also remains in [Git history](https://github.com/zixiCat/CyberKit/tree/8633af6010bd2817b9c170f4b5b5215e488da608/pets/cybercat).
+Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/clover-detailed/pet.json and pets/clover-detailed/spritesheet.png from the repository into CODEX_HOME/pets/clover-detailed/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
+
+Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Clover (Detailed).
+```
+
+For both pets plus instructions and skills, use the separate [full Windows setup](../../README.md#windows-setup). The earlier revision remains in [Git history](https://github.com/zixiCat/CyberKit/tree/8633af6010bd2817b9c170f4b5b5215e488da608/pets/cybercat).
 
 ## Format and exports
 

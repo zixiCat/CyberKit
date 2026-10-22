@@ -24,11 +24,19 @@ This saved version keeps the simpler design. [Clover (Detailed)](../clover-detai
 
 The [action contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif) show the complete pose set. Head, eyes, goggles and hair follow the gaze while the torso and boots remain planted.
 
-## Install
+## Copy and use only this pet
 
-Run `setup/install-config.ps1` with the actual checkout root as `RepositoryPath`. It installs this package's `pet.json` and `spritesheet.png` into the current computer's resolved `CODEX_HOME/pets/cybercat`, alongside the separate detailed package. The existing folder name is retained for compatibility; the display name is **Clover (Simple)**. Existing selection and unrelated pets are preserved. Replaced files receive local backups.
+Copy this task into Codex to install **Clover (Simple)** without the full Windows setup:
 
-Open **Settings > Pets > Refresh**, then choose **Clover (Simple)** or **Clover (Detailed)**. Desktop pets are local; these packages do not create account pets or copy another computer's selection.
+```text
+Install only Clover (Simple) from https://github.com/zixiCat/CyberKit, using the latest main branch.
+
+Resolve this computer's CODEX_HOME (default: .codex in the current user's home folder). Copy only pets/cybercat/pet.json and pets/cybercat/spritesheet.png from the repository into CODEX_HOME/pets/cybercat/, keeping those filenames. Back up any existing files before replacing them and verify the installed files match the source.
+
+Do not run setup/install-config.ps1 or perform the Windows setup. Leave AGENTS.md, skills, schedules, other pets, and the existing pet selection unchanged. Never create worktrees or copy credentials/runtime state. Finish by telling me to open Settings > Pets > Refresh and choose Clover (Simple).
+```
+
+The existing `cybercat` folder name is retained for compatibility; the display name is **Clover (Simple)**. Desktop pets are local; this package does not create an account pet or copy another computer's selection. For both pets plus instructions and skills, use the separate [full Windows setup](../../README.md#windows-setup).
 
 The former design remains recoverable in [Git history](https://github.com/zixiCat/CyberKit/tree/474abe00db648ac27d8f470d0fbc090f8474a55a/pets/cybercat) and in the local backups made during replacement.
 
