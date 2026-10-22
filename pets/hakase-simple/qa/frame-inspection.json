@@ -1,137 +1,137 @@
 {
   "ok": true,
-  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "sha256": "cba3e10a966ec620298a3f3254cc4ccd13c0736dba68399f249b2af4009287e7",
   "required_cells": 73,
-  "unused_transparent_cells": 15,
+  "transparent_unused_cells": 15,
   "updated_states": {
     "idle": {
       "source_size": [
-        2172,
-        724
+        2103,
+        748
       ],
       "pose_count": 6,
       "source_components": [
         {
-          "area": 119684,
+          "area": 73107,
           "bbox": [
-            6,
-            84,
-            369,
-            640
+            67,
+            155,
+            348,
+            602
           ]
         },
         {
-          "area": 119248,
+          "area": 72401,
           "bbox": [
-            380,
-            86,
-            733,
-            640
+            410,
+            155,
+            693,
+            602
           ]
         },
         {
-          "area": 119211,
+          "area": 74651,
           "bbox": [
-            740,
-            83,
-            1093,
-            640
+            739,
+            153,
+            1022,
+            602
           ]
         },
         {
-          "area": 118328,
+          "area": 74348,
           "bbox": [
-            1092,
-            83,
-            1450,
-            640
+            1076,
+            152,
+            1360,
+            602
           ]
         },
         {
-          "area": 119523,
+          "area": 74948,
           "bbox": [
-            1455,
-            82,
-            1812,
-            640
+            1413,
+            161,
+            1698,
+            602
           ]
         },
         {
-          "area": 117068,
+          "area": 73670,
           "bbox": [
-            1820,
-            84,
-            2172,
-            640
+            1752,
+            154,
+            2033,
+            602
           ]
         }
       ],
-      "shared_row_scale": 0.3279569892473118,
+      "shared_row_scale": 0.4088888888888889,
       "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     },
     "running": {
       "source_size": [
-        2172,
-        724
+        2103,
+        748
       ],
       "pose_count": 6,
       "source_components": [
         {
-          "area": 83168,
+          "area": 77354,
           "bbox": [
-            36,
-            183,
-            336,
-            645
+            62,
+            146,
+            348,
+            606
           ]
         },
         {
-          "area": 84561,
+          "area": 79180,
           "bbox": [
-            391,
-            180,
-            695,
-            644
+            404,
+            149,
+            694,
+            606
           ]
         },
         {
-          "area": 82377,
+          "area": 79879,
           "bbox": [
-            754,
-            178,
-            1057,
-            645
+            746,
+            154,
+            1036,
+            606
           ]
         },
         {
-          "area": 83048,
+          "area": 77487,
           "bbox": [
-            1106,
-            179,
-            1406,
-            645
+            1070,
+            147,
+            1353,
+            606
           ]
         },
         {
-          "area": 85343,
+          "area": 78729,
           "bbox": [
-            1461,
-            179,
-            1764,
-            645
+            1404,
+            165,
+            1697,
+            606
           ]
         },
         {
-          "area": 83227,
+          "area": 76793,
           "bbox": [
-            1842,
-            179,
-            2140,
-            645
+            1742,
+            146,
+            2025,
+            606
           ]
         }
       ],
-      "shared_row_scale": 0.39186295503211993,
+      "shared_row_scale": 0.4,
       "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     }
   },

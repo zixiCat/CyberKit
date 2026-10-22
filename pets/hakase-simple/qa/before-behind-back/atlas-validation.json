@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "sprite_version": 2,
+  "dimensions": [
+    1536,
+    2288
+  ],
+  "required_cells": 73,
+  "transparent_unused_cells": 15,
+  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "encoded_bytes": 3004961,
+  "before_encoded_bytes": 3051474,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "file": "pets/hakase-simple/spritesheet.png",
+  "validator": "pets/tools/replace_quiet_loops.py, local Codex desktop format; no account Pets tools used."
+}

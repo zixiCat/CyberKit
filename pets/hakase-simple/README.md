@@ -4,7 +4,7 @@ Hakase's simple desktop pet. [Hakase (Detailed)](../hakase-detailed/README.md) i
 
 ## Motion previews
 
-Idle and thinking were refreshed with gentle torso/head sway, breathing, hair/goggle/coat follow-through and low relaxed resting hands. Thinking has one brief chin gesture and returns both hands down. Compare [idle before/after](qa/quiet-idle-comparison.gif) and [thinking before/after](qa/quiet-running-comparison.gif). The other seven animations and all gaze cells remain pixel-identical.
+Idle and thinking now keep both hands naturally behind the lower back throughout, with relaxed shoulders, warm expressions, subtle breathing, body/head sway and hair/goggle/coat follow-through. Thinking uses glances and small nods while the hands stay hidden. Compare [idle before/after](qa/behind-back-idle-comparison.gif) and [thinking before/after](qa/behind-back-running-comparison.gif). The other seven action animations and all gaze cells remain pixel-identical, including the purposeful wave.
 
 ![Hakase (Simple) blinking, waving, hopping and asking for input](showcase.gif)
 
@@ -14,14 +14,14 @@ An eight-second loop with short pauses between actions.
 
 | State | Preview |
 | --- | --- |
-| Breathing, soft sway and blink | [idle.gif](animations/idle.gif) |
+| Hands behind back, breathing and sway | [idle.gif](animations/idle.gif) |
 | Friendly wave | [waving.gif](animations/waving.gif) |
 | Anticipation, hop and landing | [jumping.gif](animations/jumping.gif) |
 | Expectant asking gesture | [waiting.gif](animations/waiting.gif) |
 | Running right | [running-right.gif](animations/running-right.gif) |
 | Running left | [running-left.gif](animations/running-left.gif) |
 | Worried reaction and recovery | [failed.gif](animations/failed.gif) |
-| Thoughtful sway and brief chin gesture | [running.gif](animations/running.gif) |
+| Hands behind back, thoughtful tilt and glance | [running.gif](animations/running.gif) |
 | Inspecting and approving work | [review.gif](animations/review.gif) |
 
 The [action contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif) show the complete pose set. Head, eyes, goggles and hair follow the gaze while the torso and boots remain planted.
@@ -60,8 +60,10 @@ python pets/hakase-simple/tools/export_previews.py --atlas pets/hakase-simple/sp
 
 The [provenance](provenance.json), [canonical design](clover.png), and [accepted prompt set](source/prompts/README.md) describe the artwork. Built-in ImageGen produced the base and every state/gaze strip; deterministic tools extracted connected poses, applied a uniform registration per row, composed the atlas, and encoded previews. Both running directions were generated separately.
 
-Current checks include [local atlas validation](qa/atlas-validation.json), [quiet-loop measurements](qa/quiet-loop-format.json), [visual review](qa/quiet-loop-review.json), and [GIF timing/alpha validation](validation.json). Prior generation reports are retained in [the history folder](qa/before-lively). Gaze semantics and continuity reports apply to the pixel-identical gaze rows.
+Current checks include [local atlas validation](qa/atlas-validation.json), [behind-back loop measurements](qa/behind-back-format.json), [pose and motion review](qa/behind-back-review.json), and [GIF timing/alpha validation](validation.json), and [duplicate-free in-place installer tests](qa/behind-back-installer.json). Prior generation reports are retained in [the history folder](qa/before-lively); the previous quiet-loop revision is saved under [before-behind-back](qa/before-behind-back). Gaze semantics and continuity reports apply to the pixel-identical gaze rows.
 
 Visual inspection uses ordered native-size frames and contact sheets; a still-image inspection tool does not verify live playback. The largest gaze step is 157.5° to 180°; 202.5° and 225° are close in appearance. Subtle intermediate gaze components and minor hand-drawn hair/outline variation are documented in the reviews. Reports describe generation-time checks and use repository-relative paths. Intermediate source strips, rejected revisions and working frames remain in the local creation run; credentials, selections, local instructions and runtime histories are excluded.
 
 The [quiet-loop tooling guide](../tools/README.md) describes extraction, checks and updating both pets with `setup/install-config.ps1 -PetsOnly` while skipping instructions and skills. The standalone task above still installs only this pet. No frame counts or desktop timing settings were changed.
+
+For computers still using the earlier installed folder names, `-PetsOnly -ReuseLegacyPetFolders` updates those existing pets in place with the current Hakase names, avoiding duplicates and preserving the selected folder. Fresh installations retain the canonical Hakase folders.

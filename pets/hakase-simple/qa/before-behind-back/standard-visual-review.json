@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "updated_states": [
+    "idle",
+    "running"
+  ],
+  "review": "quiet-loop-review.json",
+  "other_standard_states": "Pixel-identical to the previous revision; prior review is retained at before-lively/standard-visual-review.json."
+}

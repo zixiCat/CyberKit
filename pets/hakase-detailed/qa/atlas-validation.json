@@ -7,9 +7,9 @@
   ],
   "required_cells": 73,
   "transparent_unused_cells": 15,
-  "sha256": "78a70ee6bd8c14ea610a743b45b086f92273654068a7754503302d6ce2371b5e",
-  "encoded_bytes": 3102111,
-  "before_encoded_bytes": 3135335,
+  "sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
+  "encoded_bytes": 3084483,
+  "before_encoded_bytes": 3102111,
   "unchanged_rows_pixel_exact": [
     1,
     2,
@@ -22,5 +22,5 @@
     10
   ],
   "file": "pets/hakase-detailed/spritesheet.png",
-  "validator": "pets/tools/replace_quiet_loops.py, local Codex desktop format; no account Pets tools used."
+  "validator": "pets/tools/replace_quiet_loops.py; Codex desktop format, no ChatGPT Work Pets tools used."
 }

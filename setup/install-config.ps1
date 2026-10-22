@@ -3,7 +3,8 @@ param(
     [Parameter(Mandatory=$true)][string]$RepositoryPath,
     [string]$CodexHomePath = $(if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path ([Environment]::GetFolderPath('UserProfile')) '.codex' }),
     [string]$SkillsPath,
-    [switch]$PetsOnly
+    [switch]$PetsOnly,
+    [switch]$ReuseLegacyPetFolders
 )
 $ErrorActionPreference = 'Stop'
 foreach($path in @($RepositoryPath,$CodexHomePath)) {
@@ -52,10 +53,21 @@ foreach($name in $names) {
     }
 }
 $petNames = @('hakase-simple','hakase-detailed')
+$petFolders = @{}
 foreach($petName in $petNames) {
     $petRoot = Join-Path $RepositoryPath ('pets\' + $petName)
+    $installName = $petName
+    if($ReuseLegacyPetFolders) {
+        $legacyName = if($petName -eq 'hakase-simple') { 'cybercat' } else { 'clover-detailed' }
+        $currentManifest = Join-Path $target ('pets\' + $petName + '\pet.json')
+        $legacyManifest = Join-Path $target ('pets\' + $legacyName + '\pet.json')
+        if(-not (Test-Path -LiteralPath $currentManifest) -and (Test-Path -LiteralPath $legacyManifest -PathType Leaf)) {
+            $installName = $legacyName
+        }
+    }
+    $petFolders[$petName] = $installName
     foreach($petFile in @('pet.json','spritesheet.png')) {
-        $files += [pscustomobject]@{Source=(Join-Path $petRoot $petFile);Relative=('pets\' + $petName + '\' + $petFile)}
+        $files += [pscustomobject]@{Source=(Join-Path $petRoot $petFile);Relative=('pets\' + $installName + '\' + $petFile)}
     }
 }
 foreach($file in $files) {
@@ -109,4 +121,4 @@ foreach($file in $files) {
     $changed++
 }
 $next = if($PetsOnly) { 'Refresh Settings > Pets to load updated packages; current selection is unchanged.' } else { 'Verify this app discovers SkillsPath; reopen a chat and invoke each skill. Existing AGENTS.override.md can take precedence; inspect active instructions without removing it. Refresh Settings > Pets to discover installed pet packages.' }
-[pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;custom_pets=$petNames;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next=$next} | ConvertTo-Json -Depth 4
+[pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;custom_pets=$petNames;pet_folders=$petFolders;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next=$next} | ConvertTo-Json -Depth 4

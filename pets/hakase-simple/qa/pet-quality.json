@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
-  "encoded_bytes": 3004961,
-  "format_and_motion_measurements": "quiet-loop-format.json",
-  "visual_review": "quiet-loop-review.json",
-  "unmodified_required_cells": 61,
+  "sha256": "cba3e10a966ec620298a3f3254cc4ccd13c0736dba68399f249b2af4009287e7",
+  "encoded_bytes": 2985832,
+  "format_and_loop_measurements": "behind-back-format.json",
+  "visual_review": "behind-back-review.json",
+  "unchanged_required_cells": 61,
   "unchanged_rows_pixel_exact": [
     1,
     2,
@@ -16,8 +16,8 @@
     9,
     10
   ],
-  "inherited_checks": "Jump, directional animations and all sixteen gaze cells are pixel-identical to the prior atlas; generation-time quality evidence is preserved in before-lively/pet-quality.json.",
+  "inherited_checks": "All other action and gaze cells are pixel-identical; prior checks retained in before-behind-back/pet-quality.json.",
   "warnings": [
-    "Hand-drawn outline/hair details vary slightly between frames; ordered still review cannot certify subjective live playback smoothness."
+    "Minor hand-drawn contour variation remains; still review and numeric wrap checks do not certify subjective live playback smoothness."
   ]
 }

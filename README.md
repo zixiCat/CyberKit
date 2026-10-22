@@ -6,10 +6,12 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
+Both designs keep their hands behind the back during idle and thinking, with gentle breathing and sway. The previews also show their wave, hop and waiting gestures.
+
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |
-| **[Hakase (Detailed)](pets/hakase-detailed/README.md)**<br><img src="pets/hakase-detailed/showcase.gif" alt="Hakase (Detailed) blinking, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
-| **[Hakase (Simple)](pets/hakase-simple/README.md)**<br><img src="pets/hakase-simple/showcase.gif" alt="Hakase (Simple) blinking, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-simple/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Detailed)](pets/hakase-detailed/README.md)**<br><img src="pets/hakase-detailed/showcase.gif" alt="Hakase (Detailed) resting with hands behind the back, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Simple)](pets/hakase-simple/README.md)**<br><img src="pets/hakase-simple/showcase.gif" alt="Hakase (Simple) resting with hands behind the back, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-simple/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
 The packages use `hakase-simple` and `hakase-detailed` folders. The full Windows setup installs both designs along with instructions and skills.
 

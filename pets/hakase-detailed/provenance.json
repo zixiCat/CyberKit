@@ -1,7 +1,7 @@
 {
   "name": "Hakase (Detailed)",
   "package_id": "hakase-detailed",
-  "revision": "living-quiet-loops-20261022",
+  "revision": "hands-behind-back-quiet-loops-20261022",
   "artwork_tool": "built-in ImageGen",
   "canonical_art_reused": true,
   "reference": "The user explicitly selected the upper, more detailed illustration from a comparison of two Clover designs. The exact original full-resolution transparent artwork is reused as the canonical reference. The screenshot itself is excluded.",
@@ -35,21 +35,22 @@
   "local_state_included": false,
   "account_pet_created": false,
   "canonical_sha256": "98af769d74abbd623d27320b767142163b8c9260c94147096ca04c432eb82102",
-  "sha256": "78a70ee6bd8c14ea610a743b45b086f92273654068a7754503302d6ce2371b5e",
-  "encoded_bytes": 3102111,
-  "previous_atlas_sha256": "4faed723f0450dcf73185aca9b0076a8478693c23f2905982a2f8afd20de05f2",
+  "sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
+  "encoded_bytes": 3084483,
+  "previous_atlas_sha256": "78a70ee6bd8c14ea610a743b45b086f92273654068a7754503302d6ce2371b5e",
   "quiet_loop_revision": {
     "tool": "built-in ImageGen",
     "states": [
       "idle",
       "running (thinking)"
     ],
-    "scope": "Twelve cells replaced; all other61 required cells pixel-identical. Local desktop atlas only; no account Pets tools called.",
+    "pose": "Both arms/hands naturally behind torso and lower back in every quiet frame; warm friendly anime greeting posture without speech or text.",
+    "scope": "Twelve cells replaced; all61 other required cells and current Hakase identities preserved. No account Pets tools used.",
     "prompts": [
       "source/prompts/idle.txt",
       "source/prompts/running.txt"
     ],
-    "processing": "Complete separate generated poses, uniform scale per row, planted boot registration, lossless PNG deflate9. No procedural character drawing or independently scaled poses.",
-    "review": "qa/quiet-loop-review.json"
+    "processing": "Six complete separate generated poses per row, shared row scale and planted boot registration; lossless deflate9 PNG. Simple source families received whole-strip ImageGen spacing repairs. No drawn replacement pixels.",
+    "review": "qa/behind-back-review.json"
   }
 }

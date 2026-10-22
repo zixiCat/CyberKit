@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "canonical_fresh_changes": 4,
+  "canonical_repeat_changes": 0,
+  "legacy_in_place_changes": 4,
+  "legacy_repeat_changes": 0,
+  "no_additional_pet_directories": true,
+  "source_parity": true,
+  "all_previous_file_backups_verified": true,
+  "selection_local_private_instructions_and_unrelated_fixture_preserved": true,
+  "legacy_mapping": {
+    "hakase-detailed": "clover-detailed",
+    "hakase-simple": "cybercat"
+  },
+  "live_profile_modified": false
+}

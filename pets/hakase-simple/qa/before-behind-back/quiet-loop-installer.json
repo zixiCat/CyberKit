@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "pet_only_fresh_changes": 4,
+  "pet_only_repeat_changes": 0,
+  "existing_sprite_replacements": 2,
+  "old_sprite_backups_verified": true,
+  "selection_private_local_instructions_and_unrelated_files_preserved": true,
+  "updated_repeat_changes": 0,
+  "ordinary_setup_custom_skills": 3,
+  "ordinary_setup_repeat_changes": 0,
+  "upstream_package_names": [
+    "hakase-simple",
+    "hakase-detailed"
+  ],
+  "rename_integration_fresh_changes": 4,
+  "rename_integration_repeat_changes": 0,
+  "rename_integration_preserves_private_fixture": true
+}

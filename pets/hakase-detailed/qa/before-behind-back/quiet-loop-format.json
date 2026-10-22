@@ -1,0 +1,332 @@
+{
+  "ok": true,
+  "sprite_version": 2,
+  "dimensions": [
+    1536,
+    2288
+  ],
+  "required_cells": 73,
+  "transparent_unused_cells": 15,
+  "sha256": "78a70ee6bd8c14ea610a743b45b086f92273654068a7754503302d6ce2371b5e",
+  "encoded_bytes": 3102111,
+  "before_encoded_bytes": 3135335,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "states": {
+    "idle": {
+      "geometry": {
+        "source_size": [
+          2103,
+          748
+        ],
+        "pose_count": 6,
+        "source_components": [
+          {
+            "area": 120908,
+            "bbox": [
+              21,
+              71,
+              342,
+              669
+            ]
+          },
+          {
+            "area": 122147,
+            "bbox": [
+              377,
+              70,
+              705,
+              669
+            ]
+          },
+          {
+            "area": 124674,
+            "bbox": [
+              718,
+              71,
+              1051,
+              669
+            ]
+          },
+          {
+            "area": 119872,
+            "bbox": [
+              1058,
+              79,
+              1378,
+              669
+            ]
+          },
+          {
+            "area": 122127,
+            "bbox": [
+              1400,
+              82,
+              1730,
+              669
+            ]
+          },
+          {
+            "area": 120579,
+            "bbox": [
+              1768,
+              70,
+              2086,
+              669
+            ]
+          }
+        ],
+        "shared_row_scale": 0.327212020033389,
+        "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
+      },
+      "before": {
+        "unique_frames": 6,
+        "transitions": [
+          {
+            "from": 0,
+            "to": 1,
+            "changed_visible_pixels": 4703,
+            "body_coat_arm_changed_pixels": 1470
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "changed_visible_pixels": 3109,
+            "body_coat_arm_changed_pixels": 928
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changed_visible_pixels": 3091,
+            "body_coat_arm_changed_pixels": 1010
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changed_visible_pixels": 5002,
+            "body_coat_arm_changed_pixels": 1669
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changed_visible_pixels": 5045,
+            "body_coat_arm_changed_pixels": 1711
+          },
+          {
+            "from": 5,
+            "to": 0,
+            "changed_visible_pixels": 4471,
+            "body_coat_arm_changed_pixels": 1591
+          }
+        ],
+        "wrap_diff_over_median_step": 0.9506697852434616,
+        "note": "Pixel changes and seam ratios are measurements, not proof of animation appeal; visual review remains required."
+      },
+      "after": {
+        "unique_frames": 6,
+        "transitions": [
+          {
+            "from": 0,
+            "to": 1,
+            "changed_visible_pixels": 7426,
+            "body_coat_arm_changed_pixels": 2342
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "changed_visible_pixels": 9597,
+            "body_coat_arm_changed_pixels": 2659
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changed_visible_pixels": 8280,
+            "body_coat_arm_changed_pixels": 2181
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changed_visible_pixels": 8909,
+            "body_coat_arm_changed_pixels": 3109
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changed_visible_pixels": 9904,
+            "body_coat_arm_changed_pixels": 3341
+          },
+          {
+            "from": 5,
+            "to": 0,
+            "changed_visible_pixels": 6564,
+            "body_coat_arm_changed_pixels": 1972
+          }
+        ],
+        "wrap_diff_over_median_step": 0.7367830283982489,
+        "note": "Pixel changes and seam ratios are measurements, not proof of animation appeal; visual review remains required."
+      }
+    },
+    "running": {
+      "geometry": {
+        "source_size": [
+          2103,
+          748
+        ],
+        "pose_count": 6,
+        "source_components": [
+          {
+            "area": 127769,
+            "bbox": [
+              16,
+              68,
+              342,
+              688
+            ]
+          },
+          {
+            "area": 123857,
+            "bbox": [
+              374,
+              65,
+              703,
+              688
+            ]
+          },
+          {
+            "area": 123508,
+            "bbox": [
+              719,
+              64,
+              1048,
+              688
+            ]
+          },
+          {
+            "area": 124786,
+            "bbox": [
+              1060,
+              72,
+              1386,
+              688
+            ]
+          },
+          {
+            "area": 125852,
+            "bbox": [
+              1405,
+              71,
+              1735,
+              688
+            ]
+          },
+          {
+            "area": 127364,
+            "bbox": [
+              1767,
+              68,
+              2097,
+              688
+            ]
+          }
+        ],
+        "shared_row_scale": 0.3141025641025641,
+        "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
+      },
+      "before": {
+        "unique_frames": 6,
+        "transitions": [
+          {
+            "from": 0,
+            "to": 1,
+            "changed_visible_pixels": 7513,
+            "body_coat_arm_changed_pixels": 2128
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "changed_visible_pixels": 8454,
+            "body_coat_arm_changed_pixels": 2445
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changed_visible_pixels": 7884,
+            "body_coat_arm_changed_pixels": 2795
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changed_visible_pixels": 8913,
+            "body_coat_arm_changed_pixels": 3045
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changed_visible_pixels": 8465,
+            "body_coat_arm_changed_pixels": 2494
+          },
+          {
+            "from": 5,
+            "to": 0,
+            "changed_visible_pixels": 5389,
+            "body_coat_arm_changed_pixels": 1253
+          }
+        ],
+        "wrap_diff_over_median_step": 0.637449727939437,
+        "note": "Pixel changes and seam ratios are measurements, not proof of animation appeal; visual review remains required."
+      },
+      "after": {
+        "unique_frames": 6,
+        "transitions": [
+          {
+            "from": 0,
+            "to": 1,
+            "changed_visible_pixels": 8831,
+            "body_coat_arm_changed_pixels": 2513
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "changed_visible_pixels": 7952,
+            "body_coat_arm_changed_pixels": 2335
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changed_visible_pixels": 8490,
+            "body_coat_arm_changed_pixels": 2551
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changed_visible_pixels": 6719,
+            "body_coat_arm_changed_pixels": 1887
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changed_visible_pixels": 6945,
+            "body_coat_arm_changed_pixels": 1657
+          },
+          {
+            "from": 5,
+            "to": 0,
+            "changed_visible_pixels": 6965,
+            "body_coat_arm_changed_pixels": 1997
+          }
+        ],
+        "wrap_diff_over_median_step": 0.8758802816901409,
+        "note": "Pixel changes and seam ratios are measurements, not proof of animation appeal; visual review remains required."
+      }
+    }
+  }
+}

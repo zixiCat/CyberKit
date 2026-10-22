@@ -1,7 +1,7 @@
 {
   "name": "Hakase (Simple)",
   "package_id": "hakase-simple",
-  "revision": "living-quiet-loops-20261022",
+  "revision": "hands-behind-back-quiet-loops-20261022",
   "artwork_tool": "built-in ImageGen",
   "reference": "User-supplied screenshot highlighting a green-haired scientist on its right side. Green hair, forehead goggles and scientist-coat cues were used for an original simplified chibi; no exact source-character identity is asserted. The screenshot itself is not included in this package.",
   "brief": "Predominantly green, compact readable full-body scientist with broad green hair locks, expressive green eyes, oversized mint goggles, a plain ivory coat, forest-green tunic and simple dark boots. Remove fiddly costume details. Rich state-specific acting through limbs, expression, anticipation, head movement and hair/coat follow-through; no detached decorative effects.",
@@ -32,21 +32,22 @@
   "previous_design": "https://github.com/zixiCat/CyberKit/tree/474abe00db648ac27d8f470d0fbc090f8474a55a/pets/cybercat",
   "local_state_included": false,
   "account_pet_created": false,
-  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
-  "encoded_bytes": 3004961,
-  "previous_atlas_sha256": "ed59d829149a0769bd3082cce8e620d26055e425d9bb812bd653be1fea29221c",
+  "sha256": "cba3e10a966ec620298a3f3254cc4ccd13c0736dba68399f249b2af4009287e7",
+  "encoded_bytes": 2985832,
+  "previous_atlas_sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
   "quiet_loop_revision": {
     "tool": "built-in ImageGen",
     "states": [
       "idle",
       "running (thinking)"
     ],
-    "scope": "Twelve cells replaced; all other61 required cells pixel-identical. Local desktop atlas only; no account Pets tools called.",
+    "pose": "Both arms/hands naturally behind torso and lower back in every quiet frame; warm friendly anime greeting posture without speech or text.",
+    "scope": "Twelve cells replaced; all61 other required cells and current Hakase identities preserved. No account Pets tools used.",
     "prompts": [
       "source/prompts/idle.txt",
       "source/prompts/running.txt"
     ],
-    "processing": "Complete separate generated poses, uniform scale per row, planted boot registration, lossless PNG deflate9. No procedural character drawing or independently scaled poses.",
-    "review": "qa/quiet-loop-review.json"
+    "processing": "Six complete separate generated poses per row, shared row scale and planted boot registration; lossless deflate9 PNG. Simple source families received whole-strip ImageGen spacing repairs. No drawn replacement pixels.",
+    "review": "qa/behind-back-review.json"
   }
 }

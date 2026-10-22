@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "encoded_bytes": 3004961,
+  "format_and_motion_measurements": "quiet-loop-format.json",
+  "visual_review": "quiet-loop-review.json",
+  "unmodified_required_cells": 61,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "inherited_checks": "Jump, directional animations and all sixteen gaze cells are pixel-identical to the prior atlas; generation-time quality evidence is preserved in before-lively/pet-quality.json.",
+  "warnings": [
+    "Hand-drawn outline/hair details vary slightly between frames; ordered still review cannot certify subjective live playback smoothness."
+  ]
+}

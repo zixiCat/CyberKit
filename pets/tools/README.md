@@ -18,3 +18,5 @@ For a pet-only update, the reviewed setup helper can skip instructions and skill
 ```
 
 The ordinary setup command retains its existing behavior. `-PetsOnly` copies only both pets' manifests and sprite sheets, backs up replacements, and preserves selection/configuration and other files. Refresh Settings > Pets after installing.
+
+If the two pets are still installed under the earlier `cybercat` and `clover-detailed` folder names, add `-ReuseLegacyPetFolders`. When the corresponding Hakase folder is absent, the helper updates that existing folder in place with the current Hakase manifest and sheet. This preserves the selected folder and avoids creating duplicate pets. New installations continue to use the canonical `hakase-simple` and `hakase-detailed` folders.

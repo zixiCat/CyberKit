@@ -21,3 +21,7 @@ Reference roles: [canonical design](../../clover.png), source visual cue, invisi
 ## Quiet-loop refresh,2026-10-22
 
 `idle.txt` and `running.txt` are the exact selected built-in ImageGen prompts for the living quiet loops. Canonical identity, prior small-size styling and invisible six-pose guides ground the new artwork; thinking also references the accepted relaxed idle. The simple thinking strip needed one whole-strip spacing repair. The former prompts remain under `before-lively`; original strips and rejected attempts remain in the local creation run.
+
+## Hands-behind-back revision,2026-10-22
+
+`idle.txt` and `running.txt` are the exact selected built-in ImageGen prompts for both-hands-hidden quiet loops. Canonical artwork supplies identity and costume; the earlier quiet rows supply scale/style; thinking uses the accepted behind-back idle. Invisible layout guides supply spacing. Both Simple strips needed one whole-strip spacing repair. Previous prompts remain under `before-behind-back`; original and rejected sources stay in the local creation run.

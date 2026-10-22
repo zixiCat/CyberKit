@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "sha256": "cba3e10a966ec620298a3f3254cc4ccd13c0736dba68399f249b2af4009287e7",
+  "reviewer": "Primary task agent",
+  "method": "Viewed the four selected ImageGen strips and all24 fitted native192x208 quiet-state cells in two ordered before/after contact sheets, including5->0 loop wraps. GIF encoding checks are separate; live desktop playback after Refresh is not claimed.",
+  "blockers": [],
+  "pose": {
+    "verdict": "pass",
+    "frames_reviewed": 12,
+    "evidence": "All six idle and six thinking frames keep both hands and forearms hidden behind the torso/lower back. Connected upper sleeves/elbows curve naturally behind the flanks; no exposed hand at hip, chest, chin or head. Shoulders are relaxed and the expression is warm."
+  },
+  "idle": {
+    "verdict": "pass",
+    "evidence": "Small alternating head/shoulder tilt, torso rise/settling, goggles/haircurl and coat-hem changes accompany the blink. Body moves through all six phases; boots remain planted. Last frame approaches first naturally."
+  },
+  "thinking": {
+    "verdict": "pass",
+    "evidence": "Both hands stay behind throughout thoughtful upward/side glance, head tilt, centered blink and a small opposite nod/lower glance, followed by a warm forward return. No chin-touch gesture remains. Hair and coat follow the changing head/torso poses."
+  },
+  "identity": "Compact rounded proportions, broad green locks, mint goggles, plain ivory coat/green tunic and simple ankle boots preserved.",
+  "unchanged_required_cells": 61,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "warnings": [
+    "Minor hand-drawn contour variation remains; still review and numeric wrap checks do not certify subjective live playback smoothness."
+  ]
+}

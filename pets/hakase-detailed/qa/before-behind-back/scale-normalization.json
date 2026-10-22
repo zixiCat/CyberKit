@@ -1,0 +1,136 @@
+{
+  "ok": true,
+  "updated_states": {
+    "idle": {
+      "source_size": [
+        2103,
+        748
+      ],
+      "pose_count": 6,
+      "source_components": [
+        {
+          "area": 120908,
+          "bbox": [
+            21,
+            71,
+            342,
+            669
+          ]
+        },
+        {
+          "area": 122147,
+          "bbox": [
+            377,
+            70,
+            705,
+            669
+          ]
+        },
+        {
+          "area": 124674,
+          "bbox": [
+            718,
+            71,
+            1051,
+            669
+          ]
+        },
+        {
+          "area": 119872,
+          "bbox": [
+            1058,
+            79,
+            1378,
+            669
+          ]
+        },
+        {
+          "area": 122127,
+          "bbox": [
+            1400,
+            82,
+            1730,
+            669
+          ]
+        },
+        {
+          "area": 120579,
+          "bbox": [
+            1768,
+            70,
+            2086,
+            669
+          ]
+        }
+      ],
+      "shared_row_scale": 0.327212020033389,
+      "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
+    },
+    "running": {
+      "source_size": [
+        2103,
+        748
+      ],
+      "pose_count": 6,
+      "source_components": [
+        {
+          "area": 127769,
+          "bbox": [
+            16,
+            68,
+            342,
+            688
+          ]
+        },
+        {
+          "area": 123857,
+          "bbox": [
+            374,
+            65,
+            703,
+            688
+          ]
+        },
+        {
+          "area": 123508,
+          "bbox": [
+            719,
+            64,
+            1048,
+            688
+          ]
+        },
+        {
+          "area": 124786,
+          "bbox": [
+            1060,
+            72,
+            1386,
+            688
+          ]
+        },
+        {
+          "area": 125852,
+          "bbox": [
+            1405,
+            71,
+            1735,
+            688
+          ]
+        },
+        {
+          "area": 127364,
+          "bbox": [
+            1767,
+            68,
+            2097,
+            688
+          ]
+        }
+      ],
+      "shared_row_scale": 0.3141025641025641,
+      "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
+    }
+  },
+  "unchanged_row_registration": "before-lively/scale-normalization.json"
+}

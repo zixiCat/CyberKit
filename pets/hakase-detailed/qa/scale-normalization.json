@@ -9,61 +9,61 @@
       "pose_count": 6,
       "source_components": [
         {
-          "area": 120908,
+          "area": 116270,
           "bbox": [
-            21,
-            71,
-            342,
-            669
+            22,
+            75,
+            349,
+            676
           ]
         },
         {
-          "area": 122147,
+          "area": 115606,
           "bbox": [
-            377,
-            70,
-            705,
-            669
+            381,
+            72,
+            701,
+            676
           ]
         },
         {
-          "area": 124674,
+          "area": 115728,
           "bbox": [
-            718,
-            71,
-            1051,
-            669
+            715,
+            75,
+            1038,
+            676
           ]
         },
         {
-          "area": 119872,
+          "area": 116306,
           "bbox": [
-            1058,
-            79,
-            1378,
-            669
+            1072,
+            72,
+            1397,
+            676
           ]
         },
         {
-          "area": 122127,
+          "area": 113729,
           "bbox": [
-            1400,
-            82,
-            1730,
-            669
+            1420,
+            75,
+            1744,
+            676
           ]
         },
         {
-          "area": 120579,
+          "area": 114169,
           "bbox": [
-            1768,
-            70,
-            2086,
-            669
+            1775,
+            73,
+            2093,
+            676
           ]
         }
       ],
-      "shared_row_scale": 0.327212020033389,
+      "shared_row_scale": 0.326158940397351,
       "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     },
     "running": {
@@ -74,63 +74,63 @@
       "pose_count": 6,
       "source_components": [
         {
-          "area": 127769,
+          "area": 119992,
           "bbox": [
-            16,
-            68,
-            342,
-            688
-          ]
-        },
-        {
-          "area": 123857,
-          "bbox": [
-            374,
-            65,
-            703,
-            688
-          ]
-        },
-        {
-          "area": 123508,
-          "bbox": [
-            719,
-            64,
-            1048,
-            688
-          ]
-        },
-        {
-          "area": 124786,
-          "bbox": [
-            1060,
-            72,
-            1386,
-            688
-          ]
-        },
-        {
-          "area": 125852,
-          "bbox": [
-            1405,
+            21,
             71,
-            1735,
-            688
+            353,
+            678
           ]
         },
         {
-          "area": 127364,
+          "area": 118566,
           "bbox": [
-            1767,
-            68,
-            2097,
-            688
+            381,
+            65,
+            704,
+            677
+          ]
+        },
+        {
+          "area": 120799,
+          "bbox": [
+            718,
+            71,
+            1047,
+            677
+          ]
+        },
+        {
+          "area": 119678,
+          "bbox": [
+            1074,
+            69,
+            1403,
+            677
+          ]
+        },
+        {
+          "area": 117974,
+          "bbox": [
+            1426,
+            80,
+            1749,
+            678
+          ]
+        },
+        {
+          "area": 117368,
+          "bbox": [
+            1776,
+            70,
+            2098,
+            678
           ]
         }
       ],
-      "shared_row_scale": 0.3141025641025641,
+      "shared_row_scale": 0.32189542483660133,
       "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     }
   },
-  "unchanged_row_registration": "before-lively/scale-normalization.json"
+  "unchanged_row_registration": "before-behind-back/scale-normalization.json"
 }
