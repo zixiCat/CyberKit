@@ -4,6 +4,8 @@ Hakase's detailed desktop pet. [Hakase (Simple)](../hakase-simple/README.md) is 
 
 ## Motion previews
 
+Idle and thinking were refreshed with gentle torso/head sway, breathing, hair/goggle/coat follow-through and low relaxed resting hands. Thinking has one brief chin gesture and returns both hands down. Compare [idle before/after](qa/quiet-idle-comparison.gif) and [thinking before/after](qa/quiet-running-comparison.gif). The other seven animations and all gaze cells remain pixel-identical.
+
 ![Hakase (Detailed) blinking, waving, hopping and asking for input](showcase.gif)
 
 An eight-second loop with short pauses between actions.
@@ -12,14 +14,14 @@ An eight-second loop with short pauses between actions.
 
 | State | Preview |
 | --- | --- |
-| Calm breathing and blink | [idle.gif](animations/idle.gif) |
+| Breathing, soft sway and blink | [idle.gif](animations/idle.gif) |
 | Friendly wave | [waving.gif](animations/waving.gif) |
 | Anticipation, hop and landing | [jumping.gif](animations/jumping.gif) |
 | Expectant asking gesture | [waiting.gif](animations/waiting.gif) |
 | Running right | [running-right.gif](animations/running-right.gif) |
 | Running left | [running-left.gif](animations/running-left.gif) |
 | Worried reaction and recovery | [failed.gif](animations/failed.gif) |
-| Active thinking | [running.gif](animations/running.gif) |
+| Thoughtful sway and brief chin gesture | [running.gif](animations/running.gif) |
 | Inspecting and approving work | [review.gif](animations/review.gif) |
 
 See the [contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif).
@@ -56,6 +58,8 @@ The [canonical artwork](clover.png) reuses the exact full-resolution detailed il
 
 The second gaze strip needed one [uniform source-density fit](qa/source-density-normalization.json) of its entire eight-pose family. Both gaze rows then use the same recorded final registration scale; individual final cells are not resized separately.
 
-Checks include [atlas validation](qa/atlas-validation.json), [quality gates](qa/pet-quality.json), [frame inspection](qa/frame-inspection.json), [state review](qa/standard-visual-review.json), [direction semantics](qa/direction-semantics.json), [continuity](qa/look-continuity.json), [three-reviewer blind gaze checks](qa/blind-validation.json), [independent visual review](qa/final-visual-review.json), [GIF timing/alpha validation](validation.json), and [both-design installer tests](qa/installer-test.json).
+Current checks include [local atlas validation](qa/atlas-validation.json), [quiet-loop measurements](qa/quiet-loop-format.json), [visual review](qa/quiet-loop-review.json), and [GIF timing/alpha validation](validation.json). Prior generation reports are retained in [the history folder](qa/before-lively). Gaze semantics and continuity reports apply to the pixel-identical gaze rows.
 
 Any accepted intermediate gaze or hand-drawn variation is recorded in those reports. Visual tools inspect ordered native-size frames and contact sheets, rather than verifying live desktop playback. Working strips and revisions remain in the local creation run; private instructions, selection settings, credentials, sessions and histories are excluded from the package.
+
+The [quiet-loop tooling guide](../tools/README.md) describes extraction, checks and updating both pets with `setup/install-config.ps1 -PetsOnly` while skipping instructions and skills. The standalone task above still installs only this pet. No frame counts or desktop timing settings were changed.

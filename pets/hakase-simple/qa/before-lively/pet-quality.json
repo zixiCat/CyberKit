@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "atlas": "pets/cybercat/spritesheet.png",
+  "encoded_bytes": 3051474,
+  "sha256": "ed59d829149a0769bd3082cce8e620d26055e425d9bb812bd653be1fea29221c",
+  "jump": {
+    "idle_baseline": 201,
+    "jump_baselines": [
+      202,
+      195,
+      180,
+      197,
+      202
+    ],
+    "airborne_lift_pixels": 22,
+    "landing_delta_pixels": 1
+  },
+  "look_registration": {
+    "neutral_center_x": 95.5,
+    "look_centers_x": [
+      98.5,
+      89.5,
+      86.0,
+      89.5,
+      86.5,
+      86.0,
+      87.0,
+      89.5,
+      94.5,
+      96.0,
+      94.5,
+      95.0,
+      96.5,
+      100.5,
+      101.0,
+      98.0
+    ],
+    "look_widths": [
+      121,
+      117,
+      118,
+      119,
+      115,
+      116,
+      118,
+      121,
+      119,
+      114,
+      113,
+      114,
+      111,
+      115,
+      116,
+      116
+    ],
+    "maximum_center_drift_pixels": 9.5,
+    "maximum_width_ratio": 1.09009009009009
+  },
+  "errors": [],
+  "warnings": [
+    "look direction 067.5 accepted with a reviewed warning",
+    "look direction 112.5 accepted with a reviewed warning",
+    "look direction 157.5 accepted with a reviewed warning",
+    "000->022.5 diff is a local outlier (3138 pixels vs neighbor average 2119)",
+    "000->022.5 center shift is high (9.1px)",
+    "157.5->180 diff is a local outlier (3531 pixels vs neighbor average 1478)"
+  ]
+}

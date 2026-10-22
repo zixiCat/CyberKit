@@ -1,68 +1,23 @@
 {
   "ok": true,
-  "atlas": "pets/hakase-detailed/spritesheet.png",
-  "encoded_bytes": 3135335,
-  "sha256": "4faed723f0450dcf73185aca9b0076a8478693c23f2905982a2f8afd20de05f2",
-  "jump": {
-    "idle_baseline": 203,
-    "jump_baselines": [
-      202,
-      196,
-      181,
-      197,
-      202
-    ],
-    "airborne_lift_pixels": 21,
-    "landing_delta_pixels": 1
-  },
-  "look_registration": {
-    "neutral_center_x": 95.5,
-    "look_centers_x": [
-      93.0,
-      89.0,
-      89.5,
-      87.5,
-      87.0,
-      87.5,
-      88.0,
-      88.0,
-      94.5,
-      94.5,
-      94.0,
-      95.5,
-      97.0,
-      98.0,
-      98.0,
-      98.0
-    ],
-    "look_widths": [
-      114,
-      112,
-      113,
-      115,
-      114,
-      113,
-      110,
-      106,
-      103,
-      103,
-      102,
-      97,
-      98,
-      102,
-      102,
-      102
-    ],
-    "maximum_center_drift_pixels": 8.5,
-    "maximum_width_ratio": 1.1855670103092784
-  },
-  "errors": [],
+  "sha256": "78a70ee6bd8c14ea610a743b45b086f92273654068a7754503302d6ce2371b5e",
+  "encoded_bytes": 3102111,
+  "format_and_motion_measurements": "quiet-loop-format.json",
+  "visual_review": "quiet-loop-review.json",
+  "unmodified_required_cells": 61,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "inherited_checks": "Jump, directional animations and all sixteen gaze cells are pixel-identical to the prior atlas; generation-time quality evidence is preserved in before-lively/pet-quality.json.",
   "warnings": [
-    "look direction 067.5 accepted with a reviewed warning",
-    "look direction 247.5 accepted with a reviewed warning",
-    "157.5->180 diff is a local outlier (3869 pixels vs neighbor average 2033)",
-    "157.5->180 center shift is high (9.6px)",
-    "270->292.5 diff is a local outlier (1737 pixels vs neighbor average 1186)",
-    "337.5->000 diff is a local outlier (4182 pixels vs neighbor average 2268)"
+    "Hand-drawn outline/hair details vary slightly between frames; ordered still review cannot certify subjective live playback smoothness."
   ]
 }

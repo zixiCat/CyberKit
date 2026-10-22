@@ -1,97 +1,136 @@
 {
-  "method": "one uniform scale and ground transform per row; no per-pose scaling",
-  "target_head_width": 124.5,
-  "ground_baseline": 202,
-  "rows": [
-    {
-      "state": "idle",
-      "scale": 0.939622641509434,
-      "measured_head_width": 132.5,
-      "source_ground": 202,
-      "offset": [
-        6,
-        12
-      ]
+  "ok": true,
+  "updated_states": {
+    "idle": {
+      "source_size": [
+        2172,
+        724
+      ],
+      "pose_count": 6,
+      "source_components": [
+        {
+          "area": 119684,
+          "bbox": [
+            6,
+            84,
+            369,
+            640
+          ]
+        },
+        {
+          "area": 119248,
+          "bbox": [
+            380,
+            86,
+            733,
+            640
+          ]
+        },
+        {
+          "area": 119211,
+          "bbox": [
+            740,
+            83,
+            1093,
+            640
+          ]
+        },
+        {
+          "area": 118328,
+          "bbox": [
+            1092,
+            83,
+            1450,
+            640
+          ]
+        },
+        {
+          "area": 119523,
+          "bbox": [
+            1455,
+            82,
+            1812,
+            640
+          ]
+        },
+        {
+          "area": 117068,
+          "bbox": [
+            1820,
+            84,
+            2172,
+            640
+          ]
+        }
+      ],
+      "shared_row_scale": 0.3279569892473118,
+      "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     },
-    {
-      "state": "running-right",
-      "scale": 0.939622641509434,
-      "measured_head_width": 118.5,
-      "source_ground": 201,
-      "offset": [
-        6,
-        13
-      ]
-    },
-    {
-      "state": "running-left",
-      "scale": 0.939622641509434,
-      "measured_head_width": 122.0,
-      "source_ground": 201,
-      "offset": [
-        6,
-        13
-      ]
-    },
-    {
-      "state": "waving",
-      "scale": 0.8861209964412812,
-      "measured_head_width": 140.5,
-      "source_ground": 202,
-      "offset": [
-        11,
-        23
-      ]
-    },
-    {
-      "state": "jumping",
-      "scale": 0.996,
-      "measured_head_width": 125,
-      "source_ground": 202,
-      "offset": [
-        0,
-        1
-      ]
-    },
-    {
-      "state": "failed",
-      "scale": 0.950381679389313,
-      "measured_head_width": 131.0,
-      "source_ground": 201,
-      "offset": [
-        5,
-        11
-      ]
-    },
-    {
-      "state": "waiting",
-      "scale": 1.0,
-      "measured_head_width": 124.5,
-      "source_ground": 202,
-      "offset": [
-        0,
-        0
-      ]
-    },
-    {
-      "state": "running",
-      "scale": 0.9651162790697675,
-      "measured_head_width": 129.0,
-      "source_ground": 201,
-      "offset": [
-        3,
-        8
-      ]
-    },
-    {
-      "state": "review",
-      "scale": 0.9222222222222223,
-      "measured_head_width": 135.0,
-      "source_ground": 202,
-      "offset": [
-        7,
-        16
-      ]
+    "running": {
+      "source_size": [
+        2172,
+        724
+      ],
+      "pose_count": 6,
+      "source_components": [
+        {
+          "area": 83168,
+          "bbox": [
+            36,
+            183,
+            336,
+            645
+          ]
+        },
+        {
+          "area": 84561,
+          "bbox": [
+            391,
+            180,
+            695,
+            644
+          ]
+        },
+        {
+          "area": 82377,
+          "bbox": [
+            754,
+            178,
+            1057,
+            645
+          ]
+        },
+        {
+          "area": 83048,
+          "bbox": [
+            1106,
+            179,
+            1406,
+            645
+          ]
+        },
+        {
+          "area": 85343,
+          "bbox": [
+            1461,
+            179,
+            1764,
+            645
+          ]
+        },
+        {
+          "area": 83227,
+          "bbox": [
+            1842,
+            179,
+            2140,
+            645
+          ]
+        }
+      ],
+      "shared_row_scale": 0.39186295503211993,
+      "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     }
-  ]
+  },
+  "unchanged_row_registration": "before-lively/scale-normalization.json"
 }

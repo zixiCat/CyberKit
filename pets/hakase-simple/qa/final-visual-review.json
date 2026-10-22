@@ -1,87 +1,31 @@
 {
-  "review_method": "Independent labeled review of exact final atlas, native 192x208 ordered cells, boundary strips, final contact/direction sheets and exported motion stills. No claim of live GIF or MP4 playback.",
-  "atlas_sha256": "ed59d829149a0769bd3082cce8e620d26055e425d9bb812bd653be1fea29221c",
-  "result": "acceptable_with_minor_visual_variation",
+  "ok": true,
+  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "reviewer": "Primary task agent",
+  "method": "Viewed both generated strips and all twelve fitted native cells in ordered before/after contact sheets, including5->0 wraps. GIF frame/timing/alpha checks are separate. Live desktop widget playback was not observed.",
   "blockers": [],
-  "cardinals": [
-    {
-      "expected": "000 up",
-      "observed": "Chin tipped upward and eyes aimed upward; face retained.",
-      "verdict": "pass"
-    },
-    {
-      "expected": "090 screen-right",
-      "observed": "Face/nose and eye aim to screen-right; anchored front-facing torso.",
-      "verdict": "pass"
-    },
-    {
-      "expected": "180 down",
-      "observed": "Chin tucked and eyelids/eyes downcast; residual leftward head yaw does not obscure downward primary axis.",
-      "verdict": "pass"
-    },
-    {
-      "expected": "270 screen-left",
-      "observed": "Nose/face and gaze turn to screen-left; torso and feet retained.",
-      "verdict": "pass"
-    }
+  "idle": {
+    "verdict": "pass",
+    "evidence": "All six frames have low relaxed hands; head/goggles and shoulders tilt gently left/center/right, coat cuffs and hem shift, and hair/curl follow the sway. Blink is one phase of a changing body cycle. Boots stay planted. Last frame eases into first without an arm reset."
+  },
+  "thinking": {
+    "verdict": "pass",
+    "evidence": "Frames0/4/5 have both hands down;1 begins an inward low gesture,2 reaches chin,3 lowers through chest. Head and shoulder sway continue through the brief gesture; no persistent above-head arm. Frame5 returns naturally to low-handed0."
+  },
+  "identity": "Compact rounded chibi, broad green locks, mint goggles, plain short coat/tunic and simple boots preserved.",
+  "warnings": [
+    "Hand-drawn outline/hair details vary slightly between frames; ordered still review cannot certify subjective live playback smoothness."
   ],
-  "quadrants": [
-    {
-      "directions": [
-        "022.5",
-        "045",
-        "067.5"
-      ],
-      "observed": "Upward gaze/chin with increasing rightward face turn.",
-      "verdict": "pass"
-    },
-    {
-      "directions": [
-        "112.5",
-        "135",
-        "157.5"
-      ],
-      "observed": "Gaze descends while face/rightward eye aim remains; 157.5 nearly frontal but rightward component visible.",
-      "verdict": "pass"
-    },
-    {
-      "directions": [
-        "202.5",
-        "225",
-        "247.5"
-      ],
-      "observed": "Downcast eyes/chin with leftward face turn; adjacent 202.5 and225 very similar.",
-      "verdict": "pass"
-    },
-    {
-      "directions": [
-        "292.5",
-        "315",
-        "337.5"
-      ],
-      "observed": "Lifted eyes/chin with leftward face aim easing back toward front.",
-      "verdict": "pass"
-    }
-  ],
-  "registration": "All sixteen visible bounds end at y201; boots remain fixed, torso remains front-facing, head/goggles/hair articulate. No clipping, missing face, detached components or conspicuous global scale change observed in ordered native stills.",
-  "boundaries": [
-    {
-      "from": "157.5",
-      "to": "180",
-      "verdict": "warning",
-      "evidence": "Largest head-perspective step: near-frontal down-right changes to down with residual left yaw, changing goggles/hair perspective more than neighboring increments. Primary gaze axes remain valid; treated as minor aesthetic continuity variation."
-    },
-    {
-      "from": "337.5",
-      "to": "000",
-      "verdict": "pass",
-      "evidence": "Up-left gaze and chin position ease into frontal upward gaze; torso/boots stable."
-    }
-  ],
-  "limitations": [
-    "Angular interpolation is stylized and nonuniform;202.5/225 are close in appearance.",
-    "Live GIF/MP4 timing and perceived playback smoothness were not directly viewed by this tool.",
-    "Native-frame visual review cannot guarantee frontend runtime behavior."
-  ],
-  "standard_states": "Rechecked final contact and exported motion-stills; distinct idle, wave, jump, failure, waiting, thinking/review, directional gait semantics retained. Prior native standard review accepted corrected profile scale and ground return."
+  "unchanged_required_cells": 61,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ]
 }

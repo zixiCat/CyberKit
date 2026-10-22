@@ -1,973 +1,149 @@
 {
   "ok": true,
-  "frames_root": "creation-run/frames",
-  "states": [
-    "idle",
-    "running-right",
-    "running-left",
-    "waving",
-    "jumping",
-    "failed",
-    "waiting",
-    "running",
-    "review"
-  ],
-  "errors": [],
-  "warnings": [],
-  "rows": [
-    {
-      "state": "idle",
-      "expected_frames": 6,
-      "actual_frames": 6,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
+  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "required_cells": 73,
+  "unused_transparent_cells": 15,
+  "updated_states": {
+    "idle": {
+      "source_size": [
+        2172,
+        724
+      ],
+      "pose_count": 6,
+      "source_components": [
         {
-          "index": 0,
-          "file": "creation-run/frames/idle/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14489,
+          "area": 119684,
           "bbox": [
-            31,
-            20,
-            160,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/idle/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14811,
-          "bbox": [
-            30,
-            16,
-            162,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/idle/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14508,
-          "bbox": [
-            31,
-            20,
-            161,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/idle/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14206,
-          "bbox": [
-            32,
-            22,
-            160,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 4,
-          "file": "creation-run/frames/idle/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14563,
-          "bbox": [
-            31,
-            22,
-            161,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 5,
-          "file": "creation-run/frames/idle/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14241,
-          "bbox": [
-            34,
-            20,
-            158,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "running-right",
-      "expected_frames": 8,
-      "actual_frames": 8,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/running-right/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13156,
-          "bbox": [
-            36,
-            26,
-            155,
-            202
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/running-right/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12073,
-          "bbox": [
-            36,
-            27,
-            155,
-            202
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/running-right/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12602,
-          "bbox": [
-            37,
-            22,
-            154,
-            191
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/running-right/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12825,
-          "bbox": [
-            36,
-            17,
-            155,
-            181
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 4,
-          "file": "creation-run/frames/running-right/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12986,
-          "bbox": [
-            36,
-            27,
-            155,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 5,
-          "file": "creation-run/frames/running-right/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 11699,
-          "bbox": [
-            37,
-            27,
-            154,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 6,
-          "file": "creation-run/frames/running-right/06.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 11908,
-          "bbox": [
-            37,
-            22,
-            153,
-            196
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 7,
-          "file": "creation-run/frames/running-right/07.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12767,
-          "bbox": [
-            36,
-            18,
-            155,
-            190
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "running-left",
-      "expected_frames": 8,
-      "actual_frames": 8,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/running-left/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13690,
-          "bbox": [
-            34,
-            22,
-            157,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/running-left/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12382,
-          "bbox": [
-            34,
-            23,
-            156,
-            201
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/running-left/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13059,
-          "bbox": [
-            34,
-            23,
-            157,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/running-left/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12546,
-          "bbox": [
-            35,
-            17,
-            156,
-            179
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 4,
-          "file": "creation-run/frames/running-left/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13550,
-          "bbox": [
-            34,
-            23,
-            156,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 5,
-          "file": "creation-run/frames/running-left/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12310,
-          "bbox": [
-            34,
-            23,
-            156,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 6,
-          "file": "creation-run/frames/running-left/06.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12930,
-          "bbox": [
-            34,
-            23,
-            157,
-            201
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 7,
-          "file": "creation-run/frames/running-left/07.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12538,
-          "bbox": [
-            35,
-            19,
-            156,
-            178
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "waving",
-      "expected_frames": 4,
-      "actual_frames": 4,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/waving/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13829,
-          "bbox": [
-            31,
-            26,
-            161,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/waving/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14386,
-          "bbox": [
-            32,
-            26,
-            160,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/waving/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14526,
-          "bbox": [
-            30,
-            30,
-            162,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/waving/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13731,
-          "bbox": [
-            34,
-            26,
-            159,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "jumping",
-      "expected_frames": 5,
-      "actual_frames": 5,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/jumping/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12187,
-          "bbox": [
-            33,
-            48,
-            157,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/jumping/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13289,
-          "bbox": [
-            30,
-            30,
-            160,
-            197
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/jumping/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14111,
-          "bbox": [
-            30,
             6,
-            160,
-            183
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            84,
+            369,
+            640
+          ]
         },
         {
-          "index": 3,
-          "file": "creation-run/frames/jumping/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13598,
+          "area": 119248,
           "bbox": [
-            30,
-            35,
-            160,
-            199
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            380,
+            86,
+            733,
+            640
+          ]
         },
         {
-          "index": 4,
-          "file": "creation-run/frames/jumping/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 12209,
+          "area": 119211,
           "bbox": [
-            34,
-            49,
-            156,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            740,
+            83,
+            1093,
+            640
+          ]
+        },
+        {
+          "area": 118328,
+          "bbox": [
+            1092,
+            83,
+            1450,
+            640
+          ]
+        },
+        {
+          "area": 119523,
+          "bbox": [
+            1455,
+            82,
+            1812,
+            640
+          ]
+        },
+        {
+          "area": 117068,
+          "bbox": [
+            1820,
+            84,
+            2172,
+            640
+          ]
         }
-      ]
+      ],
+      "shared_row_scale": 0.3279569892473118,
+      "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     },
-    {
-      "state": "failed",
-      "expected_frames": 8,
-      "actual_frames": 8,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
+    "running": {
+      "source_size": [
+        2172,
+        724
+      ],
+      "pose_count": 6,
+      "source_components": [
         {
-          "index": 0,
-          "file": "creation-run/frames/failed/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14851,
+          "area": 83168,
           "bbox": [
-            30,
-            16,
-            162,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/failed/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14097,
-          "bbox": [
-            31,
-            18,
-            161,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/failed/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14129,
-          "bbox": [
-            32,
-            18,
-            160,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/failed/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13983,
-          "bbox": [
-            32,
-            22,
-            160,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 4,
-          "file": "creation-run/frames/failed/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14670,
-          "bbox": [
-            30,
-            16,
-            161,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 5,
-          "file": "creation-run/frames/failed/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14508,
-          "bbox": [
-            30,
-            16,
-            161,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 6,
-          "file": "creation-run/frames/failed/06.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14311,
-          "bbox": [
-            31,
-            17,
-            161,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 7,
-          "file": "creation-run/frames/failed/07.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15113,
-          "bbox": [
-            30,
-            15,
-            161,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "waiting",
-      "expected_frames": 6,
-      "actual_frames": 6,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/waiting/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14851,
-          "bbox": [
-            31,
-            5,
-            160,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/waiting/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15323,
-          "bbox": [
-            30,
-            7,
-            161,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/waiting/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14922,
-          "bbox": [
-            30,
-            5,
-            161,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/waiting/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15540,
-          "bbox": [
-            29,
-            5,
-            162,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 4,
-          "file": "creation-run/frames/waiting/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14940,
-          "bbox": [
-            31,
-            6,
-            161,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 5,
-          "file": "creation-run/frames/waiting/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14901,
-          "bbox": [
-            31,
-            5,
-            159,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "running",
-      "expected_frames": 6,
-      "actual_frames": 6,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/running/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14830,
-          "bbox": [
-            31,
-            15,
-            160,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/running/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16097,
-          "bbox": [
-            30,
-            13,
-            161,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 2,
-          "file": "creation-run/frames/running/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15901,
-          "bbox": [
-            30,
-            13,
-            161,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 3,
-          "file": "creation-run/frames/running/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15893,
-          "bbox": [
-            30,
-            12,
-            160,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 4,
-          "file": "creation-run/frames/running/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15506,
-          "bbox": [
-            31,
-            13,
-            159,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 5,
-          "file": "creation-run/frames/running/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15194,
-          "bbox": [
-            31,
-            13,
-            158,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        }
-      ]
-    },
-    {
-      "state": "review",
-      "expected_frames": 6,
-      "actual_frames": 6,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "creation-run/frames/review/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14130,
-          "bbox": [
-            30,
-            25,
-            161,
-            204
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
-        },
-        {
-          "index": 1,
-          "file": "creation-run/frames/review/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13391,
-          "bbox": [
-            30,
             36,
-            160,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            183,
+            336,
+            645
+          ]
         },
         {
-          "index": 2,
-          "file": "creation-run/frames/review/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14766,
+          "area": 84561,
           "bbox": [
-            30,
-            19,
-            160,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            391,
+            180,
+            695,
+            644
+          ]
         },
         {
-          "index": 3,
-          "file": "creation-run/frames/review/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15726,
+          "area": 82377,
           "bbox": [
-            28,
-            20,
-            162,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            754,
+            178,
+            1057,
+            645
+          ]
         },
         {
-          "index": 4,
-          "file": "creation-run/frames/review/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 13958,
+          "area": 83048,
           "bbox": [
-            32,
-            26,
-            158,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            1106,
+            179,
+            1406,
+            645
+          ]
         },
         {
-          "index": 5,
-          "file": "creation-run/frames/review/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15556,
+          "area": 85343,
           "bbox": [
-            27,
-            23,
-            162,
-            205
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+            1461,
+            179,
+            1764,
+            645
+          ]
+        },
+        {
+          "area": 83227,
+          "bbox": [
+            1842,
+            179,
+            2140,
+            645
+          ]
         }
-      ]
+      ],
+      "shared_row_scale": 0.39186295503211993,
+      "registration": "Shared row scale; planted boot anchors at x96 and baseline203; original upper-body displacement retained."
     }
+  },
+  "other_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
   ]
 }

@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "method": "Primary source-strip and registered contact-sheet review, plus independent ordered native-frame review. Live GIF playback was not assessed by the image inspection tool.",
+  "states": [
+    {
+      "state": "idle",
+      "verdict": "pass",
+      "evidence": "Six breathing and blink poses; half and closed eyelids reopen, with planted boots and stable first/last framing."
+    },
+    {
+      "state": "running-right",
+      "verdict": "pass",
+      "evidence": "Eight right-facing full-body poses; compressed, passing and airborne legs alternate with opposing arm phases. Profile scale inherits idle registration."
+    },
+    {
+      "state": "running-left",
+      "verdict": "pass",
+      "evidence": "Eight independently generated left-facing full-body poses; readable opposing limb cadence and hair/coat follow-through, without mirroring the source identity."
+    },
+    {
+      "state": "waving",
+      "verdict": "pass",
+      "evidence": "Four attached-arm greeting poses; hand rises and tilts, happy blink and relaxed return. No detached gesture marks."
+    },
+    {
+      "state": "jumping",
+      "verdict": "pass",
+      "evidence": "Anticipation squat, lift, airborne apex, descent and landing. Independent native-frame review measured about 20px foot lift and matching idle/landing baseline; head scale remains coherent through the squat."
+    },
+    {
+      "state": "failed",
+      "verdict": "pass",
+      "evidence": "Eight worried/slumped, closed-eye, cheek-touch and peeking-recovery poses ending in a rueful smile; no added symbols or tears."
+    },
+    {
+      "state": "waiting",
+      "verdict": "pass",
+      "evidence": "Six clasped/open asking-palm poses with hopeful tilts and blink. Flexible curled hair bends with the middle head tilts and returns; attached throughout, accepted as follow-through."
+    },
+    {
+      "state": "running",
+      "verdict": "pass",
+      "evidence": "Six planted-foot thinking poses; chin, temple and forehead-goggle gestures with focus and nod. No literal foot running or new props."
+    },
+    {
+      "state": "review",
+      "verdict": "pass",
+      "evidence": "Six examining lean/eye poses, attached hand adjusts forehead goggles, then satisfied nod and recovery. Distinct from active thinking."
+    }
+  ],
+  "registration": "One uniform scale and ground transform per row; no independent pose scaling. Horizontal profiles inherit idle scale instead of being enlarged to match frontal projected head width.",
+  "limitations": "Minor hand-drawn hair and outline variation is visible; all generated silhouettes remain complete and readable at native cell size. Final encoded-atlas gates and sixteen-direction review are separate."
+}

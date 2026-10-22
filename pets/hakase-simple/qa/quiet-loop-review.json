@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "sha256": "91d2519c5a0723f18d11ffecf941fa65e631b3afd2844feea4a77d62a9d57367",
+  "reviewer": "Primary task agent",
+  "method": "Viewed both generated strips and all twelve fitted native cells in ordered before/after contact sheets, including5->0 wraps. GIF frame/timing/alpha checks are separate. Live desktop widget playback was not observed.",
+  "blockers": [],
+  "idle": {
+    "verdict": "pass",
+    "evidence": "All six frames have low relaxed hands; head/goggles and shoulders tilt gently left/center/right, coat cuffs and hem shift, and hair/curl follow the sway. Blink is one phase of a changing body cycle. Boots stay planted. Last frame eases into first without an arm reset."
+  },
+  "thinking": {
+    "verdict": "pass",
+    "evidence": "Frames0/4/5 have both hands down;1 begins an inward low gesture,2 reaches chin,3 lowers through chest. Head and shoulder sway continue through the brief gesture; no persistent above-head arm. Frame5 returns naturally to low-handed0."
+  },
+  "identity": "Compact rounded chibi, broad green locks, mint goggles, plain short coat/tunic and simple boots preserved.",
+  "warnings": [
+    "Hand-drawn outline/hair details vary slightly between frames; ordered still review cannot certify subjective live playback smoothness."
+  ],
+  "unchanged_required_cells": 61,
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ]
+}

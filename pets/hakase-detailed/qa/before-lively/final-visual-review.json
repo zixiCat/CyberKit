@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "result": "acceptable_with_minor_visual_variation",
+  "atlas": "final/spritesheet-extended.png",
+  "sha256": "4faed723f0450dcf73185aca9b0076a8478693c23f2905982a2f8afd20de05f2",
+  "dimensions": [
+    1536,
+    2288
+  ],
+  "blockers": [],
+  "method": "Viewed qa/final-directions.png, qa/final-contact-sheet.png, exports/motion-stills.png, then all sixteen exact 192x208 look cells cropped without scaling from the hashed final atlas. Reviewed flagged boundary pairs side by side as ordered stills. This image-tool review did not observe live playback or certify playback smoothness.",
+  "standard_rows": {
+    "verdict": "pass",
+    "evidence": "Read-only comparison confirms first nine rows are pixel-exactly equal to the independently reviewed final/spritesheet-standard.png. Their earlier state evidence remains applicable."
+  },
+  "cardinals": [
+    {
+      "expected": "000 up",
+      "verdict": "pass",
+      "evidence": "Front-facing head pitches upward; eyes/pupils point above neutral, nose/chin and forehead goggles follow the upward pitch. Torso and boots remain front."
+    },
+    {
+      "expected": "090 screen-right",
+      "verdict": "pass",
+      "evidence": "Head clearly turns screen-right with nose and visible eye facing right and hair trailing left; shoulders and paired boots stay frontal."
+    },
+    {
+      "expected": "180 down",
+      "verdict": "pass",
+      "evidence": "Head bows down; goggles and top hair occupy more face area, lowered eyes look down below fringe; body remains frontal."
+    },
+    {
+      "expected": "270 screen-left",
+      "verdict": "pass",
+      "evidence": "Head clearly turns screen-left with nose and visible eye pointing left; body and paired boots remain frontal."
+    }
+  ],
+  "quadrants": {
+    "verdict": "pass",
+    "evidence": "022.5/045/067.5 combine screen-right nose/eye aim with upward pitch;112.5/135/157.5 turn right while progressively bowing downward.202.5/225/247.5 turn left while bowed down;292.5/315/337.5 turn left with increasingly upward face/eye aim. Near-axis poses are subtle but remain in the expected quadrant; no observed reversal."
+  },
+  "boundaries": [
+    {
+      "pair": "157.5->180",
+      "verdict": "warning",
+      "evidence": "Head recenters from down-right to bowed center; hair silhouette visibly changes more than neighboring cells and metric reports about9.6px mass-center shift. Boots, waist and torso remain anchored; no whole-sprite relocation or material scale jump observed in native stills."
+    },
+    {
+      "pair": "270->292.5",
+      "verdict": "pass",
+      "evidence": "Left-facing profile lifts into up-left; eye/nose rise while frontal body remains stable. The flagged pixel difference is consistent with head pitch and hair occlusion; no visible defect found."
+    },
+    {
+      "pair": "337.5->000",
+      "verdict": "warning",
+      "evidence": "Head turns from up-left to frontal up;000 has a somewhat broader hair silhouette and face than337.5. Front torso/feet stay aligned; no clipping, directional reversal or conspicuous whole-body scale jump observed. Difference remains visible and should not be described as perfectly seamless."
+    }
+  ],
+  "geometry": {
+    "verdict": "pass",
+    "evidence": "All sixteen complete figures fit native bounds with transparent padding. No visible accidental alpha holes, detached parts, clipped hair/boots, whole-body turntable or shifted ground baseline. Detailed coat cuffs/lapels, diagonal bodice trim, pleated hem and tall accented boots remain recognizable. Natural head yaw/pitch changes apparent hair width/height."
+  },
+  "source_density": {
+    "evidence": "Read qa/source-density-normalization.json: one uniform whole-source resampling417/447=0.9328859060 for row10, then unchanged row9registration scale0.4676258993. No per-cell fitting was introduced by this review.",
+    "artwork_modified": false
+  },
+  "warnings": [
+    "Head/hair proportions vary slightly between row families, most noticeable at157.5->180 and337.5->000; accepted as minor visual variation in the native labeled still review.",
+    "Directional review assessed ordered stills; user motion inspection remains the evidence for perceived live playback continuity."
+  ]
+}

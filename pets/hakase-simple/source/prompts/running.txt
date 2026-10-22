@@ -1,14 +1,5 @@
-Create six SMALL complete character sprites on a WIDE TRANSPARENT CANVAS, in ONE horizontal row. This is a sprite extraction production sheet: physical separation is highest priority. Each character occupies only 45 percent of canvas height and roughly HALF its invisible slot width. Character centers at 8%,25%,42%,58%,75%,92% canvas width; same feet baseline at 72% canvas height, heads around 27%. Leave big clear fully transparent corridors BETWEEN ALL SIX ENTIRE SILHOUETTES at least half a head wide. Abundant transparent top/bottom margin. Do not fill the canvas with heads. Hair must never touch neighboring hair. No text, numbers, frames or guides. Genuine empty alpha transparent background with crisp opaque character edges.
-
-Reference 1 exact canonical identity: compact two-head-tall green scientist girl, fluffy leaf-green bob with curved tuft, forehead mint round goggles, big teal-green eyes, cropped ivory coat, forest-green dress, green boots and simple mitten hands. Exact cel shading, clean evergreen outline, face and palette. Reference 2 broad scientist cue only, ignore UI/text. Reference 3 invisible six-pose layout guide only.
-
-State: ACTIVE THINKING / RUNNING A TASK, no literal foot-running. All six full-body poses feet planted same positions, stable size. Sequential acting left to right:
-1 one attached mitten under chin, focused pondering.
-2 same hand begins lifting toward temple, eyes glance upward, thoughtful brow.
-3 same hand touches temple, head slight tilt, engaged thinking.
-4 same hand touches forehead goggle rim for tiny adjustment, focused eyes.
-5 hand lowers while head gives slight confident nod with brief half-blink.
-6 hand returns under chin, intent thinking expression loops.
-The other hand rests naturally or against torso, only two hands, no extra limbs. Goggles always worn on forehead. Small hair/coat follow-through. CLEAR visible hand positions and focused face changes, not identical idle poses. No added gadgets, symbols, paper or objects.
-
-Generous spacing, NO overlaps or cutoffs. No shadows, floor, effects, smoke, trails, glow, blur, punctuation, labels, symbols, background colors or scenery. Keep figures deliberately small relative to canvas.
+Use case: identity-preserve. Repair ONLY layout spacing of this SIX-frame thinking strip.
+Image1 is the edit target: retain its exact six poses, identity, thoughtful gesture timing and continuous body/head/coat sway. Image2 is canonical Simple Clover identity, Image3 approved relaxed idle identity/scale reference. Image4 is invisible six-slot spacing guide.
+Regenerate the whole coherent six-pose family on a true transparent alpha landscape canvas. Make ALL SIX figures substantially SMALLER IN THE CANVAS, about20% narrower/shorter than the edit target, same uniform scale across six. Increase outer margins and clear EMPTY TRANSPARENT GUTTERS between every pair of FULL hair silhouettes to at least one-third hair-width. Every pose must be a separate complete connected figure with ample blank space, especially lasttwo hair silhouettes. All six planted boot baselines equal; do not cut off haircurl or boots. Do not copy guide lines or labels.
+Keep same ordered acting:1 both hands low relaxed;2 one hand inward near waist, head leans gently;3 one chin-touch thought, other hand low;4 same hand lowering past chest, head returns;5 both hands low, blink and soft sway;6 both hands low with eyes open almost matching1. Frame6->1 small natural cyclic step, no reset. Rich continuous subtle torso breathing, head tilt and lagging hair/coat motion. No locomotion, props, effects, symbols or backgrounds.
+Simple design stays compact and rounded: broad green hair locks, oversized mint forehead goggles, green eyes, short plain ivory coat, plain green tunic/dress, simple ankle boots. No detailed wrap trim/pleats or tall ornate boots. Preserve clean evergreen outlines, cel colors, face proportions.

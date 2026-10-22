@@ -4,6 +4,8 @@ Hakase's simple desktop pet. [Hakase (Detailed)](../hakase-detailed/README.md) i
 
 ## Motion previews
 
+Idle and thinking were refreshed with gentle torso/head sway, breathing, hair/goggle/coat follow-through and low relaxed resting hands. Thinking has one brief chin gesture and returns both hands down. Compare [idle before/after](qa/quiet-idle-comparison.gif) and [thinking before/after](qa/quiet-running-comparison.gif). The other seven animations and all gaze cells remain pixel-identical.
+
 ![Hakase (Simple) blinking, waving, hopping and asking for input](showcase.gif)
 
 An eight-second loop with short pauses between actions.
@@ -12,14 +14,14 @@ An eight-second loop with short pauses between actions.
 
 | State | Preview |
 | --- | --- |
-| Calm breathing and blink | [idle.gif](animations/idle.gif) |
+| Breathing, soft sway and blink | [idle.gif](animations/idle.gif) |
 | Friendly wave | [waving.gif](animations/waving.gif) |
 | Anticipation, hop and landing | [jumping.gif](animations/jumping.gif) |
 | Expectant asking gesture | [waiting.gif](animations/waiting.gif) |
 | Running right | [running-right.gif](animations/running-right.gif) |
 | Running left | [running-left.gif](animations/running-left.gif) |
 | Worried reaction and recovery | [failed.gif](animations/failed.gif) |
-| Active thinking | [running.gif](animations/running.gif) |
+| Thoughtful sway and brief chin gesture | [running.gif](animations/running.gif) |
 | Inspecting and approving work | [review.gif](animations/review.gif) |
 
 The [action contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif) show the complete pose set. Head, eyes, goggles and hair follow the gaze while the torso and boots remain planted.
@@ -58,6 +60,8 @@ python pets/hakase-simple/tools/export_previews.py --atlas pets/hakase-simple/sp
 
 The [provenance](provenance.json), [canonical design](clover.png), and [accepted prompt set](source/prompts/README.md) describe the artwork. Built-in ImageGen produced the base and every state/gaze strip; deterministic tools extracted connected poses, applied a uniform registration per row, composed the atlas, and encoded previews. Both running directions were generated separately.
 
-The [atlas validator](qa/atlas-validation.json), [quality gate](qa/pet-quality.json), [standard-frame inspection](qa/frame-inspection.json), [visual review](qa/standard-visual-review.json), [direction semantics](qa/direction-semantics.json), [continuity analysis](qa/look-continuity.json), and [blind direction check](qa/blind-validation.json) record the checks on this revision. [GIF validation](validation.json) checks the exact timing and alpha masks of all 57 standard frames and the combined transitions.
+Current checks include [local atlas validation](qa/atlas-validation.json), [quiet-loop measurements](qa/quiet-loop-format.json), [visual review](qa/quiet-loop-review.json), and [GIF timing/alpha validation](validation.json). Prior generation reports are retained in [the history folder](qa/before-lively). Gaze semantics and continuity reports apply to the pixel-identical gaze rows.
 
 Visual inspection uses ordered native-size frames and contact sheets; a still-image inspection tool does not verify live playback. The largest gaze step is 157.5° to 180°; 202.5° and 225° are close in appearance. Subtle intermediate gaze components and minor hand-drawn hair/outline variation are documented in the reviews. Reports describe generation-time checks and use repository-relative paths. Intermediate source strips, rejected revisions and working frames remain in the local creation run; credentials, selections, local instructions and runtime histories are excluded.
+
+The [quiet-loop tooling guide](../tools/README.md) describes extraction, checks and updating both pets with `setup/install-config.ps1 -PetsOnly` while skipping instructions and skills. The standalone task above still installs only this pet. No frame counts or desktop timing settings were changed.

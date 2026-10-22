@@ -2,7 +2,8 @@
 param(
     [Parameter(Mandatory=$true)][string]$RepositoryPath,
     [string]$CodexHomePath = $(if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path ([Environment]::GetFolderPath('UserProfile')) '.codex' }),
-    [string]$SkillsPath
+    [string]$SkillsPath,
+    [switch]$PetsOnly
 )
 $ErrorActionPreference = 'Stop'
 foreach($path in @($RepositoryPath,$CodexHomePath)) {
@@ -30,8 +31,12 @@ function Assert-NoLink([string]$Path) {
         $current = $parent
     }
 }
-$names = @('activitywatch-life-review','personal-work-report','task-manager')
-$files = @([pscustomobject]@{Source=(Join-Path $source 'AGENTS.md');Relative='AGENTS.md'})
+$names = @()
+$files = @()
+if(-not $PetsOnly) {
+    $names = @('activitywatch-life-review','personal-work-report','task-manager')
+    $files += [pscustomobject]@{Source=(Join-Path $source 'AGENTS.md');Relative='AGENTS.md'}
+}
 foreach($name in $names) {
     $root = Join-Path (Join-Path $source 'skills') $name
     if(-not (Test-Path -LiteralPath (Join-Path $root 'SKILL.md') -PathType Leaf)) { throw "Missing skill: $name" }
@@ -67,8 +72,11 @@ foreach($file in $files) {
         $parent=$next
     }
 }
-$agentsSource = [IO.File]::ReadAllText((Join-Path $source 'AGENTS.md'))
-if($agentsSource -match '(?m)^### Local[ \t]*\r?$') { throw 'Repository AGENTS.md must not contain a Local section.' }
+$agentsSource = $null
+if(-not $PetsOnly) {
+    $agentsSource = [IO.File]::ReadAllText((Join-Path $source 'AGENTS.md'))
+    if($agentsSource -match '(?m)^### Local[ \t]*\r?$') { throw 'Repository AGENTS.md must not contain a Local section.' }
+}
 $backupRoot = Join-Path $target ('backups\CyberKit\' + [guid]::NewGuid().ToString('N'))
 $changed = 0
 foreach($file in $files) {
@@ -100,4 +108,5 @@ foreach($file in $files) {
     } else { [IO.File]::Move($temporary,$destination) }
     $changed++
 }
-[pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;custom_pets=$petNames;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next='Verify this app discovers SkillsPath; reopen a chat and invoke each skill. Existing AGENTS.override.md can take precedence; inspect active instructions without removing it. Refresh Settings > Pets to discover installed pet packages.'} | ConvertTo-Json -Depth 4
+$next = if($PetsOnly) { 'Refresh Settings > Pets to load updated packages; current selection is unchanged.' } else { 'Verify this app discovers SkillsPath; reopen a chat and invoke each skill. Existing AGENTS.override.md can take precedence; inspect active instructions without removing it. Refresh Settings > Pets to discover installed pet packages.' }
+[pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;custom_pets=$petNames;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next=$next} | ConvertTo-Json -Depth 4

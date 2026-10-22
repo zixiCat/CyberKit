@@ -1,0 +1,97 @@
+{
+  "method": "one uniform scale and ground transform per row; no per-pose scaling",
+  "target_head_width": 124.5,
+  "ground_baseline": 202,
+  "rows": [
+    {
+      "state": "idle",
+      "scale": 0.939622641509434,
+      "measured_head_width": 132.5,
+      "source_ground": 202,
+      "offset": [
+        6,
+        12
+      ]
+    },
+    {
+      "state": "running-right",
+      "scale": 0.939622641509434,
+      "measured_head_width": 118.5,
+      "source_ground": 201,
+      "offset": [
+        6,
+        13
+      ]
+    },
+    {
+      "state": "running-left",
+      "scale": 0.939622641509434,
+      "measured_head_width": 122.0,
+      "source_ground": 201,
+      "offset": [
+        6,
+        13
+      ]
+    },
+    {
+      "state": "waving",
+      "scale": 0.8861209964412812,
+      "measured_head_width": 140.5,
+      "source_ground": 202,
+      "offset": [
+        11,
+        23
+      ]
+    },
+    {
+      "state": "jumping",
+      "scale": 0.996,
+      "measured_head_width": 125,
+      "source_ground": 202,
+      "offset": [
+        0,
+        1
+      ]
+    },
+    {
+      "state": "failed",
+      "scale": 0.950381679389313,
+      "measured_head_width": 131.0,
+      "source_ground": 201,
+      "offset": [
+        5,
+        11
+      ]
+    },
+    {
+      "state": "waiting",
+      "scale": 1.0,
+      "measured_head_width": 124.5,
+      "source_ground": 202,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "state": "running",
+      "scale": 0.9651162790697675,
+      "measured_head_width": 129.0,
+      "source_ground": 201,
+      "offset": [
+        3,
+        8
+      ]
+    },
+    {
+      "state": "review",
+      "scale": 0.9222222222222223,
+      "measured_head_width": 135.0,
+      "source_ground": 202,
+      "offset": [
+        7,
+        16
+      ]
+    }
+  ]
+}
