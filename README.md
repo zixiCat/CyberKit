@@ -8,8 +8,8 @@ Copy your chosen pet's task from the table into Codex to install only that desig
 
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |
-| **[Clover (Detailed)](pets/clover-detailed/README.md)**<br>Layered hair and detailed costume.<br><img src="pets/clover-detailed/animations/waving.gif" alt="Detailed Clover waving" width="192" height="208"> | `Install only Clover (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
-| **[Clover (Simple)](pets/cybercat/README.md)**<br>Rounded proportions and simple outfit.<br><img src="pets/cybercat/animations/waving.gif" alt="Simple Clover waving" width="192" height="208"> | `Install only Clover (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Clover (Detailed)](pets/clover-detailed/README.md)**<br>Layered hair and detailed costume.<br><img src="pets/clover-detailed/animations/waving.gif" alt="Detailed Clover waving" width="144" height="156"> | `Install only Clover (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Clover (Simple)](pets/cybercat/README.md)**<br>Rounded proportions and simple outfit.<br><img src="pets/cybercat/animations/waving.gif" alt="Simple Clover waving" width="144" height="156"> | `Install only Clover (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
 The simple design retains the existing `cybercat` folder for compatibility; the detailed design uses `clover-detailed`. The full Windows setup installs both designs along with instructions and skills.
 
