@@ -6,10 +6,10 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
-| Design and artwork | Motion | Copy into Codex (pet only) |
-| --- | --- | --- |
-| **[Clover (Detailed)](pets/clover-detailed/README.md)** — layered hair, shaded coat and cuffs, trimmed pleated outfit, and taller boots | ![Detailed Clover waving](pets/clover-detailed/animations/waving.gif) | `Install only Clover (Detailed) from https://github.com/zixiCat/CyberKit using the latest main branch. Follow the "Copy and use only this pet" instructions in pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
-| **[Clover (Simple)](pets/cybercat/README.md)** — rounded proportions, plain outfit, and simpler shapes | ![Simple Clover waving](pets/cybercat/animations/waving.gif) | `Install only Clover (Simple) from https://github.com/zixiCat/CyberKit using the latest main branch. Follow the "Copy and use only this pet" instructions in pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| Pet and motion preview | Copy into Codex (pet only) |
+| --- | --- |
+| **[Clover (Detailed)](pets/clover-detailed/README.md)**<br>Layered hair and detailed costume.<br><img src="pets/clover-detailed/animations/waving.gif" alt="Detailed Clover waving" width="240" height="260"> | `Install only Clover (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/clover-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Clover (Simple)](pets/cybercat/README.md)**<br>Rounded proportions and simple outfit.<br><img src="pets/cybercat/animations/waving.gif" alt="Simple Clover waving" width="240" height="260"> | `Install only Clover (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/cybercat/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
 The simple design retains the existing `cybercat` folder for compatibility; the detailed design uses `clover-detailed`. The full Windows setup installs both designs along with instructions and skills.
 
