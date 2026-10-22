@@ -4,9 +4,11 @@ Hakase's detailed desktop pet. [Hakase (Simple)](../hakase-simple/README.md) is 
 
 ## Motion previews
 
-![Hakase (Detailed) blinking, waving, hopping and asking for input](cute.gif)
+![Hakase (Detailed) blinking, waving, hopping and asking for input](showcase.gif)
 
-[All animations](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png)
+An eight-second loop with short pauses between actions.
+
+[All animations](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png) · [Short loop](cute.gif)
 
 | State | Preview |
 | --- | --- |
@@ -40,7 +42,7 @@ For both pets plus instructions and skills, use the separate [full Windows setup
 
 The transparent lossless PNG uses sprite version 2: **1536 × 2288**, eight columns by eleven rows, with **192 × 208** cells. Nine animation states contain **57 frames** and two gaze rows contain **16 clockwise directions**. All fifteen unused cells are transparent. The detailed design is preserved through lossless PNG encoding; GIFs use a shared palette, no dithering, and alpha threshold 128 for clean small-size edges.
 
-To rebuild exports from the checkout root:
+To rebuild exports from the checkout root (use `--showcase-only` to rebuild just the eight-second preview without FFmpeg):
 
 ```powershell
 python -m pip install -r pets/hakase-detailed/tools/requirements.txt

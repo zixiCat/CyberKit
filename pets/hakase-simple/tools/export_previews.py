@@ -33,6 +33,8 @@ LABELS = {
     "running": "Thinking",
     "review": "Looking good",
 }
+SHOWCASE_STATES = ["idle", "waving", "idle", "jumping", "idle", "waiting", "idle"]
+SHOWCASE_PAUSE_MS = 150
 
 
 def font(size):
@@ -112,11 +114,12 @@ def labeled(cell, label, scale=2):
     return result
 
 
-def collect(cells, states, with_labels):
+def collect(cells, states, with_labels, pause_ms=0):
     frames, durations = [], []
     for state in states:
         frames.extend(labeled(cell, LABELS[state]) if with_labels else cell for cell in cells[state])
         durations.extend(ROW_DURATIONS[state])
+        durations[-1] += pause_ms
     return frames, durations
 
 
@@ -217,11 +220,12 @@ def validate_exports(atlas, output_dir):
         for state, durations in ROW_DURATIONS.items()
     ]
     sequences = []
-    for name, states in [
-        ("cute.gif", ["idle", "waving", "jumping", "waiting"]),
-        ("animations/idle-jump-idle.gif", ["idle", "jumping", "idle"]),
+    for name, states, pause_ms in [
+        ("cute.gif", ["idle", "waving", "jumping", "waiting"], 0),
+        ("animations/idle-jump-idle.gif", ["idle", "jumping", "idle"], 0),
+        ("showcase.gif", SHOWCASE_STATES, SHOWCASE_PAUSE_MS),
     ]:
-        frames, durations = collect(cells, states, False)
+        frames, durations = collect(cells, states, False, pause_ms)
         sequences.append({"file": name, **validate_gif(frames, durations, output_dir / name)})
     return {"ok": True, "atlas": "spritesheet.png", "states": results, "sequences": sequences, "total_state_frames": sum(item["frames"] for item in results)}
 
@@ -232,6 +236,7 @@ def main():
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--ffmpeg-tools", type=Path)
     parser.add_argument("--validate", action="store_true", help="Validate existing state GIFs without rendering or loading FFmpeg")
+    parser.add_argument("--showcase-only", action="store_true", help="Build only the eight-second table preview and refresh the export report")
     args = parser.parse_args()
     with Image.open(args.atlas) as opened:
         atlas = opened.convert("RGBA")
@@ -247,6 +252,13 @@ def main():
         state: [atlas.crop((column * CELL[0], row * CELL[1], (column + 1) * CELL[0], (row + 1) * CELL[1])) for column in range(len(durations))]
         for row, (state, durations) in enumerate(ROW_DURATIONS.items())
     }
+    showcase_frames, showcase_durations = collect(cells, SHOWCASE_STATES, False, SHOWCASE_PAUSE_MS)
+    save_gif(showcase_frames, showcase_durations, args.output_dir / "showcase.gif")
+    if args.showcase_only:
+        result = {"ok": True, "atlas": args.atlas.name, "previews": inspect_gifs(args.output_dir)}
+        (args.output_dir / "export-report.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+        print(json.dumps(result, indent=2))
+        return
     looks = [atlas.crop((column * CELL[0], row * CELL[1], (column + 1) * CELL[0], (row + 1) * CELL[1])) for row in (9, 10) for column in range(8)]
     palette = make_palette([frame for frames in cells.values() for frame in frames] + looks)
     for state, frames in cells.items():

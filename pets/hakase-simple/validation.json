@@ -69,6 +69,12 @@
       "frames": 17,
       "alpha_mismatches": 0,
       "timings_exact": true
+    },
+    {
+      "file": "showcase.gif",
+      "frames": 39,
+      "alpha_mismatches": 0,
+      "timings_exact": true
     }
   ],
   "total_state_frames": 57

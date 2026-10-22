@@ -4,9 +4,11 @@ Hakase's simple desktop pet. [Hakase (Detailed)](../hakase-detailed/README.md) i
 
 ## Motion previews
 
-![Hakase (Simple) blinking, waving, hopping and asking for input](cute.gif)
+![Hakase (Simple) blinking, waving, hopping and asking for input](showcase.gif)
 
-[All states](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png)
+An eight-second loop with short pauses between actions.
+
+[All states](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png) · [Short loop](cute.gif)
 
 | State | Preview |
 | --- | --- |
@@ -44,7 +46,7 @@ The transparent, losslessly encoded PNG is sprite version 2: **1536 × 2288**, e
 
 The PNG preserves smooth alpha edges. Native-size GIFs use a shared palette, no dithering, and a reserved transparent index; an alpha threshold of 128 keeps faint edge pixels from becoming speckled opaque borders.
 
-To rebuild and check the exports from the checkout root:
+To rebuild and check the exports from the checkout root (use `--showcase-only` to rebuild just the eight-second preview without FFmpeg):
 
 ```powershell
 python -m pip install -r pets/hakase-simple/tools/requirements.txt

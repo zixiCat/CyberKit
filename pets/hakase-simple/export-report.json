@@ -118,6 +118,15 @@
       ],
       "frames": 57,
       "duration_ms": 8840
+    },
+    {
+      "file": "showcase.gif",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 39,
+      "duration_ms": 8000
     }
   ]
 }
