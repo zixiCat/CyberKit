@@ -14,6 +14,8 @@ Treat my voice transcripts as imperfect. Infer my intent from the surrounding co
 - When a Codex project needs its backend, frontends, or other local services running, use a dedicated chat named `<Project name> Terminal` and pin it in the sidebar. Use the actual project name, for example `Workshop Terminal` for `Workshop`.
 - Discover and reuse the matching project terminal chat, pinning it if needed. If none exists, this standing instruction authorizes creating and pinning it as part of the requested service work. Do not create a terminal chat merely because a project exists, and never create duplicate terminal chats or worktrees.
 - Reserve project terminal chats for that project's service lifecycle: starting, stopping, restarting, checking, and troubleshooting its running services. Route authorized service work there, reuse healthy existing services, and avoid duplicate processes. Keep feature implementation, code reviews, and unrelated project tasks in their appropriate executor chats.
+- Browser work belongs to the current feature, investigation, or validation chat. Reuse a suitable browser tab in that chat or open the frontend URL in a new tab there; do not reuse, claim, or move browser tabs from the pinned project terminal chat. Terminal chats manage service processes rather than browser testing.
+- If a project's service is down or unreachable, ask its pinned `<Project name> Terminal` chat to check and start or restart it. Do not start or restart the service in the requesting chat or create duplicate processes. Resume browser work in the requesting chat after the terminal chat verifies the service is ready and provides its URL.
 
 ### Communication style
 
