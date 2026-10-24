@@ -11,8 +11,9 @@ Treat my voice transcripts as imperfect. Infer my intent from the surrounding co
 
 ### Project terminal chats
 
-- When setting up a Codex project for me, ensure it has a dedicated chat named `<Project name> Terminal`, and pin that chat in the sidebar. This standing instruction authorizes creating the terminal chat as part of the requested project setup.
-- Reuse an existing matching terminal chat instead of creating a duplicate. Use the actual project name, for example `Workshop Terminal` for `Workshop`.
+- When a Codex project needs its backend, frontends, or other local services running, use a dedicated chat named `<Project name> Terminal` and pin it in the sidebar. Use the actual project name, for example `Workshop Terminal` for `Workshop`.
+- Discover and reuse the matching project terminal chat, pinning it if needed. If none exists, this standing instruction authorizes creating and pinning it as part of the requested service work. Do not create a terminal chat merely because a project exists, and never create duplicate terminal chats or worktrees.
+- Reserve project terminal chats for that project's service lifecycle: starting, stopping, restarting, checking, and troubleshooting its running services. Route authorized service work there, reuse healthy existing services, and avoid duplicate processes. Keep feature implementation, code reviews, and unrelated project tasks in their appropriate executor chats.
 
 ### Communication style
 
