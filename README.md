@@ -6,7 +6,14 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
-Both designs keep their hands behind the back during idle and thinking, with gentle breathing and sway. The previews also show their wave, hop and waiting gestures.
+The approved [circular idle and thinking previews](pets/previews/circular-look-20261026/README.md) follow **up → right → down → left → up**, using all sixteen original gaze poses with relaxed visible hands.
+
+| Circular motion | Detailed | Simple |
+| --- | --- | --- |
+| Idle · 3.84 s | <img src="pets/previews/circular-look-20261026/hakase-detailed/idle.gif" alt="Hakase (Detailed) looking around in a full clockwise circle, slowly" width="144" height="156"> | <img src="pets/previews/circular-look-20261026/hakase-simple/idle.gif" alt="Hakase (Simple) looking around in a full clockwise circle, slowly" width="144" height="156"> |
+| Thinking · 2.4 s | <img src="pets/previews/circular-look-20261026/hakase-detailed/thinking.gif" alt="Hakase (Detailed) looking around in a full clockwise circle at the original pace" width="144" height="156"> | <img src="pets/previews/circular-look-20261026/hakase-simple/thinking.gif" alt="Hakase (Simple) looking around in a full clockwise circle at the original pace" width="144" height="156"> |
+
+These are full sixteen-frame previews. The installable v2 format has six cells each for idle and thinking, so the pet-only installation tasks below still install the current native animations, with hands behind the back during those two states. The circular previews preserve the approved motion without reducing it to six poses.
 
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |

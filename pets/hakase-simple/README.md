@@ -2,7 +2,17 @@
 
 Hakase's simple desktop pet. [Hakase (Detailed)](../hakase-detailed/README.md) is available separately.
 
-## Motion previews
+## Approved circular motion
+
+The new full-circle [idle and thinking previews](../previews/circular-look-20261026/README.md) reuse all sixteen original gaze poses: **up → right → down → left → up**, with relaxed visible hands and natural head turns.
+
+| Idle · 3.84 s | Thinking · 2.4 s |
+| --- | --- |
+| ![Simple circular idle](../previews/circular-look-20261026/hakase-simple/idle.gif) | ![Simple circular thinking](../previews/circular-look-20261026/hakase-simple/thinking.gif) |
+
+These previews retain sixteen frames. The native v2 idle and thinking rows each contain six cells, so the installation task below still uses the current native animations. See the linked preview package for source frames, validation and rebuild instructions.
+
+## Current native motion previews
 
 Idle and thinking now keep both hands naturally behind the lower back throughout, with relaxed shoulders, warm expressions, subtle breathing, body/head sway and hair/goggle/coat follow-through. Thinking uses glances and small nods while the hands stay hidden. Compare [idle before/after](qa/behind-back-idle-comparison.gif) and [thinking before/after](qa/behind-back-running-comparison.gif). The other seven action animations and all gaze cells remain pixel-identical, including the purposeful wave.
 
