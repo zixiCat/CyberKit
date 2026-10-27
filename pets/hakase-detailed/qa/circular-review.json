@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "reviewer": "Independent motion-review agent",
+  "atlas_sha256": "7e6f35a32bdda21ce96bcd829d2f0cc1e9189df6a9d3636be2e006380a305b02",
+  "baseline_commit": "5614f37a727bc3e053b3300630a6236054414475",
+  "method": "Compared every atlas cell against the baseline commit and each new quiet cell against the approved source PNG; visually inspected both ordered six-cell rows plus the frame 5 to frame 0 closure in circular-contact-sheet.png at native cell size. No live desktop playback claimed.",
+  "contact_sheet": "circular-contact-sheet.png",
+  "source_look_indices_zero_based": [
+    0,
+    4,
+    6,
+    8,
+    12,
+    14
+  ],
+  "source_png_pixels_exact": true,
+  "changed_cells_zero_based": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ]
+  ],
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "all_16_gaze_cells_preserved": true,
+  "states": {
+    "idle": {
+      "row": 0,
+      "unique_frames": 6,
+      "durations_ms": [
+        1680,
+        660,
+        660,
+        840,
+        840,
+        1920
+      ],
+      "cycle_ms": 6600
+    },
+    "running": {
+      "row": 7,
+      "unique_frames": 6,
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "cycle_ms": 820
+    }
+  },
+  "visual_review": {
+    "direction": "Up -> right -> down-right -> down -> left -> up-left -> up. Face yaw, gaze and head pitch follow the intended clockwise order.",
+    "hands": "Both hands remain visible with relaxed arms throughout the six-pose sequence; no original behind-back quiet poses remain.",
+    "identity": "Approved head, hair, goggles, outfit and body proportions preserved because the source pose pixels are copied exactly.",
+    "registration": "Boots remain planted. No clipping or cell-edge contact observed; the six cells keep transparent margins.",
+    "wrap": "Frame 5 up-left returns to frame 0 up with a 45-degree gaze step. Both states share the same source sequence; the idle hold is calmer and thinking cadence quicker.",
+    "appeal": "Warm open-eyed upward expression, curious right/left turns and lowered thoughtful gaze form a small head roll."
+  },
+  "blockers": [],
+  "limitations": [
+    "Six native cells cannot reproduce sixteen-pose smoothness: the up-to-right and down-to-left transitions each cover 90 degrees.",
+    "Ordered still-frame review and exact pixel checks do not certify subjective live desktop animation smoothness.",
+    "App-controlled timings cannot match the full 16-pose reference loops; non-loop actions may return to idle after three cycles."
+  ]
+}

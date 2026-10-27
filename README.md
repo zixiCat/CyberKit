@@ -6,19 +6,19 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
-The approved [circular idle and thinking previews](pets/previews/circular-look-20261026/README.md) follow **up → right → down → left → up**, using all sixteen original gaze poses with relaxed visible hands.
+Both installable pets now use a curious clockwise head roll for idle and thinking: **up → right → down → left → up**, with relaxed visible hands. The original quiet-state actions have been replaced in the pet packages.
 
 | Circular motion | Detailed | Simple |
 | --- | --- | --- |
-| Idle · 3.84 s | <img src="pets/previews/circular-look-20261026/hakase-detailed/idle.gif" alt="Hakase (Detailed) looking around in a full clockwise circle, slowly" width="144" height="156"> | <img src="pets/previews/circular-look-20261026/hakase-simple/idle.gif" alt="Hakase (Simple) looking around in a full clockwise circle, slowly" width="144" height="156"> |
-| Thinking · 2.4 s | <img src="pets/previews/circular-look-20261026/hakase-detailed/thinking.gif" alt="Hakase (Detailed) looking around in a full clockwise circle at the original pace" width="144" height="156"> | <img src="pets/previews/circular-look-20261026/hakase-simple/thinking.gif" alt="Hakase (Simple) looking around in a full clockwise circle at the original pace" width="144" height="156"> |
+| Circular idle · 6.6 s | <img src="pets/hakase-detailed/animations/idle.gif" alt="Hakase (Detailed) playing the installable circular idle poses" width="144" height="156"> | <img src="pets/hakase-simple/animations/idle.gif" alt="Hakase (Simple) playing the installable circular idle poses" width="144" height="156"> |
+| Circular thinking · 0.82 s | <img src="pets/hakase-detailed/animations/running.gif" alt="Hakase (Detailed) playing the installable circular thinking poses" width="144" height="156"> | <img src="pets/hakase-simple/animations/running.gif" alt="Hakase (Simple) playing the installable circular thinking poses" width="144" height="156"> |
 
-These are full sixteen-frame previews. The installable v2 format has six cells each for idle and thinking, so the pet-only installation tasks below still install the current native animations, with hands behind the back during those two states. The circular previews preserve the approved motion without reducing it to six poses.
+The installed loops use six selected poses from the approved sixteen-pose circle, matching the desktop app's fixed six-frame idle and thinking playback. The table shows those installed poses with the app's 6.6-second idle and 0.82-second thinking cadence. Thinking can return to idle after a short run, depending on the app state. The [full sixteen-frame references](pets/previews/circular-look-20261026/README.md) remain available for comparison; all sixteen original gaze cells are also retained in each pet.
 
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |
-| **[Hakase (Detailed)](pets/hakase-detailed/README.md)**<br><img src="pets/hakase-detailed/showcase.gif" alt="Hakase (Detailed) resting with hands behind the back, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
-| **[Hakase (Simple)](pets/hakase-simple/README.md)**<br><img src="pets/hakase-simple/showcase.gif" alt="Hakase (Simple) resting with hands behind the back, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-simple/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Detailed)](pets/hakase-detailed/README.md)**<br><img src="pets/hakase-detailed/showcase.gif" alt="Hakase (Detailed) looking around clockwise, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
+| **[Hakase (Simple)](pets/hakase-simple/README.md)**<br><img src="pets/hakase-simple/showcase.gif" alt="Hakase (Simple) looking around clockwise, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Simple). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-simple/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
 
 The packages use `hakase-simple` and `hakase-detailed` folders. The full Windows setup installs both designs along with instructions and skills.
 

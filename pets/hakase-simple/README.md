@@ -2,36 +2,34 @@
 
 Hakase's simple desktop pet. [Hakase (Detailed)](../hakase-detailed/README.md) is available separately.
 
-## Approved circular motion
+## Circular idle and thinking
 
-The new full-circle [idle and thinking previews](../previews/circular-look-20261026/README.md) reuse all sixteen original gaze poses: **up → right → down → left → up**, with relaxed visible hands and natural head turns.
+Both quiet states now use the approved curious head roll with relaxed visible hands: **up → right → down → left → up**. The installable spritesheet replaces the earlier hands-behind-back idle and thinking actions.
 
-| Idle · 3.84 s | Thinking · 2.4 s |
+| Native circular idle · 6.6 s | Native circular thinking · 0.82 s |
 | --- | --- |
-| ![Simple circular idle](../previews/circular-look-20261026/hakase-simple/idle.gif) | ![Simple circular thinking](../previews/circular-look-20261026/hakase-simple/thinking.gif) |
+| ![Simple native circular idle](animations/idle.gif) | ![Simple native circular thinking](animations/running.gif) |
 
-These previews retain sixteen frames. The native v2 idle and thinking rows each contain six cells, so the installation task below still uses the current native animations. See the linked preview package for source frames, validation and rebuild instructions.
+The desktop app plays six frames in each of these states. The installed sequence selects **Look01 → Look05 → Look07 → Look09 → Look13 → Look15 → Look01** from the approved circle: up → right → down-right → down → left → up-left → up. Each selected pose keeps the original artwork exactly. The GIFs use the app's 6.6-second idle and 0.82-second thinking cadence. Thinking can return to idle after a short run, depending on the app state. The [full sixteen-frame reference](../previews/circular-look-20261026/README.md) remains available separately; all sixteen native gaze cells are retained.
 
-## Current native motion previews
+## Motion previews
 
-Idle and thinking now keep both hands naturally behind the lower back throughout, with relaxed shoulders, warm expressions, subtle breathing, body/head sway and hair/goggle/coat follow-through. Thinking uses glances and small nods while the hands stay hidden. Compare [idle before/after](qa/behind-back-idle-comparison.gif) and [thinking before/after](qa/behind-back-running-comparison.gif). The other seven action animations and all gaze cells remain pixel-identical, including the purposeful wave.
+![Hakase (Simple) looking around clockwise, waving, hopping and asking for input](showcase.gif)
 
-![Hakase (Simple) blinking, waving, hopping and asking for input](showcase.gif)
-
-An eight-second loop with short pauses between actions.
+The 10.72-second showcase combines circular idle and thinking with a friendly wave, hop and waiting gesture. The other seven action animations keep their existing poses.
 
 [All states](preview.gif) · [Video](preview.mp4) · [Motion stills](motion-stills.png) · [Short loop](cute.gif)
 
 | State | Preview |
 | --- | --- |
-| Hands behind back, breathing and sway | [idle.gif](animations/idle.gif) |
+| Circular idle, relaxed visible hands | [idle.gif](animations/idle.gif) |
 | Friendly wave | [waving.gif](animations/waving.gif) |
 | Anticipation, hop and landing | [jumping.gif](animations/jumping.gif) |
 | Expectant asking gesture | [waiting.gif](animations/waiting.gif) |
 | Running right | [running-right.gif](animations/running-right.gif) |
 | Running left | [running-left.gif](animations/running-left.gif) |
 | Worried reaction and recovery | [failed.gif](animations/failed.gif) |
-| Hands behind back, thoughtful tilt and glance | [running.gif](animations/running.gif) |
+| Circular thinking, relaxed visible hands | [running.gif](animations/running.gif) |
 | Inspecting and approving work | [review.gif](animations/review.gif) |
 
 The [action contact sheet](contact-sheet.png), [sixteen gaze directions](look-directions.png), [gaze loop](look.gif), and [idle-to-jump transition](animations/idle-jump-idle.gif) show the complete pose set. Head, eyes, goggles and hair follow the gaze while the torso and boots remain planted.
@@ -58,7 +56,7 @@ The transparent, losslessly encoded PNG is sprite version 2: **1536 × 2288**, e
 
 The PNG preserves smooth alpha edges. Native-size GIFs use a shared palette, no dithering, and a reserved transparent index; an alpha threshold of 128 keeps faint edge pixels from becoming speckled opaque borders.
 
-To rebuild and check the exports from the checkout root (use `--showcase-only` to rebuild just the eight-second preview without FFmpeg):
+To rebuild and check the exports from the checkout root (use `--quiet-loops-only` to refresh circular-loop exports while retaining other action GIFs, or `--showcase-only` for just the showcase without FFmpeg):
 
 ```powershell
 python -m pip install -r pets/hakase-simple/tools/requirements.txt
@@ -68,12 +66,12 @@ python pets/hakase-simple/tools/export_previews.py --atlas pets/hakase-simple/sp
 
 ## Evidence and source
 
-The [provenance](provenance.json), [canonical design](clover.png), and [accepted prompt set](source/prompts/README.md) describe the artwork. Built-in ImageGen produced the base and every state/gaze strip; deterministic tools extracted connected poses, applied a uniform registration per row, composed the atlas, and encoded previews. Both running directions were generated separately.
+The [provenance](provenance.json), [canonical design](clover.png), and [accepted prompt set](source/prompts/README.md) describe the artwork. Built-in ImageGen produced the base and every state/gaze strip; deterministic tools extracted connected poses, applied a uniform registration per row, composed the atlas, and encoded previews. Both running directions were generated separately. The current circular idle and thinking loops copy selected approved gaze cells without redrawing or resizing them.
 
-Current checks include [local atlas validation](qa/atlas-validation.json), [behind-back loop measurements](qa/behind-back-format.json), [pose and motion review](qa/behind-back-review.json), and [GIF timing/alpha validation](validation.json), and [duplicate-free in-place installer tests](qa/behind-back-installer.json). Prior generation reports are retained in [the history folder](qa/before-lively); the previous quiet-loop revision is saved under [before-behind-back](qa/before-behind-back). Gaze semantics and continuity reports apply to the pixel-identical gaze rows.
+Current checks include [local atlas validation](qa/atlas-validation.json), [circular-loop measurements](qa/circular-format.json), [circular pose and motion review](qa/circular-review.json), and [GIF timing/alpha validation](validation.json). Earlier generation and hands-behind-back reports describe historical revisions only. Gaze semantics and continuity reports still apply to the unchanged gaze rows.
 
 Visual inspection uses ordered native-size frames and contact sheets; a still-image inspection tool does not verify live playback. The largest gaze step is 157.5° to 180°; 202.5° and 225° are close in appearance. Subtle intermediate gaze components and minor hand-drawn hair/outline variation are documented in the reviews. Reports describe generation-time checks and use repository-relative paths. Intermediate source strips, rejected revisions and working frames remain in the local creation run; credentials, selections, local instructions and runtime histories are excluded.
 
-The [quiet-loop tooling guide](../tools/README.md) describes extraction, checks and updating both pets with `setup/install-config.ps1 -PetsOnly` while skipping instructions and skills. The standalone task above still installs only this pet. No frame counts or desktop timing settings were changed.
+The [circular-loop tooling guide](../tools/README.md) describes pose selection, checks and updating both pets with `setup/install-config.ps1 -PetsOnly` while skipping instructions and skills. The standalone task above still installs only this pet. No frame counts or desktop timing settings were changed.
 
 For computers still using the earlier installed folder names, `-PetsOnly -ReuseLegacyPetFolders` updates those existing pets in place with the current Hakase names, avoiding duplicates and preserving the selected folder. Fresh installations retain the canonical Hakase folders.

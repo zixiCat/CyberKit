@@ -66,7 +66,8 @@ for pet in ("hakase-detailed", "hakase-simple"):
         "original_package_unchanged": True,
         "exports": checks,
         "native_idle_thinking_row_cells": 6,
-        "native_installation": "Not installed. These faithful 16-frame previews do not fit the native six-cell idle/thinking rows.",
+        "native_selected_gaze_indices_zero_based": [0, 4, 6, 8, 12, 14],
+        "native_installation": "The Hakase packages now use six selected clockwise poses in idle and thinking. These full sixteen-frame references retain the original smooth motion and independent preview timing.",
     }
     (destination / "validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     summary.append({"pet": pet, "ok": True, "previews": {a: str(destination / f"{a}.gif") for a in CADENCES}})

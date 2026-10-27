@@ -1,6 +1,6 @@
 {
   "displayName": "Hakase (Simple)",
-  "description": "Hakase desktop companion, simple version.",
+  "description": "Hakase desktop companion, simple version, with clockwise idle and thinking head rolls.",
   "spriteVersionNumber": 2,
   "spritesheetPath": "spritesheet.png"
 }

@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "sprite_version": 2,
+  "dimensions": [
+    1536,
+    2288
+  ],
+  "required_cells": 73,
+  "transparent_unused_cells": 15,
+  "sha256": "0477d157a228e383e86f7c4e003d3174b31e42814695877690988d5c49a27104",
+  "encoded_bytes": 3009183,
+  "previous_atlas_sha256": "cba3e10a966ec620298a3f3254cc4ccd13c0736dba68399f249b2af4009287e7",
+  "unchanged_rows_pixel_exact": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+  ],
+  "source_gaze_indices_zero_based": [
+    0,
+    4,
+    6,
+    8,
+    12,
+    14
+  ],
+  "source_look_names": [
+    "Look01",
+    "Look05",
+    "Look07",
+    "Look09",
+    "Look13",
+    "Look15"
+  ],
+  "directions": [
+    "up",
+    "right",
+    "down-right",
+    "down",
+    "left",
+    "up-left",
+    "up"
+  ],
+  "all_16_gaze_cells_preserved": true,
+  "approved_pixels_exact": true,
+  "new_artwork_generated": false,
+  "states": {
+    "idle": {
+      "row_zero_based": 0,
+      "frames": 6,
+      "durations_ms": [
+        1680,
+        660,
+        660,
+        840,
+        840,
+        1920
+      ],
+      "cycle_ms": 6600,
+      "loop_wrap": "up-left -> up"
+    },
+    "running": {
+      "row_zero_based": 7,
+      "frames": 6,
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "cycle_ms": 820,
+      "loop_wrap": "up-left -> up"
+    }
+  },
+  "timing_source": "Installed desktop app 26.1021.3705: idle base timings multiplied by six; running row seven timings unchanged.",
+  "scope": "Twelve quiet-state cells replaced. Seven other action rows and all sixteen gaze poses remain pixel-identical.",
+  "limitation": "Six native poses cannot reproduce the sixteen-pose reference's smoothness or its timing. Non-loop actions can return to idle after three cycles."
+}

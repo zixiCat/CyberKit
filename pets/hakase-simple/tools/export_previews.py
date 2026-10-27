@@ -12,7 +12,8 @@ BACKGROUND = "#f1f7ef"
 INK = "#1f4936"
 TRANSPARENT = 255
 ROW_DURATIONS = {
-    "idle": [280, 110, 110, 140, 140, 320],
+    # The desktop player multiplies these base idle timings by six.
+    "idle": [1680, 660, 660, 840, 840, 1920],
     "running-right": [120, 120, 120, 120, 120, 120, 120, 220],
     "running-left": [120, 120, 120, 120, 120, 120, 120, 220],
     "waving": [140, 140, 140, 280],
@@ -23,7 +24,7 @@ ROW_DURATIONS = {
     "review": [150, 150, 150, 150, 150, 280],
 }
 LABELS = {
-    "idle": "Blinking",
+    "idle": "Curious head roll",
     "running-right": "Running right",
     "running-left": "Running left",
     "waving": "Hello!",
@@ -33,7 +34,7 @@ LABELS = {
     "running": "Thinking",
     "review": "Looking good",
 }
-SHOWCASE_STATES = ["idle", "waving", "idle", "jumping", "idle", "waiting", "idle"]
+SHOWCASE_STATES = ["idle", "running", "waving", "jumping", "waiting"]
 SHOWCASE_PAUSE_MS = 150
 
 
@@ -236,7 +237,8 @@ def main():
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--ffmpeg-tools", type=Path)
     parser.add_argument("--validate", action="store_true", help="Validate existing state GIFs without rendering or loading FFmpeg")
-    parser.add_argument("--showcase-only", action="store_true", help="Build only the eight-second table preview and refresh the export report")
+    parser.add_argument("--showcase-only", action="store_true", help="Build only the table showcase and refresh the export report")
+    parser.add_argument("--quiet-loops-only", action="store_true", help="Refresh quiet-state and combined exports, preserving unrelated action GIFs and gaze exports")
     args = parser.parse_args()
     with Image.open(args.atlas) as opened:
         atlas = opened.convert("RGBA")
@@ -262,6 +264,8 @@ def main():
     looks = [atlas.crop((column * CELL[0], row * CELL[1], (column + 1) * CELL[0], (row + 1) * CELL[1])) for row in (9, 10) for column in range(8)]
     palette = make_palette([frame for frames in cells.values() for frame in frames] + looks)
     for state, frames in cells.items():
+        if args.quiet_loops_only and state not in ("idle", "running"):
+            continue
         save_gif(frames, ROW_DURATIONS[state], args.output_dir / "animations" / f"{state}.gif", palette)
     cute_frames, cute_durations = collect(cells, ["idle", "waving", "jumping", "waiting"], False)
     save_gif(cute_frames, cute_durations, args.output_dir / "cute.gif", palette)
@@ -269,11 +273,13 @@ def main():
     save_gif(transition_frames, transition_durations, args.output_dir / "animations" / "idle-jump-idle.gif", palette)
     preview_frames, preview_durations = collect(cells, cells, True)
     save_gif(preview_frames, preview_durations, args.output_dir / "preview.gif")
-    look_frames = [labeled(frame, f"Look {index + 1:02}") for index, frame in enumerate(looks)]
-    save_gif(look_frames, [150] * len(look_frames), args.output_dir / "look.gif")
+    if not args.quiet_loops_only:
+        look_frames = [labeled(frame, f"Look {index + 1:02}") for index, frame in enumerate(looks)]
+        save_gif(look_frames, [150] * len(look_frames), args.output_dir / "look.gif")
     save_video(preview_frames, preview_durations, args.output_dir / "preview.mp4", args.ffmpeg_tools)
     save_contact_sheet(cells, args.output_dir / "contact-sheet.png")
-    save_look_sheet(looks, args.output_dir / "look-directions.png")
+    if not args.quiet_loops_only:
+        save_look_sheet(looks, args.output_dir / "look-directions.png")
     save_motion_stills(cells, args.output_dir / "motion-stills.png")
     result = {"ok": True, "atlas": args.atlas.name, "previews": inspect_gifs(args.output_dir)}
     (args.output_dir / "export-report.json").write_text(json.dumps(result, indent=2), encoding="utf-8")

@@ -3,7 +3,7 @@
   "preview_only": true,
   "artwork": "Exact original approved gaze-cell pixels; no new artwork generated.",
   "source_atlas": "../../../hakase-detailed/spritesheet.png",
-  "source_atlas_sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
+  "source_atlas_sha256": "7e6f35a32bdda21ce96bcd829d2f0cc1e9189df6a9d3636be2e006380a305b02",
   "source_rows_zero_indexed": [
     9,
     10
@@ -104,5 +104,13 @@
     }
   },
   "native_idle_thinking_row_cells": 6,
-  "native_installation": "Not installed. These faithful 16-frame previews do not fit the native six-cell idle/thinking rows."
+  "native_selected_gaze_indices_zero_based": [
+    0,
+    4,
+    6,
+    8,
+    12,
+    14
+  ],
+  "native_installation": "The Hakase packages now use six selected clockwise poses in idle and thinking. These full sixteen-frame references retain the original smooth motion and independent preview timing."
 }

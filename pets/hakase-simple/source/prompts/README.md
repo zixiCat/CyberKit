@@ -1,5 +1,9 @@
 # Accepted ImageGen prompts
 
+## Current circular revision, 2026-10-27
+
+The current circular idle and thinking loops copy selected approved gaze artwork without generating new frames. `idle.txt` and `running.txt` are historical prompt records for the earlier hands-behind-back actions. See the [current circular source-pose and format report](../../qa/circular-format.json) for the installed sequence.
+
 These are the exact submitted prompts for the accepted base edit, nine state strips, cardinal anchors, and two gaze rows, using the built-in ImageGen tool with transparent backgrounds. The final row10 sheet also used the recorded size-repair edit.
 
 - [Canonical design edit](base.txt)

@@ -1,7 +1,7 @@
 {
   "name": "Hakase (Detailed)",
   "package_id": "hakase-detailed",
-  "revision": "hands-behind-back-quiet-loops-20261022",
+  "revision": "native-circular-quiet-loops-20261027",
   "artwork_tool": "built-in ImageGen",
   "canonical_art_reused": true,
   "reference": "The user explicitly selected the upper, more detailed illustration from a comparison of two Clover designs. The exact original full-resolution transparent artwork is reused as the canonical reference. The screenshot itself is excluded.",
@@ -35,22 +35,27 @@
   "local_state_included": false,
   "account_pet_created": false,
   "canonical_sha256": "98af769d74abbd623d27320b767142163b8c9260c94147096ca04c432eb82102",
-  "sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
-  "encoded_bytes": 3084483,
-  "previous_atlas_sha256": "78a70ee6bd8c14ea610a743b45b086f92273654068a7754503302d6ce2371b5e",
+  "sha256": "7e6f35a32bdda21ce96bcd829d2f0cc1e9189df6a9d3636be2e006380a305b02",
+  "encoded_bytes": 3112354,
+  "previous_atlas_sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
   "quiet_loop_revision": {
-    "tool": "built-in ImageGen",
+    "tool": "Deterministic packaging of existing approved ImageGen gaze artwork",
     "states": [
       "idle",
       "running (thinking)"
     ],
-    "pose": "Both arms/hands naturally behind torso and lower back in every quiet frame; warm friendly anime greeting posture without speech or text.",
-    "scope": "Twelve cells replaced; all61 other required cells and current Hakase identities preserved. No account Pets tools used.",
-    "prompts": [
-      "source/prompts/idle.txt",
-      "source/prompts/running.txt"
+    "pose": "Gentle curious clockwise head roll, visible relaxed hands and planted boots.",
+    "source_look_names": [
+      "Look01",
+      "Look05",
+      "Look07",
+      "Look09",
+      "Look13",
+      "Look15"
     ],
-    "processing": "Six complete separate generated poses per row, shared row scale and planted boot registration; lossless deflate9 PNG. Simple source families received whole-strip ImageGen spacing repairs. No drawn replacement pixels.",
-    "review": "qa/behind-back-review.json"
+    "scope": "Twelve quiet-state cells replaced. Seven other action rows and all sixteen gaze poses remain pixel-identical.",
+    "processing": "Exact 192x208 source cells copied without resizing or redrawing; lossless PNG encoding.",
+    "review": "qa/circular-review.json",
+    "format_validation": "qa/circular-format.json"
   }
 }

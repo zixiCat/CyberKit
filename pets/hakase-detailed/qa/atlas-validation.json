@@ -7,9 +7,9 @@
   ],
   "required_cells": 73,
   "transparent_unused_cells": 15,
-  "sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
-  "encoded_bytes": 3084483,
-  "before_encoded_bytes": 3102111,
+  "sha256": "7e6f35a32bdda21ce96bcd829d2f0cc1e9189df6a9d3636be2e006380a305b02",
+  "encoded_bytes": 3112354,
+  "previous_atlas_sha256": "638afd4690f2d9557f38442cd654d7fed8ad172302276e2292f714ecb3ea0af7",
   "unchanged_rows_pixel_exact": [
     1,
     2,
@@ -21,6 +21,36 @@
     9,
     10
   ],
+  "source_gaze_indices_zero_based": [
+    0,
+    4,
+    6,
+    8,
+    12,
+    14
+  ],
+  "source_look_names": [
+    "Look01",
+    "Look05",
+    "Look07",
+    "Look09",
+    "Look13",
+    "Look15"
+  ],
+  "directions": [
+    "up",
+    "right",
+    "down-right",
+    "down",
+    "left",
+    "up-left",
+    "up"
+  ],
+  "all_16_gaze_cells_preserved": true,
+  "approved_pixels_exact": true,
+  "new_artwork_generated": false,
+  "timing_source": "Installed desktop app 26.1021.3705: idle base timings multiplied by six; running row seven timings unchanged.",
+  "scope": "Twelve quiet-state cells replaced. Seven other action rows and all sixteen gaze poses remain pixel-identical.",
   "file": "pets/hakase-detailed/spritesheet.png",
-  "validator": "pets/tools/replace_quiet_loops.py; Codex desktop format, no ChatGPT Work Pets tools used."
+  "validator": "pets/tools/install_circular_loops.py"
 }
