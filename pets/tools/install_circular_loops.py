@@ -1,7 +1,7 @@
 """Replace both native quiet-state rows with approved clockwise gaze pixels.
 
 This packages existing artwork; it does not generate, redraw or rescale poses.
-The sixteen-pose reference is sampled to the six slots the desktop player uses.
+The atlas's sixteen gaze poses are sampled to the six slots the player uses.
 """
 import argparse
 import hashlib
@@ -43,11 +43,7 @@ def build(pet, verify_only=False):
     original_bytes = source.read_bytes()
     original = Image.open(source).convert("RGBA")
     inspect(original)
-    reference = PETS / "previews/circular-look-20261026" / pet / "frames"
-    looks = [Image.open(reference / f"look{i + 1:02}.png").convert("RGBA") for i in range(16)]
-    for i, frame in enumerate(looks):
-        if frame.size != CELL or frame.tobytes() != cell(original, 9 + i // 8, i % 8).tobytes():
-            raise ValueError(f"Approved gaze reference differs at Look{i + 1:02}")
+    looks = [cell(original, 9 + i // 8, i % 8) for i in range(16)]
     frames = [looks[i] for i in POSES]
     if len({frame.tobytes() for frame in frames}) != 6:
         raise ValueError("Circular loop needs six distinct approved poses")

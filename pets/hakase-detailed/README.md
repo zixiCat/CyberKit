@@ -2,16 +2,6 @@
 
 Hakase's detailed desktop pet. [Hakase (Simple)](../hakase-simple/README.md) is available separately.
 
-## Circular idle and thinking
-
-Both quiet states now use the approved curious head roll with relaxed visible hands: **up → right → down → left → up**. The installable spritesheet replaces the earlier hands-behind-back idle and thinking actions.
-
-| Native circular idle · 6.6 s | Native circular thinking · 0.82 s |
-| --- | --- |
-| ![Detailed native circular idle](animations/idle.gif) | ![Detailed native circular thinking](animations/running.gif) |
-
-The desktop app plays six frames in each of these states. The installed sequence selects **Look01 → Look05 → Look07 → Look09 → Look13 → Look15 → Look01** from the approved circle: up → right → down-right → down → left → up-left → up. Each selected pose keeps the original artwork exactly. The GIFs use the app's 6.6-second idle and 0.82-second thinking cadence. Thinking can return to idle after a short run, depending on the app state. The [full sixteen-frame reference](../previews/circular-look-20261026/README.md) remains available separately; all sixteen native gaze cells are retained.
-
 ## Motion previews
 
 ![Hakase (Detailed) looking around clockwise, waving, hopping and asking for input](showcase.gif)

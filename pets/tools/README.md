@@ -4,11 +4,11 @@
 
 The tool copies existing gaze cells exactly, keeping relaxed visible hands, original proportions and head turns. All sixteen gaze cells remain in rows 9 and 10. The other seven action rows are unchanged. No new artwork is needed for this revision.
 
-The desktop app fixes idle and thinking at six frames each. Its idle cadence is `[1680, 660, 660, 840, 840, 1920]` milliseconds (6.6 seconds); thinking uses `[120, 120, 120, 120, 120, 220]` milliseconds (0.82 seconds). The native preview GIFs use these timings. The app may return to idle after a short thinking run, depending on its state. The [sixteen-frame references](../previews/circular-look-20261026/README.md) retain their separate 3.84-second idle and 2.4-second thinking pacing.
+The desktop app fixes idle and thinking at six frames each. Its idle cadence is `[1680, 660, 660, 840, 840, 1920]` milliseconds (6.6 seconds); thinking uses `[120, 120, 120, 120, 120, 220]` milliseconds (0.82 seconds). The native preview GIFs use these timings. The app may return to idle after a short thinking run, depending on its state.
 
 ## Rebuild and validate
 
-The builder copies the tracked `frames/look*.png` artwork from the sixteen-frame reference package. With no arguments, it updates both pets; `--pet hakase-simple` or `--pet hakase-detailed` selects one. Use `--verify` to check the repository packages without rewriting them.
+The builder reads the existing gaze artwork directly from rows 9 and 10 of each pet's spritesheet. With no arguments, it updates both pets; `--pet hakase-simple` or `--pet hakase-detailed` selects one. Use `--verify` to check the repository packages without rewriting them.
 
 ```powershell
 python -m pip install -r pets/tools/requirements.txt

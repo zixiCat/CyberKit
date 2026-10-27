@@ -6,15 +6,6 @@ Set up my Codex instructions and workflows on a new Windows computer with one ta
 
 Copy your chosen pet's task from the table into Codex to install only that design. The full Windows setup below is optional.
 
-Both installable pets now use a curious clockwise head roll for idle and thinking: **up → right → down → left → up**, with relaxed visible hands. The original quiet-state actions have been replaced in the pet packages.
-
-| Circular motion | Detailed | Simple |
-| --- | --- | --- |
-| Circular idle · 6.6 s | <img src="pets/hakase-detailed/animations/idle.gif" alt="Hakase (Detailed) playing the installable circular idle poses" width="144" height="156"> | <img src="pets/hakase-simple/animations/idle.gif" alt="Hakase (Simple) playing the installable circular idle poses" width="144" height="156"> |
-| Circular thinking · 0.82 s | <img src="pets/hakase-detailed/animations/running.gif" alt="Hakase (Detailed) playing the installable circular thinking poses" width="144" height="156"> | <img src="pets/hakase-simple/animations/running.gif" alt="Hakase (Simple) playing the installable circular thinking poses" width="144" height="156"> |
-
-The installed loops use six selected poses from the approved sixteen-pose circle, matching the desktop app's fixed six-frame idle and thinking playback. The table shows those installed poses with the app's 6.6-second idle and 0.82-second thinking cadence. Thinking can return to idle after a short run, depending on the app state. The [full sixteen-frame references](pets/previews/circular-look-20261026/README.md) remain available for comparison; all sixteen original gaze cells are also retained in each pet.
-
 | Pet and motion preview | Copy into Codex (pet only) |
 | --- | --- |
 | **[Hakase (Detailed)](pets/hakase-detailed/README.md)**<br><img src="pets/hakase-detailed/showcase.gif" alt="Hakase (Detailed) looking around clockwise, waving, hopping and waiting" width="144" height="156"> | `Install only Hakase (Detailed). Follow the pet-only instructions at https://github.com/zixiCat/CyberKit/blob/main/pets/hakase-detailed/README.md. Skip the full Windows setup and preserve existing settings and other pets.` |
