@@ -15,6 +15,8 @@ The packages use `hakase-simple` and `hakase-detailed` folders. The full Windows
 
 ## Windows setup
 
+See the [full setup guide](setup/new-computer.md) and [private per-project instructions guide](setup/local-project-instructions.md). Each computer creates its own private files and project-folder mappings; CyberKit carries only the reusable recipe and generic template.
+
 Sign in to Codex or ChatGPT desktop on the new computer, then paste this task:
 
 ```text

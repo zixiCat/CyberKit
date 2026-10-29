@@ -15,9 +15,11 @@ The repository carries reusable instructions and helpers. Login and a skill copy
 
 ## Shared and local AGENTS.md instructions
 
-`ChatGPT/.codex/AGENTS.md` in GitHub contains shared instructions and `### Common` hotwords only. The installed `AGENTS.md` may also have a `### Local` section for this computer's hotwords. Keep that section only on this computer; never commit or upload it, and never seed a new computer with another computer's Local section. When syncing installed instructions back to CyberKit, exclude the entire Local section through the next heading of level three or higher (or the end of the file).
+`ChatGPT/.codex/AGENTS.md` in GitHub contains shared instructions and `### Common` hotwords only. The installed `AGENTS.md` may also have a `### Local` section for this computer's hotwords and private project references. Keep that section only on this computer; never commit or upload it, and never seed a new computer with another computer's Local section. When syncing installed instructions back to CyberKit, exclude the entire Local section through the next heading of level three or higher (or the end of the file).
 
 The installer preserves an existing Local section while updating shared instructions and Common hotwords. A fresh installation receives only the shared content. Repeated installs preserve Local without duplicating it. Review the staged diff before every sync to verify that no Local section or its hotwords were included.
+
+For computer-specific project rules, follow [Private project instructions on each computer](local-project-instructions.md). It includes a short checklist, a generic starter template and a conditional Local reference. Create private files under this computer's resolved `CODEX_HOME/project-instructions/`, outside the checkout; map only verified project roots on this computer. The installer leaves that private directory untouched. Keep Local subheadings at level four or deeper so their references remain inside the preserved section.
 
 ## Then select the skill and press Enter
 
@@ -45,7 +47,8 @@ These address mappings were verified with native read-only `get_site`: both proj
 | Item | Stored in GitHub | Account/service | Rebuilt per device / optional private migration |
 | --- | --- | --- | --- |
 | Shared `AGENTS.md` instructions and Common hotwords, three custom skills, helpers, templates | Yes, only under `ChatGPT/.codex` plus its scoped ignore file | Skills still need local discovery | Install into the verified local user skill directory and Codex home; preserve the installed Local section; system/plugin/cache content stays excluded |
-| `AGENTS.md` Local hotwords | No | Not restored by login | Keep only in this computer's installed AGENTS.md; preserve during updates and omit from every GitHub sync |
+| `AGENTS.md` Local hotwords and private project mappings | No | Not restored by login | Keep only in this computer's installed AGENTS.md; preserve during updates and omit from every GitHub sync |
+| Private `project-instructions/<project-key>.md` files | Generic template and setup recipe only | No automatic private-file or folder-mapping sync | Create outside the checkout using this computer's paths; preserve existing files on repeat setup and verify root/descendant matching in a new chat |
 | Both Hakase designs, sprite sheets, metadata, and animation previews | Yes, under `pets/hakase-simple` and `pets/hakase-detailed` | Desktop custom pets are local | Install both manifests and sprite sheets into the resolved Codex home; Refresh in Settings > Pets; preserve selection and unrelated pets |
 | Existing WorkReport and EnglishMemoryCard Sites | Verified IDs/URLs and workflow references only | Owner-private Sites, registered source and database | Reconnect same account; verify project/address and owner/access. Never export Site data/source into CyberKit |
 | Tools/plugins, bundled runtimes, login | No | Availability depends on account/workspace and tool support | Connect/install on the new device; complete real trust/permission prompts; never copy tokens |
