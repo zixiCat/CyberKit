@@ -17,7 +17,7 @@ The packages use `hakase-simple` and `hakase-detailed` folders. The full Windows
 
 See the [full setup guide](setup/new-computer.md) and [private per-project instructions guide](setup/local-project-instructions.md). Each computer creates its own private files and project-folder mappings; CyberKit carries only the reusable recipe and generic template.
 
-The reusable [Eruna skill](ChatGPT/.codex/skills/computer-task/SKILL.md) lets project chats and Hakase (Task Manager) queue scoped desktop actions for one existing local executor. Invoke `$computer-task` to check setup, or ask it to delegate a specific authorized UI action. It preserves the executor's model/thinking and keeps queue records and results on this computer. The [queue reference](ChatGPT/.codex/skills/computer-task/references/queue.md) covers ownership, result retrieval and interruption recovery.
+The reusable [Eruna skill](ChatGPT/.codex/skills/eruna/SKILL.md) lets project chats and Hakase (Task Manager) queue scoped desktop actions for one shared local executor. Invoke `$eruna` to initialize and pin Eruna, reusing an existing executor, or ask it to delegate a specific authorized UI action. Eruna uses GPT-6.1 Terra with Medium reasoning and keeps queue records and results on this computer. The [queue reference](ChatGPT/.codex/skills/eruna/references/queue.md) covers ownership, result retrieval and interruption recovery.
 
 For browser control, use GPT's default browser first, Edge if the default browser cannot meet the requirement, and Eruna only if Edge also cannot meet it. Explicit requests for Edge or Eruna select that route directly. Native desktop app work can use Eruna directly.
 
