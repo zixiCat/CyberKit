@@ -1,3 +1,0 @@
-interface:
-  display_name: "Eruna"
-  short_description: "Queue desktop actions in one shared local executor"

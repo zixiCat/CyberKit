@@ -12,7 +12,7 @@ SCRIPT = Path(__file__).with_name("computer_queue.py")
 
 class QueueTests(unittest.TestCase):
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory(prefix="computer-task-test-")
+        self.temp = tempfile.TemporaryDirectory(prefix="eruna-test-")
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.state = self.root / "state"
@@ -170,6 +170,25 @@ class QueueTests(unittest.TestCase):
         (skill / "SKILL.md").write_text("fixture", encoding="utf-8")
         with self.assertRaises(ValueError):
             Queue(skill / "state")
+
+
+class DefaultStateTests(unittest.TestCase):
+    def test_default_and_legacy_queue_preservation(self):
+        from unittest.mock import patch
+        from computer_queue import default_state_dir
+        with tempfile.TemporaryDirectory(prefix="eruna-default-") as directory:
+            root = Path(directory)
+            with patch.dict("os.environ", {"CODEX_HOME": directory}):
+                self.assertEqual(default_state_dir(), root / "eruna")
+                legacy = root / "computer-task"
+                legacy.mkdir()
+                (legacy / "queue.sqlite3").touch()
+                self.assertEqual(default_state_dir(), legacy)
+                current = root / "eruna"
+                current.mkdir()
+                (current / "queue.sqlite3").touch()
+                with self.assertRaises(ValueError):
+                    default_state_dir()
 
 
 if __name__ == "__main__":

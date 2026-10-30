@@ -149,7 +149,7 @@ class Queue:
                 return {"should_send": False, "id": a.id, "status": job["status"]}
             script = Path(__file__).resolve()
             prompt = (
-                "Use $computer-task as this computer's shared desktop executor. "
+                "Use $eruna as this computer's shared desktop executor. "
                 f"Read {script.parents[1] / 'SKILL.md'} and its queue reference before acting. "
                 f"Queue helper: {script}. State directory: {self.directory}. "
                 f"Wake notification for queued job {a.id}; claim the oldest queued job, not necessarily this ID. "
@@ -196,9 +196,20 @@ class Queue:
         return self.public(self.job(a.id))
 
 
+def default_state_dir():
+    codex_home = Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex")))
+    legacy = codex_home / "computer-task"
+    current = codex_home / "eruna"
+    if (legacy / "queue.sqlite3").exists():
+        if (current / "queue.sqlite3").exists():
+            raise ValueError("Both legacy and Eruna queues exist; reconcile explicitly without resetting either")
+        return legacy
+    return current
+
+
 def parser():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--state-dir", default=str(Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))) / "computer-task"))
+    p.add_argument("--state-dir", default=str(default_state_dir()))
     sub = p.add_subparsers(dest="command", required=True)
     for name in ("init", "claim"):
         command = sub.add_parser(name)

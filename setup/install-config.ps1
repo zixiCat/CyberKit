@@ -35,7 +35,17 @@ function Assert-NoLink([string]$Path) {
 $names = @()
 $files = @()
 if(-not $PetsOnly) {
-    $names = @('activitywatch-life-review','personal-work-report','task-manager','computer-task')
+    $legacySkill = Join-Path $skillTarget 'computer-task'
+    $erunaSkill = Join-Path $skillTarget 'eruna'
+    if(Test-Path -LiteralPath $legacySkill) {
+        Assert-NoLink $legacySkill
+        Assert-NoLink $erunaSkill
+        if(Test-Path -LiteralPath $erunaSkill) { throw 'Both legacy and Eruna skills exist; reconcile without removing local files.' }
+        Move-Item -LiteralPath $legacySkill -Destination $erunaSkill
+    }
+}
+if(-not $PetsOnly) {
+    $names = @('activitywatch-life-review','personal-work-report','task-manager','eruna')
     $files += [pscustomobject]@{Source=(Join-Path $source 'AGENTS.md');Relative='AGENTS.md'}
 }
 foreach($name in $names) {

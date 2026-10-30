@@ -1,11 +1,11 @@
 ---
-name: computer-task
+name: eruna
 description: Queue scoped native desktop actions for the shared local Eruna executor, or operate that executor. Use for native desktop apps or explicit Eruna requests; browser delegation only after GPT's default browser and Edge cannot meet the requirement. Not for ordinary browser control, APIs, or project implementation.
 ---
 
 # Eruna
 
-Eruna is the shared desktop helper. Invoke this skill as `$computer-task`; its stable skill identifier and local state path stay `computer-task`. One local desktop, one cooperative queue, one verified executor chat. Project implementation and judgment of the result stay in the requesting chat. This skill coordinates the bundled **computer-use** skill; it does not replace its APIs or confirmation rules.
+Eruna is the shared desktop helper. Invoke this skill as `$eruna`; its skill identifier and default local state path are `eruna`. One local desktop, one cooperative queue, one verified executor chat. Project implementation and judgment of the result stay in the requesting chat. This skill coordinates the bundled **computer-use** skill; it does not replace its APIs or confirmation rules.
 
 ## Browser routing before desktop delegation
 
@@ -15,9 +15,9 @@ Default-browser and Edge work stay in the requesting feature/investigation/valid
 
 ## Local setup or bare invocation
 
-Resolve `CODEX_HOME` (otherwise the current user's `.codex`) and the installed skill path. Use `scripts/computer_queue.py` with a working Python 3.10+ interpreter; the app's `load_workspace_dependencies` can locate its bundled Python. Run `status`. Runtime configuration, dedupe records, requests, results and evidence belong under `<CODEX_HOME>/computer-task`, outside Git, never inside this skill. Read [queue.md](references/queue.md) for commands and payloads.
+Resolve `CODEX_HOME` (otherwise the current user's `.codex`) and the installed skill path. Use `scripts/computer_queue.py` with a working Python 3.10+ interpreter; the app's `load_workspace_dependencies` can locate its bundled Python. Run `status`. Runtime configuration, dedupe records, requests, results and evidence belong under `<CODEX_HOME>/eruna`, outside Git, never inside this skill. Existing legacy queue state is reused in place when present; never reset or copy it. Read [queue.md](references/queue.md) for commands and payloads.
 
-Discover the app tools and inspect their current schemas. Verify the configured executor's host, purpose and pin using `list_threads` and focused `read_thread` history. On first setup, discover the user's existing Eruna desktop executor (older installations may call it Computer task) and bind it with `init`; do not infer purpose from its title alone or confuse it with Hakase, the Task Manager. Reuse it and preserve its model/thinking. Never create a duplicate or change settings. If no executor is verified, report the missing binding; creation requires explicit user authorization. Bare invocation checks readiness, without inventing a UI job or background monitor.
+Discover the app tools and inspect their current schemas. Verify the configured executor's local host, purpose and pin using `list_threads` and focused `read_thread` history; do not infer purpose from its title alone or confuse it with Hakase. Reuse a verified existing Eruna executor and preserve its model/thinking. Bare invocation authorizes initializing Eruna: if no suitable executor exists and this is not a setup request explicitly forbidding creation, create one local projectless chat named **Eruna**, omitting model/thinking so it uses the user's defaults. Its initial request must initialize only, read this skill and the bundled computer-use skill, verify its own identity and queue, and perform no UI job. Never create a duplicate or a worktree. Bind the verified executor with `init` and pin it using the native sidebar tool. If creation was explicitly forbidden, report the missing binding instead. Repeated invocation reuses the same binding and chat. Bare setup never invents a UI action or background monitor. A missing capability is pending, not permission to simulate it.
 
 ## Submit from any requesting chat
 

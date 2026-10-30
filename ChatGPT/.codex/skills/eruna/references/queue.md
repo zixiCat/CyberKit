@@ -53,6 +53,6 @@ Result files:
 
 ## Local files and validation
 
-Default state: `<CODEX_HOME>/computer-task/queue.sqlite3`, otherwise `~/.codex/computer-task/queue.sqlite3`. Runtime files must stay outside any Git checkout or skill directory. `--state-dir <absolute-private-directory>` is for isolated tests or an explicitly selected single shared location; all live requesters must use the same default location. Never create per-project live queues for the same desktop. Binding IDs and relative `local` host labels apply only to this machine; do not migrate them.
+Default state: `<CODEX_HOME>/eruna/queue.sqlite3`, otherwise `~/.codex/eruna/queue.sqlite3`. A pre-existing legacy queue is reused in place, preserving binding, ownership and history. If both old and new queue databases exist, stop for reconciliation. Runtime files must stay outside any Git checkout or skill directory. `--state-dir <absolute-private-directory>` is for isolated tests or an explicitly selected single shared location; all live requesters must use the same default location. Never create per-project live queues for the same desktop. Binding IDs and relative `local` host labels apply only to this machine; do not migrate them.
 
 `python -m unittest discover -s <skill>/scripts -p test_computer_queue.py` runs isolated temporary-directory tests, including concurrent submissions/claims, dedupe, FIFO, ownership fencing, persistence and interruption recovery. No real UI work is performed by those tests.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eruna"
+  short_description: "Queue desktop actions in one shared local executor"
+  default_prompt: "Use $eruna to initialize and pin the local Eruna executor, or handle my scoped desktop request."
