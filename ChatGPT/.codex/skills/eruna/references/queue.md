@@ -21,7 +21,7 @@ Requests are UTF-8 JSON files stored outside Git:
 }
 ```
 
-`submit --request <file>` is atomic and idempotent for identical IDs/payloads. `wake --id <id>` emits `should_send` and supported `send_message_to_thread` arguments with only `threadId`, `hostId`, `prompt`. It never sends, changes model/thinking, or promises delivery. Terminal/running jobs do not need another wake. Each new queued submission should send a wake, even if the executor appears busy, so arrivals near its final empty check are not lost. Concurrent wakes may queue multiple chat turns; they do not grant ownership.
+`submit --request <file>` is atomic and idempotent for identical IDs/payloads. `wake --id <id>` emits `should_send` and supported `send_message_to_thread` arguments with `threadId`, `hostId`, `prompt`, `model: "gpt-6.1-terra"` and `thinking: "medium"`. It never sends or promises delivery; the requesting chat applies the explicit Eruna preference through the native tool. Terminal/running jobs do not need another wake. Each new queued submission should send a wake, even if the executor appears busy, so arrivals near its final empty check are not lost. Concurrent wakes may queue multiple chat turns; they do not grant ownership.
 
 Use `get` as the durable pull-result channel. `wait_threads` observes the chat; it does not observe/complete arbitrary local job IDs. No callback is sent automatically. If tools are unavailable, report the queued job and pasteable wake prompt. A stopped app/host needs a later explicit wake; no background availability is claimed.
 

@@ -130,12 +130,14 @@ class QueueTests(unittest.TestCase):
         self.call("submit", "--request", str(remote), ok=False)
         self.assertEqual(self.call("status")["counts"], {})
 
-    def test_supported_dispatch_arguments_preserve_settings(self):
+    def test_supported_dispatch_arguments_apply_eruna_preference(self):
         self.submit(self.request("wake-job"))
         wake = self.call("wake", "--id", "wake-job")
         self.assertTrue(wake["should_send"])
-        self.assertEqual(set(wake["arguments"]), {"threadId", "hostId", "prompt"})
+        self.assertEqual(set(wake["arguments"]), {"threadId", "hostId", "prompt", "model", "thinking"})
         self.assertEqual(wake["arguments"]["threadId"], "desktop-executor")
+        self.assertEqual(wake["arguments"]["model"], "gpt-6.1-terra")
+        self.assertEqual(wake["arguments"]["thinking"], "medium")
         self.assertEqual(self.call("wake", "--id", "wake-job"), wake)
         self.assertEqual(self.call("get", "--id", "wake-job")["status"], "queued")
 

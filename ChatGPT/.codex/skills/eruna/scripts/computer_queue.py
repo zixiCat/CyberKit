@@ -157,9 +157,9 @@ class Queue:
                 "authorization, and use the bundled computer-use skill. Do not resume unrelated prior work. "
                 "Record actual actions, verified outcome, evidence and blocker via finish after input settles; "
                 "then claim any remaining authorized jobs. If ownership is busy/interrupted, do no UI work. "
-                "The requester pulls the stored result; do not send a callback. Preserve your model/thinking."
+                "The requester pulls the stored result; do not send a callback. Use the user-selected GPT-6.1 Terra with Medium reasoning."
             )
-            return {"should_send": True, "tool": "send_message_to_thread", "arguments": {**binding, "prompt": prompt}}
+            return {"should_send": True, "tool": "send_message_to_thread", "arguments": {**binding, "prompt": prompt, "model": "gpt-6.1-terra", "thinking": "medium"}}
         if a.command == "finish":
             if job["status"] != "running" or not secrets.compare_digest(job["token"] or "", a.token):
                 raise ValueError("not the running owner or wrong token; do not replay")
