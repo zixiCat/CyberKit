@@ -1,0 +1,3 @@
+interface:
+  display_name: "Computer Task"
+  short_description: "Queue desktop actions in one shared local executor"

@@ -35,7 +35,7 @@ function Assert-NoLink([string]$Path) {
 $names = @()
 $files = @()
 if(-not $PetsOnly) {
-    $names = @('activitywatch-life-review','personal-work-report','task-manager')
+    $names = @('activitywatch-life-review','personal-work-report','task-manager','computer-task')
     $files += [pscustomobject]@{Source=(Join-Path $source 'AGENTS.md');Relative='AGENTS.md'}
 }
 foreach($name in $names) {
