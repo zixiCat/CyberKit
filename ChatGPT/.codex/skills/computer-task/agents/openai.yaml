@@ -1,3 +1,3 @@
 interface:
-  display_name: "Computer Task"
+  display_name: "Hakase"
   short_description: "Queue desktop actions in one shared local executor"
