@@ -9,6 +9,11 @@ Treat my voice transcripts as imperfect. Infer my intent from the surrounding co
 - When syncing AGENTS.md to CyberKit, commit shared instructions and Common hotwords only. Keep the `### Local` section only in the installed file on this computer, never in GitHub. During setup or updates, preserve this computer's existing Local section and never copy another computer's Local section.
 - If I am saying Chinese text to you, just ignore them, no need to reply me unless I am talk about name, path, specific terms etc.
 
+### Instruction scope
+
+- Keep project-specific instructions in that project's AGENTS.md, or a more narrowly scoped AGENTS.md inside the relevant directory. Apply them only within that project or directory; do not carry them into unrelated projects.
+- When asked to add or update rules for a particular project, update that project's instructions. Do not add those rules to the global user AGENTS.md or CyberKit's shared instructions unless I explicitly ask for them to apply globally.
+
 ### Project terminal chats
 
 - When a Codex project needs its backend, frontends, or other local services running, use a dedicated chat named `<Project name> Terminal` and pin it in the sidebar. Use the actual project name, for example `Workshop Terminal` for `Workshop`.
@@ -38,3 +43,5 @@ And the following content is my hotwords for Vocie/ASR usage
 - Phoenix
 - CyberKit
 - WeCom
+- Hakase
+- Eruna
