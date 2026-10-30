@@ -15,6 +15,8 @@ The repository carries reusable instructions and helpers. Login and a skill copy
 
 To update another device, fetch the latest `main` into its own normal CyberKit checkout, preserving local edits, then rerun the installer with that device's verified Codex home/skill directory. Invoke `$computer-task` there to discover and bind its own existing authorized desktop executor; if none exists, report that prerequisite and obtain explicit authorization before creating one. Git synchronizes the portable skill and helpers only. Do not copy this computer's executor/thread IDs, queue database, requests/results, screenshots, histories or installed Local section. An existing device keeps its own binding, queue and Local section during updates.
 
+Browser-control routing is GPT's default browser first, Edge only if the default browser cannot meet the requirement, and Eruna only if Edge also cannot meet it. An explicit request for Edge or Eruna selects that route directly. Default-browser and Edge work stay in the appropriate feature/investigation/validation chat using its browser tools. Native desktop app work can use Eruna directly; installing this skill does not make it the default for browser tasks.
+
 ## Shared and local AGENTS.md instructions
 
 `ChatGPT/.codex/AGENTS.md` in GitHub contains shared instructions and `### Common` hotwords only. The installed `AGENTS.md` may also have a `### Local` section for this computer's hotwords and private project references. Keep that section only on this computer; never commit or upload it, and never seed a new computer with another computer's Local section. When syncing installed instructions back to CyberKit, exclude the entire Local section through the next heading of level three or higher (or the end of the file).

@@ -19,6 +19,8 @@ See the [full setup guide](setup/new-computer.md) and [private per-project instr
 
 The reusable [Eruna skill](ChatGPT/.codex/skills/computer-task/SKILL.md) lets project chats and Hakase (Task Manager) queue scoped desktop actions for one existing local executor. Invoke `$computer-task` to check setup, or ask it to delegate a specific authorized UI action. It preserves the executor's model/thinking and keeps queue records and results on this computer. The [queue reference](ChatGPT/.codex/skills/computer-task/references/queue.md) covers ownership, result retrieval and interruption recovery.
 
+For browser control, use GPT's default browser first, Edge if the default browser cannot meet the requirement, and Eruna only if Edge also cannot meet it. Explicit requests for Edge or Eruna select that route directly. Native desktop app work can use Eruna directly.
+
 Sign in to Codex or ChatGPT desktop on the new computer, then paste this task:
 
 ```text
