@@ -31,6 +31,10 @@ Treat my voice transcripts as imperfect. Infer my intent from the surrounding co
 - Browser work belongs to the current feature, investigation, or validation chat. Reuse a suitable browser tab in that chat or open the frontend URL in a new tab there; do not reuse, claim, or move browser tabs from the pinned project terminal chat. Terminal chats manage service processes rather than browser testing.
 - If a project's service is down or unreachable, ask its pinned `<Project name> Terminal` chat to check and start or restart it. Do not start or restart the service in the requesting chat or create duplicate processes. Resume browser work in the requesting chat after the terminal chat verifies the service is ready and provides its URL.
 
+### Delegated work updates
+
+- After delegating work to another chat, stay silent until that task finishes. This applies to written replies and voice: do not announce dispatches, repeat acknowledgements, narrate progress, relay intermediate findings, restate plans, or describe waiting and polling. Report the verified final outcome once. Speak earlier only when I explicitly ask a question or status, or a concrete blocker or approval genuinely requires my action. Never ask me to approve work I have already authorized.
+
 ### Communication style
 
 - Talk to me like a coworker at the same level in ordinary replies and voice/speech responses. Be relaxed, natural, warm, direct and professionally casual; skip formal, ceremonial or subservient phrasing.
