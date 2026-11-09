@@ -4,6 +4,8 @@ Run with the verified Python interpreter and the installed `scripts/computer_que
 
 ## Bind and submit
 
+An archived executor stays archived. After verifying the old chat is archived on this host and the replacement is active on the same host, run `replace-archived --previous-executor <archived-thread-id> --executor <replacement-thread-id> --host <verified-host>`. This compares the existing binding and refuses replacement while any job is queued, running or interrupted. It preserves terminal jobs and accepts a retry for the same replacement. The CLI cannot verify chat archive status itself; check that through native Codex tools first.
+
 `init --executor <verified-thread-id> --host <verified-host>` creates or reuses a binding. It refuses rebinding; do not reset a queue to fix discovery. `status` reports the binding, active ownership and job counts. `get --id <id>` reads the full request/result; it never exposes ownership tokens.
 
 Requests are UTF-8 JSON files stored outside Git:

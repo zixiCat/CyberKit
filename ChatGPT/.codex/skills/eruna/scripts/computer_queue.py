@@ -99,6 +99,25 @@ class Queue:
                 raise ValueError("executor binding differs; preserve the existing queue and investigate")
             self.db.execute("INSERT OR IGNORE INTO config VALUES ('executor', ?)", (canonical(desired),))
             return {"executor": desired, "state_dir": str(self.directory)}
+        if a.command == "replace-archived":
+            previous = {"threadId": a.previous_executor, "hostId": a.host}
+            replacement = {"threadId": a.executor, "hostId": a.host}
+            require_text(a.previous_executor, "previous executor")
+            require_text(a.executor, "executor")
+            require_text(a.host, "host")
+            if previous == replacement:
+                raise ValueError("replacement must be a different executor")
+            binding = self.binding()
+            if binding != replacement:
+                if binding != previous:
+                    raise ValueError("previous executor does not match the queue binding")
+                outstanding = self.db.execute(
+                    "SELECT 1 FROM jobs WHERE status IN ('queued','running','interrupted') LIMIT 1"
+                ).fetchone()
+                if outstanding:
+                    raise ValueError("queue has outstanding work; preserve the existing binding")
+                self.db.execute("UPDATE config SET value=? WHERE key='executor'", (canonical(replacement),))
+            return {"executor": replacement, "state_dir": str(self.directory)}
         if a.command == "status":
             row = self.db.execute("SELECT value FROM config WHERE key='executor'").fetchone()
             active = self.db.execute("SELECT * FROM jobs WHERE status IN ('running','interrupted')").fetchone()
@@ -215,6 +234,10 @@ def parser():
         command = sub.add_parser(name)
         command.add_argument("--executor", required=True)
         command.add_argument("--host", required=True)
+    command = sub.add_parser("replace-archived")
+    command.add_argument("--previous-executor", required=True)
+    command.add_argument("--executor", required=True)
+    command.add_argument("--host", required=True)
     sub.add_parser("status")
     command = sub.add_parser("submit")
     command.add_argument("--request", required=True)

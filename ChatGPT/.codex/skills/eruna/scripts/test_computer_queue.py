@@ -49,6 +49,24 @@ class QueueTests(unittest.TestCase):
         return self.call("finish", "--id", claim["job"]["id"], "--token", claim["token"],
                          "--status", status, "--result", str(path))
 
+    def test_replace_archived_requires_idle_queue_and_preserves_history(self):
+        replacement = ("replace-archived", "--previous-executor", "desktop-executor",
+                       "--executor", "new-executor", "--host", "test-host")
+        self.submit(self.request("existing-job"))
+        self.call(*replacement, ok=False)
+        claim = self.claim()
+        self.call(*replacement, ok=False)
+        self.finish(claim)
+        before = self.call("get", "--id", "existing-job")
+
+        expected = {"threadId": "new-executor", "hostId": "test-host"}
+        self.assertEqual(self.call(*replacement)["executor"], expected)
+        self.assertEqual(self.call(*replacement)["executor"], expected)
+        self.assertEqual(self.call("status")["executor"], expected)
+        self.assertEqual(self.call("get", "--id", "existing-job"), before)
+        self.call(*replacement[:-3], "another-executor", "--host", "test-host", ok=False)
+        self.call("claim", "--executor", "desktop-executor", "--host", "test-host", ok=False)
+
     def test_concurrent_submissions_claims_fifo_and_release(self):
         paths = [self.request(f"job-{i}", requester=f"project-{i}") for i in range(12)]
         with ThreadPoolExecutor(max_workers=12) as pool:
