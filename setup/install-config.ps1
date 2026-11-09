@@ -45,7 +45,7 @@ if(-not $PetsOnly) {
     }
 }
 if(-not $PetsOnly) {
-    $names = @('activitywatch-life-review','personal-work-report','task-manager','eruna')
+    $names = @('activitywatch-life-review','personal-work-report','hakase','eruna')
     $files += [pscustomobject]@{Source=(Join-Path $source 'AGENTS.md');Relative='AGENTS.md'}
 }
 foreach($name in $names) {
@@ -129,6 +129,21 @@ foreach($file in $files) {
         [IO.File]::Replace($temporary,$destination,$backup)
     } else { [IO.File]::Move($temporary,$destination) }
     $changed++
+}
+if(-not $PetsOnly) {
+    $legacyManager = Join-Path $skillTarget 'task-manager\SKILL.md'
+    if(Test-Path -LiteralPath $legacyManager -PathType Leaf) {
+        Assert-NoLink $legacyManager
+        $legacyContent = [IO.File]::ReadAllText($legacyManager)
+        if($legacyContent -match '\A---\r?\nname: task-manager\r?\n' -and
+           $legacyContent -match '(?m)^# Hakase \(Task Manager\)\r?$') {
+            $backup = Join-Path $backupRoot 'skills\task-manager\SKILL.md'
+            Assert-NoLink $backup
+            $null = [IO.Directory]::CreateDirectory((Split-Path -Parent $backup))
+            [IO.File]::Move($legacyManager,$backup)
+            $changed++
+        }
+    }
 }
 $next = if($PetsOnly) { 'Refresh Settings > Pets to load updated packages; current selection is unchanged.' } else { 'Verify this app discovers SkillsPath; reopen a chat and invoke each skill. Existing AGENTS.override.md can take precedence; inspect active instructions without removing it. Refresh Settings > Pets to discover installed pet packages.' }
 [pscustomobject]@{codex_home=$target;skills_path=$skillTarget;custom_skills=$names;custom_pets=$petNames;pet_folders=$petFolders;changed_files=$changed;backup_directory=$(if(Test-Path -LiteralPath $backupRoot){$backupRoot}else{$null});runtime_state_copied=$false;next=$next} | ConvertTo-Json -Depth 4

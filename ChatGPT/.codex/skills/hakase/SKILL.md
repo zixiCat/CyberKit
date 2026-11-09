@@ -1,11 +1,11 @@
 ---
-name: task-manager
+name: hakase
 description: Coordinate project work as Hakase (Task Manager) through the most relevant existing executor chat and quietly monitor completion. Use for Task Manager setup, delegated work and follow-ups in an established manager chat; not for operating-system Task Manager or generic task lists.
 ---
 
 # Hakase (Task Manager)
 
-Hakase is the user's Task Manager and coordination hub. Bare `$task-manager` initializes or checks this chat. Use the delegation workflow for project requests and the completion workflow for scheduled runs. Keep implementation in the relevant executor chats. Never create worktrees.
+Hakase is the user's Task Manager and coordination hub. Bare `$hakase` initializes or checks this chat. Use the delegation workflow for project requests and the completion workflow for scheduled runs. Keep implementation in the relevant executor chats. Never create worktrees.
 
 ## Quiet coordination, including voice
 
@@ -60,7 +60,7 @@ The manager coordinates; executor chats investigate, implement and validate proj
 - Create or update through the native heartbeat tool. Use an explicit target only if the tool supports it and verify the saved destination thread, host, five-minute cadence and status in native app state before calling it active. If this build only supports creating a heartbeat from its own chat, run the native setup in the intended Hakase chat. If the app rejects five minutes or verification is unavailable, report the exact limitation. Keep native completion evidence available while setup is pending. Use the supported heartbeat only.
 - When verified work first needs tracking, create the heartbeat if absent or resume the matching heartbeat if it was paused for inactivity. Preserve manual pauses. Reconcile after dispatch, after reporting terminal outcomes, on bare setup, and on scheduled runs. When no work needs tracking, leave an absent heartbeat absent or pause the existing active heartbeat through the native tool. Verify the saved state and recheck the registry for a dispatch that arrived during the change.
 - Record an inactivity pause in the local registry as `heartbeatIdlePause` with the automation ID and its verified saved revision or `updated_at` value. Resume only when the paused schedule still matches that record, or when the user explicitly requests a resume. A pause requested independently of the inactivity policy clears that record. If the pause origin cannot be verified, preserve it. Clear the record after verified resumption.
-- Save a durable prompt that identifies the verified manager, invokes `$task-manager` in heartbeat mode, and includes the idle-pause rule and the instructions below. Keep machine-specific identities and saved schedule details local.
+- Save a durable prompt that identifies the verified manager, invokes `$hakase` in heartbeat mode, and includes the idle-pause rule and the instructions below. Keep machine-specific identities and saved schedule details local.
 
 ### Each heartbeat run
 

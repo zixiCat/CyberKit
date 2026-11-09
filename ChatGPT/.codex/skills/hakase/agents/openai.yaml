@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hakase"
+  short_description: "Delegate project work and monitor completion"
+  default_prompt: "Use $hakase to initialize this chat as Hakase, my Task Manager, with quiet delegation and completion tracking."
