@@ -7,7 +7,7 @@ CyberKit carries this recipe and a [generic starter template](templates/project-
 1. Resolve this computer's `CODEX_HOME` (the environment variable, or the current user's `.codex` directory). Use the [normal setup guide](new-computer.md) if shared instructions and skills are not installed yet.
 2. Verify the actual absolute root of the project on this computer. Do not reuse a path or project mapping from another device.
 3. Create `<resolved CODEX_HOME>/project-instructions/` outside the CyberKit checkout. Create a private `<project-key>.md` only if it does not already exist; start from the generic template and fill it in locally. Preserve an existing file.
-4. Add one conditional reference under `### Local` in this computer's installed `AGENTS.md`, as shown below. Preserve its existing hotwords and mappings; do not append a duplicate mapping.
+4. Add one conditional reference under `### Local` in this computer's installed `AGENTS.md`, as shown below. The normal installer now creates an empty [Local template](templates/agents-local.example.md) when that section is missing. Preserve its existing hotwords and mappings; do not append a duplicate mapping or a second Local heading.
 5. Open a new chat in the project and run the matching/nonmatching checks below. Reconcile an existing `AGENTS.override.md` deliberately if it takes precedence; do not delete it during setup.
 
 Copy this task into Codex on the target computer:
@@ -94,7 +94,7 @@ Keep all subheadings inside Local at `####` or deeper. The current installer pre
 
 ## Updates and verification
 
-The existing `setup/install-config.ps1` updates shared instructions while preserving the target computer's Local section. It does not copy or modify `project-instructions/`. Fresh installations receive no other computer's Local section or mappings. Repeat setup must keep existing private files, reuse the existing Local section, and avoid duplicate project references. Do not run the full installer just to create a private mapping; it also installs skills and pets.
+The existing `setup/install-config.ps1` updates shared instructions while preserving the target computer's Local section verbatim. When Local is missing, it appends the generic empty Local template on fresh installs and updates. It does not copy or modify `project-instructions/`. Fresh installations receive no other computer's Local content or mappings. Repeat setup must keep existing private files, reuse the existing Local section, and avoid duplicate project references. Do not run the full installer just to create a private mapping; it also installs skills and pets.
 
 When syncing installed instructions back to CyberKit, omit the entire Local section and its references. Review the staged diff: only shared instructions and Common hotwords belong in the tracked `AGENTS.md`. Keep the actual private files outside the checkout; the ignore rules under `ChatGPT/.codex` are an extra guard, not permission to copy private data there.
 

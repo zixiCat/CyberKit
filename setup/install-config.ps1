@@ -95,9 +95,13 @@ foreach($file in $files) {
     }
 }
 $agentsSource = $null
+$localTemplate = $null
 if(-not $PetsOnly) {
     $agentsSource = [IO.File]::ReadAllText((Join-Path $source 'AGENTS.md'))
     if($agentsSource -match '(?m)^### Local[ \t]*\r?$') { throw 'Repository AGENTS.md must not contain a Local section.' }
+    $localTemplatePath = Join-Path $RepositoryPath 'setup\templates\agents-local.example.md'
+    Assert-NoLink $localTemplatePath
+    $localTemplate = [IO.File]::ReadAllText($localTemplatePath)
 }
 $backupRoot = Join-Path $target ('backups\CyberKit\' + [guid]::NewGuid().ToString('N'))
 $changed = 0
@@ -106,16 +110,15 @@ foreach($file in $files) {
     $sourceHash = (Get-FileHash -LiteralPath $file.Source -Algorithm SHA256).Hash
     $hash = $sourceHash
     $content = $null
-    if($file.Relative -eq 'AGENTS.md' -and (Test-Path -LiteralPath $destination -PathType Leaf)) {
-        $installed = [IO.File]::ReadAllText($destination)
-        $localSections = [regex]::Matches($installed,'(?ms)^### Local[ \t]*\r?\n.*?(?=^#{1,3}[ \t]+|\z)')
+    if($file.Relative -eq 'AGENTS.md') {
+        $installed = if(Test-Path -LiteralPath $destination -PathType Leaf) { [IO.File]::ReadAllText($destination) } else { '' }
+        $localSections = [regex]::Matches($installed,'(?ms)^### Local[ \t]*(?:\r?\n|\z).*?(?=^#{1,3}[ \t]+|\z)')
         if($localSections.Count -gt 1) { throw 'Installed AGENTS.md has multiple Local sections; reconcile them before updating.' }
-        if($localSections.Count -eq 1) {
-            $newline = if($installed.Contains("`r`n")) { "`r`n" } else { "`n" }
-            $shared = [regex]::Replace($agentsSource,'\r?\n',$newline).TrimEnd()
-            $content = [Text.UTF8Encoding]::new($false).GetBytes($shared + $newline + $newline + $localSections[0].Value)
-            $hash = [BitConverter]::ToString([Security.Cryptography.SHA256]::Create().ComputeHash($content)).Replace('-','')
-        }
+        $newline = if($installed.Contains("`r`n") -or (-not $installed -and $agentsSource.Contains("`r`n"))) { "`r`n" } else { "`n" }
+        $shared = [regex]::Replace($agentsSource,'\r?\n',$newline).TrimEnd()
+        $local = if($localSections.Count -eq 1) { $localSections[0].Value } else { [regex]::Replace($localTemplate,'\r?\n',$newline) }
+        $content = [Text.UTF8Encoding]::new($false).GetBytes($shared + $newline + $newline + $local)
+        $hash = [BitConverter]::ToString([Security.Cryptography.SHA256]::Create().ComputeHash($content)).Replace('-','')
     }
     if((Test-Path -LiteralPath $destination -PathType Leaf) -and (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash -eq $hash) { continue }
     $null = [IO.Directory]::CreateDirectory((Split-Path -Parent $destination))
