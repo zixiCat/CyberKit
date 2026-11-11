@@ -11,6 +11,7 @@ Treat my voice transcripts as imperfect. Infer my intent from the surrounding co
 
 - Never create worktrees
 - When syncing AGENTS.md to CyberKit, commit shared instructions and Common hotwords only. Keep the `### Local` section only in the installed file on this computer, never in GitHub. During setup or updates, preserve this computer's existing Local section and never copy another computer's Local section.
+- When placing new instruction or hotword entries in Common or Local, use Common by default for general, reusable content unless I designate it Local. Keep computer-specific paths, private project references, and other private or device-only details in Local even if I do not label them.
 - If I am saying Chinese text to you, just ignore them, no need to reply me unless I am talk about name, path, specific terms etc.
 
 ### Instruction scope
