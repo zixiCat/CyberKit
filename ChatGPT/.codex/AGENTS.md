@@ -47,6 +47,8 @@ And the following content is my hotwords for Vocie/ASR usage
 
 ### Common
 
+#### Common hotwords
+
 - zixiCat
 - Langfuse
 - Figma
@@ -58,3 +60,8 @@ And the following content is my hotwords for Vocie/ASR usage
 - WeCom
 - Hakase
 - Eruna
+
+#### Shared project instructions
+
+<!-- Optional: add references to shared project instructions here.
+Keep each project's rules in its own AGENTS.md. -->
