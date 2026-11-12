@@ -47,6 +47,8 @@ if(-not $PetsOnly) {
 if(-not $PetsOnly) {
     $names = @('activitywatch-life-review','personal-work-report','hakase','eruna')
     $files += [pscustomobject]@{Source=(Join-Path $source 'AGENTS.md');Relative='AGENTS.md'}
+    # Repository keybindings replace the complete local file, including null unbindings.
+    $files += [pscustomobject]@{Source=(Join-Path $source 'keybindings.json');Relative='keybindings.json'}
 }
 foreach($name in $names) {
     $root = Join-Path (Join-Path $source 'skills') $name

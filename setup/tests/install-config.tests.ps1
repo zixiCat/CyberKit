@@ -27,8 +27,11 @@ try {
     $source = Join-Path $fixture 'repository'
     $skillPath = Join-Path $fixture 'custom-skills'
     $agentsSource = Join-Path $source 'ChatGPT\.codex\AGENTS.md'
+    $bindingsSource = Join-Path $source 'ChatGPT\.codex\keybindings.json'
+    $bindings = '[{"command":"fixture.submit","key":"Alt+Enter"},{"command":"fixture.unbound","key":null}]'
     $shared = "### Common`n`n- SharedFixture`n"
     Write-Fixture $agentsSource $shared
+    Write-Fixture $bindingsSource $bindings
     Write-Fixture (Join-Path $source 'setup\templates\agents-local.example.md') $template
     foreach($name in @('activitywatch-life-review','personal-work-report','hakase','eruna')) {
         Write-Fixture (Join-Path $source "ChatGPT\.codex\skills\$name\SKILL.md") "# Synthetic $name"
@@ -40,17 +43,36 @@ try {
     Write-Fixture (Join-Path $skillPath 'unrelated\SKILL.md') 'untouched skill'
     $fresh = Join-Path $fixture 'fresh-home'
     $agents = Join-Path $fresh 'AGENTS.md'
+    $bindingsTarget = Join-Path $fresh 'keybindings.json'
     $sentinels = @('config.toml','eruna\queue.sqlite','history.jsonl','pets\selection.json','schedules\local.json','project-instructions\private.md')
     foreach($relative in $sentinels) { Write-Fixture (Join-Path $fresh $relative) "untouched $relative" }
     $first = Install $fresh
     $expected = $shared.TrimEnd() + "`n`n" + [regex]::Replace($template,'\r?\n',"`n")
     Assert ([IO.File]::ReadAllText($agents) -ceq $expected) 'Fresh install must append exactly the generic template.'
+    Assert ((Get-FileHash -LiteralPath $bindingsTarget).Hash -eq (Get-FileHash -LiteralPath $bindingsSource).Hash) 'Fresh keybindings must match source bytes exactly.'
     Assert ($first.skills_path -eq $skillPath) 'Explicit skills directory must be respected.'
     Assert ((Install $fresh).changed_files -eq 0) 'Repeated fresh install must make zero changes.'
     foreach($relative in $sentinels) {
         Assert ([IO.File]::ReadAllText((Join-Path $fresh $relative)) -ceq "untouched $relative") "Unrelated file changed: $relative"
     }
     Assert ([IO.File]::ReadAllText((Join-Path $skillPath 'unrelated\SKILL.md')) -ceq 'untouched skill') 'Unrelated skill changed.'
+
+    $localBindings = '[{"command":"fixture.local-only","key":"Ctrl+L"},{"command":"fixture.submit","key":"Ctrl+Enter"},{"command":"fixture.unbound","key":"Ctrl+U"}]'
+    Write-Fixture $bindingsTarget $localBindings
+    $privateLocal = "### Local`n`n- PrivateFixture`n"
+    $privateAgents = $shared.TrimEnd() + "`n`n" + $privateLocal
+    Write-Fixture $agents $privateAgents
+    $replacement = Install $fresh
+    Assert ($replacement.changed_files -eq 1) 'Only differing keybindings should be replaced.'
+    Assert ((Get-FileHash -LiteralPath $bindingsTarget).Hash -eq (Get-FileHash -LiteralPath $bindingsSource).Hash) 'Replacement must copy source bytes without merging.'
+    Assert ([IO.File]::ReadAllText((Join-Path $replacement.backup_directory 'keybindings.json')) -ceq $localBindings) 'Previous local keybindings must be backed up intact.'
+    $installedBindings = @([IO.File]::ReadAllText($bindingsTarget) | ConvertFrom-Json)
+    Assert ($installedBindings.Count -eq 2 -and 'fixture.local-only' -notin $installedBindings.command) 'Replacement must remove local-only entries.'
+    Assert (($installedBindings | Where-Object command -eq 'fixture.submit').key -ceq 'Alt+Enter') 'Repository binding must replace the local shortcut.'
+    Assert ($null -eq ($installedBindings | Where-Object command -eq 'fixture.unbound').key) 'Explicit null must replace a local binding as an unbinding.'
+    Assert ([IO.File]::ReadAllText($agents) -ceq $privateAgents) 'Keybindings replacement must preserve installed Local content.'
+    $repeat = Install $fresh
+    Assert ($repeat.changed_files -eq 0 -and $null -eq $repeat.backup_directory) 'Repeated replacement must make no changes or extra backups.'
 
     Write-Fixture $agents $shared
     $upgrade = Install $fresh
@@ -84,13 +106,19 @@ try {
     Write-Fixture $agentsSource $shared
     Assert (-not [IO.File]::ReadAllText($agentsSource).Contains('PrivateFixture')) 'Private content must never flow into the source.'
 
-    # Pet-only installation must work without any instruction source/template.
+    # Pet-only installation must work without instruction or keybindings sources.
     Remove-Item -LiteralPath $agentsSource
+    Remove-Item -LiteralPath $bindingsSource
     Remove-Item -LiteralPath (Join-Path $source 'setup\templates\agents-local.example.md')
     $petHome = Join-Path $fixture 'pets-only-home'
     $null = Install $petHome -PetsOnly
     Assert (-not (Test-Path -LiteralPath (Join-Path $petHome 'AGENTS.md'))) 'Pet-only install must not create instructions.'
-    Write-Output "PASS: $checks installer checks (fresh, missing Local, private preservation, repeat updates, rejection and pet-only)."
+    $petBindings = Join-Path $petHome 'keybindings.json'
+    Assert (-not (Test-Path -LiteralPath $petBindings)) 'Fresh pet-only install must not create keybindings.'
+    Write-Fixture $petBindings $localBindings
+    $null = Install $petHome -PetsOnly
+    Assert ([IO.File]::ReadAllText($petBindings) -ceq $localBindings) 'Pet-only update must preserve existing keybindings verbatim.'
+    Write-Output "PASS: $checks installer checks (fresh, keybindings replacement/backup/nulls, private preservation, repeat updates, rejection and pet-only)."
 } finally {
     $temporaryRoot = [IO.Path]::GetFullPath([IO.Path]::GetTempPath()).TrimEnd('\')
     if((Split-Path -Parent $fixture) -ne $temporaryRoot -or (Split-Path -Leaf $fixture) -notmatch '^cyberkit-install-test-[0-9a-f]{32}$') {

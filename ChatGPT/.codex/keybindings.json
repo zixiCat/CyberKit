@@ -1,0 +1,294 @@
+[
+  {
+    "command": "archiveThread",
+    "key": null
+  },
+  {
+    "command": "artifact.sendAnnotations",
+    "key": null
+  },
+  {
+    "command": "artifacts.arrowTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.circleTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.handTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.lineTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.noteTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.rectangleTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.selectTool",
+    "key": null
+  },
+  {
+    "command": "artifacts.textTool",
+    "key": null
+  },
+  {
+    "command": "canvas.prompt",
+    "key": null
+  },
+  {
+    "command": "clearAllUnreads",
+    "key": null
+  },
+  {
+    "command": "closeWindow",
+    "key": null
+  },
+  {
+    "command": "composer.openModelPicker",
+    "key": null
+  },
+  {
+    "command": "composer.openProjectPicker",
+    "key": null
+  },
+  {
+    "command": "composer.openRecentModels",
+    "key": null
+  },
+  {
+    "command": "composer.steer",
+    "key": "Alt+Enter"
+  },
+  {
+    "command": "composer.submitInBackground",
+    "key": "CmdOrCtrl+Enter"
+  },
+  {
+    "command": "copyConversationPath",
+    "key": null
+  },
+  {
+    "command": "copyLastCodeBlock",
+    "key": null
+  },
+  {
+    "command": "copyPageLink",
+    "key": null
+  },
+  {
+    "command": "environmentAction1",
+    "key": null
+  },
+  {
+    "command": "exitWorkspaceFullView",
+    "key": null
+  },
+  {
+    "command": "file.findReferences",
+    "key": null
+  },
+  {
+    "command": "focusBrowserAddressBar",
+    "key": null
+  },
+  {
+    "command": "focusMainChat",
+    "key": null
+  },
+  {
+    "command": "focusPageBlockControls",
+    "key": null
+  },
+  {
+    "command": "focusTab1",
+    "key": null
+  },
+  {
+    "command": "focusTab2",
+    "key": null
+  },
+  {
+    "command": "focusTab3",
+    "key": null
+  },
+  {
+    "command": "focusTab4",
+    "key": null
+  },
+  {
+    "command": "focusTab5",
+    "key": null
+  },
+  {
+    "command": "focusTab6",
+    "key": null
+  },
+  {
+    "command": "focusTab7",
+    "key": null
+  },
+  {
+    "command": "focusTab8",
+    "key": null
+  },
+  {
+    "command": "focusTab9",
+    "key": null
+  },
+  {
+    "command": "globalDictationHold",
+    "key": "Alt+Shift+2"
+  },
+  {
+    "command": "markThreadUnread",
+    "key": null
+  },
+  {
+    "command": "newProjectlessTask",
+    "key": null
+  },
+  {
+    "command": "newTask",
+    "key": "CmdOrCtrl+N"
+  },
+  {
+    "command": "nextThreadNeedingAttention",
+    "key": null
+  },
+  {
+    "command": "openAvatarOverlay",
+    "key": null
+  },
+  {
+    "command": "openOrbit",
+    "key": null
+  },
+  {
+    "command": "openSideChat",
+    "key": null
+  },
+  {
+    "command": "page.addComment",
+    "key": null
+  },
+  {
+    "command": "page.formatBulletedList",
+    "key": null
+  },
+  {
+    "command": "page.formatChecklist",
+    "key": null
+  },
+  {
+    "command": "page.formatNumberedList",
+    "key": null
+  },
+  {
+    "command": "recentThread1",
+    "key": null
+  },
+  {
+    "command": "recentThread2",
+    "key": null
+  },
+  {
+    "command": "recentThread3",
+    "key": null
+  },
+  {
+    "command": "recentThread4",
+    "key": null
+  },
+  {
+    "command": "recentThread5",
+    "key": null
+  },
+  {
+    "command": "recentThread6",
+    "key": null
+  },
+  {
+    "command": "renameThread",
+    "key": null
+  },
+  {
+    "command": "settings",
+    "key": null
+  },
+  {
+    "command": "showKeyboardShortcuts",
+    "key": null
+  },
+  {
+    "command": "showWorkspaceTabView",
+    "key": null
+  },
+  {
+    "command": "temporaryChat",
+    "key": null
+  },
+  {
+    "command": "thread1",
+    "key": null
+  },
+  {
+    "command": "thread2",
+    "key": null
+  },
+  {
+    "command": "thread3",
+    "key": null
+  },
+  {
+    "command": "thread4",
+    "key": null
+  },
+  {
+    "command": "thread5",
+    "key": null
+  },
+  {
+    "command": "thread6",
+    "key": null
+  },
+  {
+    "command": "thread7",
+    "key": null
+  },
+  {
+    "command": "thread8",
+    "key": null
+  },
+  {
+    "command": "thread9",
+    "key": null
+  },
+  {
+    "command": "toggleBottomPanel",
+    "key": null
+  },
+  {
+    "command": "togglePriorityFilter",
+    "key": null
+  },
+  {
+    "command": "toggleSidebar",
+    "key": null
+  },
+  {
+    "command": "toggleSidePanel",
+    "key": null
+  },
+  {
+    "command": "toggleTerminal",
+    "key": null
+  }
+]

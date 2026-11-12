@@ -1,7 +1,8 @@
-# Version user instructions and custom skills.
+# Version shared instructions, Codex keybindings and custom skills.
 /*
 !/.gitignore
 !/AGENTS.md
+!/keybindings.json
 !/skills/
 
 # Exclude bundled skills, caches, credentials, and personal runtime data.
